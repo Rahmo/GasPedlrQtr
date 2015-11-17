@@ -55,6 +55,10 @@
 		2CF7D26E1BEAEAE8009A3BA7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF7D26D1BEAEAE8009A3BA7 /* libsqlite3.tbd */; };
 		B40D24DD1BF136E1007431DB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40D24DB1BF136E1007431DB /* Bolts.framework */; };
 		B40D24DE1BF136E1007431DB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40D24DC1BF136E1007431DB /* Parse.framework */; };
+		B4A2D4AE1BFAC3200047DC08 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D4AD1BFAC3200047DC08 /* Utilities.swift */; };
+		B4A2D4B01BFAC3940047DC08 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D4AF1BFAC3940047DC08 /* Geotification.swift */; };
+		B4A2D4B21BFAC3AE0047DC08 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */; };
+		B4A2D4B41BFAC47A0047DC08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */; };
 		B4A6DE091BDC65BC00D31ACE /* Chicago.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B4A6DE081BDC65BC00D31ACE /* Chicago.gpx */; };
 		B4E620881BD5BB8500923AA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E620871BD5BB8500923AA8 /* MapViewController.swift */; };
 		B4FC9D031BE9EEC0007303FC /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC9D021BE9EEC0007303FC /* SearchModel.swift */; };
@@ -157,6 +161,10 @@
 		2CF7D26D1BEAEAE8009A3BA7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B40D24DB1BF136E1007431DB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B40D24DC1BF136E1007431DB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B4A2D4AD1BFAC3200047DC08 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		B4A2D4AF1BFAC3940047DC08 /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
+		B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B4A6DE081BDC65BC00D31ACE /* Chicago.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Chicago.gpx; sourceTree = "<group>"; };
 		B4E620871BD5BB8500923AA8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B4FC9D021BE9EEC0007303FC /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
@@ -253,10 +261,16 @@
 				2CDC08FF1BE85932009D330B /* GAIDictionaryBuilder.h */,
 				2CDC09001BE85932009D330B /* GAIFields.h */,
 				2CDC09011BE85932009D330B /* GAILogger.h */,
+				B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */,
 				2CDC09021BE85932009D330B /* GAITrackedViewController.h */,
 				2CDC09031BE85932009D330B /* GAITracker.h */,
+				B4A2D4AF1BFAC3940047DC08 /* Geotification.swift */,
 				2C03A6891BC98A1200335354 /* AppDelegate.swift */,
 				2C03A68B1BC98A1200335354 /* ViewController.swift */,
+				B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */,
+				B4E620871BD5BB8500923AA8 /* MapViewController.swift */,
+				B4A2D4AD1BFAC3200047DC08 /* Utilities.swift */,
+				B4FC9D041BE9EF12007303FC /* MapHelper.swift */,
 				03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */,
 				03E316C21BF5820900DA6857 /* loginButton.jpg */,
 				036FA2911BF6D098002E8956 /* breakout_icon.png */,
@@ -287,10 +301,8 @@
 				2C03A6951BC98A1200335354 /* Info.plist */,
 				2C03A6B71BC9975A00335354 /* RegistrationViewController.swift */,
 				2C03A6B91BC9AFB800335354 /* LoginViewController.swift */,
-				B4E620871BD5BB8500923AA8 /* MapViewController.swift */,
 				03A27BB71BDD30C000E00020 /* WebViewController.swift */,
 				B4FC9D021BE9EEC0007303FC /* SearchModel.swift */,
-				B4FC9D041BE9EF12007303FC /* MapHelper.swift */,
 				B4FC9D061BEC2806007303FC /* CustomAnnotation.swift */,
 				B4FC9D081BEC30D2007303FC /* ServiceHelper.swift */,
 				2C5CC7781BF0250E004629F0 /* myConnector.h */,
@@ -471,6 +483,7 @@
 				03A27BBF1BDD380F00E00020 /* Google-Maps-icon.png in Resources */,
 				B4FC9D141BEC4034007303FC /* cinema.png in Resources */,
 				B4FC9D261BECB5FF007303FC /* atm-.png in Resources */,
+				B4A2D4B41BFAC47A0047DC08 /* Images.xcassets in Resources */,
 				B4FC9D221BEC8FAE007303FC /* close.png in Resources */,
 				2C03A68F1BC98A1200335354 /* Main.storyboard in Resources */,
 				037EF9FB1BEFEE0400AB3E70 /* spark.png in Resources */,
@@ -518,8 +531,11 @@
 				2C03A6B81BC9975A00335354 /* RegistrationViewController.swift in Sources */,
 				037EF9F01BEFEDF400AB3E70 /* GameViewController.swift in Sources */,
 				B4FC9D201BEC8D6D007303FC /* CustomFlyout.swift in Sources */,
+				B4A2D4AE1BFAC3200047DC08 /* Utilities.swift in Sources */,
 				2C03A68C1BC98A1200335354 /* ViewController.swift in Sources */,
+				B4A2D4B01BFAC3940047DC08 /* Geotification.swift in Sources */,
 				B4FC9D071BEC2806007303FC /* CustomAnnotation.swift in Sources */,
+				B4A2D4B21BFAC3AE0047DC08 /* CollectionViewCell.swift in Sources */,
 				037EFA031BEFF21800AB3E70 /* MainMapViewController.swift in Sources */,
 				B4FC9D031BE9EEC0007303FC /* SearchModel.swift in Sources */,
 				03A27BBA1BDD34F700E00020 /* RiderUIViewController.swift in Sources */,
