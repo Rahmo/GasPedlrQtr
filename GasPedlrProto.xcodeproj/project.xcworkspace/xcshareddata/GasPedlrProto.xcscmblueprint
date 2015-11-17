@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1D47CA3E93F1424F523E1FC0F3705179C802860E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C07FB399219960EAF266E12BDF57A5F100817A61" : 0,
+    "1D47CA3E93F1424F523E1FC0F3705179C802860E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0A246B18-BA75-446D-A46B-FA42C6A8A33A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C07FB399219960EAF266E12BDF57A5F100817A61" : "SwiftBreakout\/",
+    "1D47CA3E93F1424F523E1FC0F3705179C802860E" : "GasPedlr\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GasPedlrProto",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GasPedlrProto\/GasPedlrProto.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Rahmo\/GasPedlr.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1D47CA3E93F1424F523E1FC0F3705179C802860E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ynaoto\/SwiftBreakout.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C07FB399219960EAF266E12BDF57A5F100817A61"
+    }
+  ]
+}
