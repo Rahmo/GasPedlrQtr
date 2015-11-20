@@ -22,6 +22,8 @@ class Geotification: NSObject, NSCoding, MKAnnotation {
   var radius: CLLocationDistance
   var identifier: String
   var note: String
+var address : String
+    var icon : String
   var eventType: EventType
   var searchModel:SearchModel?
   
@@ -40,6 +42,7 @@ class Geotification: NSObject, NSCoding, MKAnnotation {
      return note
   }
     
+
    
 
     init(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance, identifier: String,  eventType: EventType , Model: SearchModel) {
@@ -47,8 +50,8 @@ class Geotification: NSObject, NSCoding, MKAnnotation {
     self.radius = radius
     self.identifier = identifier
     self.note = Model.name
-   
-    //self.address = Model.address
+   self.icon = Model.icon
+    self.address = Model.address
     self.eventType = eventType
     self.searchModel = Model
   }
@@ -64,7 +67,8 @@ class Geotification: NSObject, NSCoding, MKAnnotation {
     identifier = decoder.decodeObjectForKey(kGeotificationIdentifierKey) as! String
     note = decoder.decodeObjectForKey(kGeotificationNoteKey) as! String
     eventType = EventType(rawValue: decoder.decodeIntegerForKey(kGeotificationEventTypeKey))!
-   // address = decoder.decodeObjectForKey(kGeotificationAddressKey) as! String
+    address = decoder.decodeObjectForKey(kGeotificationAddressKey) as! String
+    icon = decoder.decodeObjectForKey(kGeotificationIconKey) as! String
   }
 
   func encodeWithCoder(coder: NSCoder) {
@@ -74,5 +78,8 @@ class Geotification: NSObject, NSCoding, MKAnnotation {
     coder.encodeObject(identifier, forKey: kGeotificationIdentifierKey)
     coder.encodeObject(note, forKey: kGeotificationNoteKey)
     coder.encodeInt(Int32(eventType.rawValue), forKey: kGeotificationEventTypeKey)
+    coder.encodeObject(icon, forKey: kGeotificationIconKey)
+    coder.encodeObject(address, forKey: kGeotificationAddressKey)
+
   }
 }

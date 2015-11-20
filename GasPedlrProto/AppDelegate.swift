@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
 
    var window: UIWindow?
  let locationManager = CLLocationManager()
+    var items = NSMutableArray()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -33,12 +34,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         
+        
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Sound, .Alert, .Badge], categories: nil))
         UIApplication.sharedApplication().cancelAllLocalNotifications()
         
         return true
     }
     
+    class func getDelegate() -> AppDelegate {
+        return UIApplication.sharedApplication().delegate as! AppDelegate
+    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -62,6 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func locationManager(manager: CLLocationManager, didStartMonitoringForRegion region: CLRegion) {
+        locationManager.requestStateForRegion(region)
+    }
+    
     func handleRegionEvent(region: CLRegion) {
         // Show an alert if application is active
         if UIApplication.sharedApplication().applicationState == .Active {
@@ -92,13 +101,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
             handleRegionEvent(region)
         }
     }
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    NSLog("\(error)")
+    
+    }
+    func locationManager(manager: CLLocationManager, didDetermineState state: CLRegionState, forRegion region: CLRegion) {
+        print("BM didDetermineState \(state)");
+       //  let delegate = AppDelegate.getDelegate()
+        switch state {
+        case .Inside:
+            print("BeaconManager:didDetermineState CLRegionState.Inside \(region.identifier)")
+            for savedItem in self.items {
+                if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(savedItem as! NSData) as? Geotification {
+                    if geotification.identifier == region.identifier {
+                      print("BeaconManager:didDetermineState CLRegionState.Inside \(region.identifier) is Equal to \(geotification.identifier)")                    }
+                }
+            }
+         //   delegate.insideRegion(region.identifier)
+        case .Outside:
+            print("BeaconManager:didDetermineState CLRegionState.Outside");
+            for savedItem in self.items {
+                if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(savedItem as! NSData) as? Geotification {
+                    if geotification.identifier != region.identifier {
+                        print("BeaconManager:didDetermineState CLRegionState.Inside \(region.identifier) does NOT Equal to \(geotification.identifier)")                    }
+                }
+            }
+        case .Unknown:
+            print("BeaconManager:didDetermineState CLRegionState.Unknown");
+        default:
+            print("BeaconManager:didDetermineState default");
+        }
+    }
     
     func notefromRegionIdentifier(identifier: String) -> String? {
-        if let savedItems = NSUserDefaults.standardUserDefaults().arrayForKey(kSavedItemsKey) {
+        let savedGeos = self.items
+        if let savedItems = savedGeos as? NSMutableArray {
             for savedItem in savedItems {
                 if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(savedItem as! NSData) as? Geotification {
                     if geotification.identifier == identifier {
-                        return geotification.note
+                       // return geotification.note
+                        let Emoji = "😀"
+                        var text:String = "Welcome to \(geotification.note) \(Emoji) \n" +
+                        "address: \(geotification.address)"
+                        return text
                     }
                 }
             }
