@@ -16,61 +16,21 @@
                         <viewControllerLayoutGuide type="bottom" id="QrQ-m0-VtP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cz4-fV-c87">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IR8-pB-2K7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IR8-pB-2K7">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bwP-h4-hyG">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="406"/>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bwP-h4-hyG">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="554"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="406" id="a9b-kT-YO6"/>
+                                            <constraint firstAttribute="height" constant="554" id="a9b-kT-YO6"/>
                                         </constraints>
                                     </mapView>
-                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2TI-Qi-uDW">
-                                        <rect key="frame" x="0.0" y="362" width="1024" height="44"/>
-                                        <animations/>
-                                        <items>
-                                            <barButtonItem title="+" id="fWJ-q2-7NC">
-                                                <connections>
-                                                    <action selector="zoomIn:" destination="bfz-zq-dWH" id="saa-8l-WOl"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="-" id="MfL-pH-PzG">
-                                                <connections>
-                                                    <action selector="zoomOut:" destination="bfz-zq-dWH" id="ryj-WU-Pbn"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Change Map Type" id="vzt-Bk-Yb8">
-                                                <color key="tintColor" red="1" green="0.41722372205277214" blue="0.3787936113151571" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="changeMapType:" destination="bfz-zq-dWH" id="OdR-0V-0Z0"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem systemItem="search" id="KAO-eK-oS7">
-                                                <color key="tintColor" red="1" green="0.41722372210000003" blue="0.3787936113" alpha="1" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="showSearchBar:" destination="bfz-zq-dWH" id="RSW-Wu-HKh"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Current Location " style="done" id="vCu-pe-LcD">
-                                                <color key="tintColor" red="0.17004856137977842" green="0.20405428291524008" blue="1" alpha="0.62" colorSpace="calibratedRGB"/>
-                                                <connections>
-                                                    <action selector="currentLocationPressed:" destination="bfz-zq-dWH" id="Nj2-rt-dRR"/>
-                                                </connections>
-                                            </barButtonItem>
-                                            <barButtonItem title="Return To Menu" id="dpm-Cs-3yi">
-                                                <connections>
-                                                    <action selector="mapBackButton:" destination="bfz-zq-dWH" id="Gx6-2k-8LK"/>
-                                                    <segue destination="QAY-Fl-5dS" kind="show" identifier="mapBackView" id="gDu-pb-Vxd"/>
-                                                </connections>
-                                            </barButtonItem>
-                                        </items>
-                                    </toolbar>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bqB-ze-lfD">
-                                        <rect key="frame" x="0.0" y="406" width="768" height="132"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqB-ze-lfD">
+                                        <rect key="frame" x="0.0" y="598" width="1024" height="5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AddressInfo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLd-Eq-X33">
                                                 <rect key="frame" x="8" y="0.0" width="97" height="41"/>
@@ -101,15 +61,18 @@
                                             </label>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.085150526556776573" green="0.085150526556776573" blue="0.085150526556776573" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DrP-xD-WTs">
-                                        <rect key="frame" x="0.0" y="537" width="768" height="487"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DrP-xD-WTs">
+                                        <rect key="frame" x="0.0" y="603" width="1024" height="421"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ffb-f3-dPa">
-                                                <rect key="frame" x="0.0" y="0.0" width="621.5" height="228.5"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ffb-f3-dPa">
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="163"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="163" id="YpD-9L-rvn"/>
+                                                </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EFd-3O-t2f">
                                                     <size key="itemSize" width="228" height="50"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -166,15 +129,68 @@
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" red="0.88167374959454503" green="0.94277043684065209" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ffb-f3-dPa" firstAttribute="top" secondItem="DrP-xD-WTs" secondAttribute="top" id="Jmi-g5-Mlv"/>
+                                            <constraint firstAttribute="trailing" secondItem="ffb-f3-dPa" secondAttribute="trailing" id="M59-pO-Dq5"/>
+                                            <constraint firstItem="ffb-f3-dPa" firstAttribute="leading" secondItem="DrP-xD-WTs" secondAttribute="leading" id="Nx1-BD-ItT"/>
+                                        </constraints>
                                     </view>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2TI-Qi-uDW">
+                                        <rect key="frame" x="0.0" y="554" width="1024" height="44"/>
+                                        <animations/>
+                                        <items>
+                                            <barButtonItem title="+" id="fWJ-q2-7NC">
+                                                <connections>
+                                                    <action selector="zoomIn:" destination="bfz-zq-dWH" id="saa-8l-WOl"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="-" id="MfL-pH-PzG">
+                                                <connections>
+                                                    <action selector="zoomOut:" destination="bfz-zq-dWH" id="ryj-WU-Pbn"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Change Map Type" id="vzt-Bk-Yb8">
+                                                <color key="tintColor" red="1" green="0.41722372205277214" blue="0.3787936113151571" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="changeMapType:" destination="bfz-zq-dWH" id="OdR-0V-0Z0"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="search" id="KAO-eK-oS7">
+                                                <color key="tintColor" red="1" green="0.41722372210000003" blue="0.3787936113" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="showSearchBar:" destination="bfz-zq-dWH" id="RSW-Wu-HKh"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Current Location " style="done" id="vCu-pe-LcD">
+                                                <color key="tintColor" red="0.17004856137977842" green="0.20405428291524008" blue="1" alpha="0.62" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="currentLocationPressed:" destination="bfz-zq-dWH" id="Nj2-rt-dRR"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Return To Menu" id="dpm-Cs-3yi">
+                                                <connections>
+                                                    <action selector="mapBackButton:" destination="bfz-zq-dWH" id="Gx6-2k-8LK"/>
+                                                    <segue destination="QAY-Fl-5dS" kind="show" identifier="mapBackView" id="gDu-pb-Vxd"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="bwP-h4-hyG" secondAttribute="trailing" id="9FQ-Qg-pu5"/>
                                     <constraint firstItem="2TI-Qi-uDW" firstAttribute="leading" secondItem="bwP-h4-hyG" secondAttribute="leading" id="9Qt-pA-JnQ"/>
-                                    <constraint firstItem="2TI-Qi-uDW" firstAttribute="bottom" secondItem="bwP-h4-hyG" secondAttribute="bottom" id="KcW-gs-wgJ"/>
+                                    <constraint firstItem="bqB-ze-lfD" firstAttribute="leading" secondItem="DrP-xD-WTs" secondAttribute="leading" id="Bhb-LL-qyy"/>
+                                    <constraint firstItem="DrP-xD-WTs" firstAttribute="top" secondItem="bqB-ze-lfD" secondAttribute="bottom" id="D3f-rL-Hbv"/>
+                                    <constraint firstAttribute="bottom" secondItem="DrP-xD-WTs" secondAttribute="bottom" constant="-256" id="Gnv-eZ-GRD"/>
+                                    <constraint firstItem="2TI-Qi-uDW" firstAttribute="bottom" secondItem="bwP-h4-hyG" secondAttribute="bottom" constant="44" id="KcW-gs-wgJ"/>
+                                    <constraint firstItem="bqB-ze-lfD" firstAttribute="trailing" secondItem="DrP-xD-WTs" secondAttribute="trailing" id="KkR-V1-0hd"/>
+                                    <constraint firstItem="bqB-ze-lfD" firstAttribute="trailing" secondItem="2TI-Qi-uDW" secondAttribute="trailing" id="Ruo-Xp-S8b"/>
+                                    <constraint firstItem="DrP-xD-WTs" firstAttribute="top" secondItem="IR8-pB-2K7" secondAttribute="top" constant="603" id="UwG-cf-hmo"/>
+                                    <constraint firstItem="bqB-ze-lfD" firstAttribute="top" secondItem="2TI-Qi-uDW" secondAttribute="bottom" id="VXm-9V-ghh"/>
                                     <constraint firstItem="2TI-Qi-uDW" firstAttribute="trailing" secondItem="bwP-h4-hyG" secondAttribute="trailing" id="Xcc-En-1Hb"/>
+                                    <constraint firstItem="bqB-ze-lfD" firstAttribute="leading" secondItem="2TI-Qi-uDW" secondAttribute="leading" id="aWp-yx-qUF"/>
                                     <constraint firstItem="bwP-h4-hyG" firstAttribute="top" secondItem="IR8-pB-2K7" secondAttribute="top" id="jxk-SQ-i0L"/>
                                     <constraint firstItem="bwP-h4-hyG" firstAttribute="leading" secondItem="IR8-pB-2K7" secondAttribute="leading" id="lOz-QW-ab4"/>
                                 </constraints>
@@ -197,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdz-Ng-4oa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2417" y="-1446"/>
+            <point key="canvasLocation" x="2229" y="-2150"/>
         </scene>
         <!--Main Map View Controller-->
         <scene sceneID="54o-qk-MZM">
@@ -208,7 +224,7 @@
                         <viewControllerLayoutGuide type="bottom" id="m5j-eG-X4L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Aq-64-dmR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="651" height="314"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fsO-hA-ZCd">
@@ -1051,13 +1067,13 @@
                         <viewControllerLayoutGuide type="bottom" id="A9D-Pv-RAd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EzK-9Y-3jn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-ew-1Mn" customClass="SKView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-ew-1Mn" customClass="SKView">
                                 <rect key="frame" x="20" y="0.0" width="728" height="656"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKz-Ht-Xev">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKz-Ht-Xev">
                                         <rect key="frame" x="289" y="290" width="150" height="76"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
@@ -1068,7 +1084,7 @@
                                             <action selector="restart:" destination="Fzm-FY-Z6G" eventType="touchUpInside" id="OAN-2j-cgA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZn-bh-nki">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZn-bh-nki">
                                         <rect key="frame" x="242" y="290" width="245" height="76"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
@@ -1089,7 +1105,7 @@
                                     <constraint firstAttribute="centerX" secondItem="aZn-bh-nki" secondAttribute="centerX" id="cv8-IS-yIP"/>
                                 </constraints>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WEF-U6-5yU">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WEF-U6-5yU">
                                 <rect key="frame" x="18" y="702" width="732" height="31"/>
                                 <animations/>
                                 <constraints>
@@ -1099,7 +1115,7 @@
                                     <action selector="padSliderMoved:" destination="Fzm-FY-Z6G" eventType="valueChanged" id="tup-sf-n1g"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLZ-Io-yGy">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLZ-Io-yGy">
                                 <rect key="frame" x="20" y="664" width="42" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -1159,8 +1175,8 @@
         <image name="transparent icon.png" width="720" height="418"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="17M-20-tVe"/>
         <segue reference="gDu-pb-Vxd"/>
-        <segue reference="Y6X-Pd-2j3"/>
         <segue reference="ybi-IT-bzM"/>
     </inferredMetricsTieBreakers>
 </document>
