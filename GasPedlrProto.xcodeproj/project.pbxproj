@@ -62,7 +62,6 @@
 		B4A6DE091BDC65BC00D31ACE /* Chicago.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B4A6DE081BDC65BC00D31ACE /* Chicago.gpx */; };
 		B4E620881BD5BB8500923AA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E620871BD5BB8500923AA8 /* MapViewController.swift */; };
 		B4FC9D031BE9EEC0007303FC /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC9D021BE9EEC0007303FC /* SearchModel.swift */; };
-		B4FC9D051BE9EF12007303FC /* MapHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC9D041BE9EF12007303FC /* MapHelper.swift */; };
 		B4FC9D071BEC2806007303FC /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC9D061BEC2806007303FC /* CustomAnnotation.swift */; };
 		B4FC9D091BEC30D2007303FC /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC9D081BEC30D2007303FC /* ServiceHelper.swift */; };
 		B4FC9D141BEC4034007303FC /* cinema.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FC9D0B1BEC4034007303FC /* cinema.png */; };
@@ -168,7 +167,6 @@
 		B4A6DE081BDC65BC00D31ACE /* Chicago.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Chicago.gpx; sourceTree = "<group>"; };
 		B4E620871BD5BB8500923AA8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B4FC9D021BE9EEC0007303FC /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
-		B4FC9D041BE9EF12007303FC /* MapHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapHelper.swift; sourceTree = "<group>"; };
 		B4FC9D061BEC2806007303FC /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		B4FC9D081BEC30D2007303FC /* ServiceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
 		B4FC9D0B1BEC4034007303FC /* cinema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cinema.png; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 				B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */,
 				B4E620871BD5BB8500923AA8 /* MapViewController.swift */,
 				B4A2D4AD1BFAC3200047DC08 /* Utilities.swift */,
-				B4FC9D041BE9EF12007303FC /* MapHelper.swift */,
 				03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */,
 				03E316C21BF5820900DA6857 /* loginButton.jpg */,
 				036FA2911BF6D098002E8956 /* breakout_icon.png */,
@@ -544,7 +541,6 @@
 				037EFA031BEFF21800AB3E70 /* MainMapViewController.swift in Sources */,
 				B4FC9D031BE9EEC0007303FC /* SearchModel.swift in Sources */,
 				03A27BBA1BDD34F700E00020 /* RiderUIViewController.swift in Sources */,
-				B4FC9D051BE9EF12007303FC /* MapHelper.swift in Sources */,
 				2C5CC77A1BF0250E004629F0 /* myConnector.m in Sources */,
 				B4E620881BD5BB8500923AA8 /* MapViewController.swift in Sources */,
 				037EF9F71BEFEE0400AB3E70 /* MyScene.swift in Sources */,

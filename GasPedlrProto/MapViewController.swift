@@ -3,7 +3,20 @@
 //  GasPedlrProto
 //
 //  Created by Abdulrahman on 2015-10-19.
-//  Copyright © 2015 GMG Developments. All rights reserved.
+// What is this file does are
+// 1 - adding multiple pins of the surrounding businesses according google place api as it send to the service using get helper
+// 2 - Retrieved the pins according to either by the search method if the user searched or using the catagories that has been shown in the collectionView. or else it takes from the default business that has been partnered with our service.
+//3 -The retrived info get add as a Geotification and been added to an array. then this array get sent to the App Delegate to monitor the region
+//4- it keeps updating the location based on the user location
+// Files that interact with this file :
+//.CutomFlyout
+//.Appdelegate
+//.Utilities
+//.Geotification
+//.CustomAnnotation
+//.ServiceHelper
+//.SearchModel : This to be added to the Geaotification to contain the srecieved info about each place
+// Copyright © 2015 GMG Developments. All rights reserved.
 
 
 import Foundation
@@ -13,29 +26,43 @@ import UIKit
 import Parse
 
 
-let kSavedItemsKey = "savedItems"
+
 let reuseIdentifier = "Cell"
-var myImage =  UIImage(named: "restaurent.png");
+extension MKMapView {
+    
+    // delta is the zoom factor
+    // 2 will zoom out x2
+    // .5 will zoom in by x2
+    
+    func setZoomByDelta(delta: Double, animated: Bool) {
+        var _region = region;
+        var _span = region.span;
+        _span.latitudeDelta *= delta;
+        _span.longitudeDelta *= delta;
+        _region.span = _span;
+        
+        setRegion(_region, animated: animated)
+    }
+}
+
 class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapViewDelegate ,UISearchBarDelegate   {
     
     //Geofications
     var geotifications = [Geotification]()
     
-    //hh
     //relate to the search
     var searchController:UISearchController!
-    
     var autoCompleteDataSource:Array<String> = [];
     @IBOutlet weak var mapView: MKMapView!
-    var customAnotations:[Geotification] = [Geotification]();
+    
+    
+    //This used in the dataload method to save the result from the service
     var mapModels:[SearchModel]?;
-    
     var mapData:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:0, longitude:0)
-    let apiKey = "AIzaSyAbXjQRDPYZJkP1FloGsnqjQHF8qc1I4yw"
-    let mapHelper:MapHelper = MapHelper();
     
+    //This key is for Google api servcie
+    let apiKey = "AIzaSyAbXjQRDPYZJkP1FloGsnqjQHF8qc1I4yw"
     var searchBy:String = ""
-    @IBOutlet weak var autoCompleteTableView: UITableView!
     
     
     //relate to get the user location
@@ -59,33 +86,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+    
         //TODO This to clear NSuserdefveult of the local device to start over
         //  clearlocalUserFefaults()
-        
-        
         let monitoredRegions =  locationManager.monitoredRegions.count
         if (monitoredRegions > 0) {
-           
             
-        let geoSet = locationManager.monitoredRegions
-       // var nsarr = geoSet. as NSArray
             
+            //The part below is important which is to delete the monitored regions from the set in the locationmanager (even if the user closed the app and reopen )
+            let geoSet = locationManager.monitoredRegions
             for geo in geoSet  {
-            
-               locationManager.stopMonitoringForRegion(geo)
-
+                locationManager.stopMonitoringForRegion(geo)
             }
         }
         
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("dataLoaded:"), name: "DataLoaded", object: nil);
-        
-        //        autoCompleteTableView.dataSource = self;
-        //        autoCompleteTableView.delegate = self;
-        //        autoCompleteTableView.backgroundColor = UIColor.clearColor();
-        //        autoCompleteTableView.separatorColor = UIColor.clearColor();
+
         autoCompleteDataSource.append("PartneredUser");
         autoCompleteDataSource.append("Restaurant");
         autoCompleteDataSource.append("Airport");
@@ -98,7 +115,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
         
         //the default zoom
-        zoomSpan = [0.1,0.1]
+        zoomSpan = [0.0,0.1]
         myAddress.lineBreakMode = .ByWordWrapping
         myAddress.numberOfLines = 0
         myLocation.lineBreakMode = .ByWordWrapping
@@ -114,8 +131,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
         self.mapView.delegate = self;
+        // self.mapView.setUserTrackingMode(MAUserTrackingMode.Follow, animated: true)
         self.mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
-        self.customAnotations.removeAll(keepCapacity: false);
+     
         //relate to Geotifications
         
         
@@ -127,42 +145,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     
     //clearlocal nsuser default as a replacment for database
     func clearAllGeo(){
-//        if let savedItems = NSUserDefaults.standardUserDefaults().arrayForKey(kSavedItemsKey) {
-//            for savedItem in savedItems {
-//                if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(savedItem as! NSData) as? Geotification {
-//                    
-//                    print(geotification.note)
-//                    
-//                }
-//            }
-//        }
-
-       // NSUserDefaults.standardUserDefaults().setObject(nil, forKey: kSavedItemsKey)
-     //   print(NSUserDefaults.standardUserDefaults().dictionaryRepresentation().keys.,"hjhjh")
-//        NSUserDefaults.standardUserDefaults().removeObjectForKey(kSavedItemsKey)
-      
+        
         for geo in geotifications
         {
             mapView.removeAnnotation(geo)
             stopMonitoringGeotification(geo)
             removeGeotification(geo)
-           
-            
         }
-        
-        // saveAllGeotifications()
-    geotifications.removeAll()
+        geotifications.removeAll()
     }
     
-    
+    //This
     func runPartneredBusiness(){
-              let allAnnotations = self.mapView.annotations
+        let allAnnotations = self.mapView.annotations
         self.mapView.removeAnnotations(allAnnotations)
         
-     clearAllGeo()
+        clearAllGeo()
         
         let serviceHelper = ServiceHelper();
-        let dynamicURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(mapData.latitude),\(mapData.longitude)&radius=5000&types=starbucks&sensor=true&key=\(apiKey)"
+        let dynamicURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(mapData.latitude),\(mapData.longitude)&radius=5000&types=Starbucks&sensor=true&key=\(apiKey)"
         print(dynamicURL);
         serviceHelper.getServiceHandle(self.dataLoaded, url: dynamicURL);
         
@@ -183,27 +184,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     }
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        //loadAllGeotifications()
-//        let annotationView = mapView.viewForAnnotation(userLocation)
-//        annotationView.canShowCallout = false
-      //  zoomToFitMapAnnotations()
+    // self.locationManager.distanceFilter = 5000.0;
     }
-   
+    
     
     @IBAction func currentLocationPressed(sender: AnyObject) {
         //this below to remove all annotioantion plus the custom
-          runPartneredBusiness()
-        self.locationManager.startUpdatingLocation()
-//        self.customAnotations.removeAll(keepCapacity: false);
-//        let allAnnotations = self.mapView.annotations
-//        self.mapView.removeAnnotations(allAnnotations)
-       // loadAllGeotifications()
+        runPartneredBusiness()
+       // self.locationManager.startUpdatingLocation()
     }
     
     //this function get the current location of the user and keep updating the fields with the new Lat and lon
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let regionToZoom = MKCoordinateRegionMake(manager.location!.coordinate, MKCoordinateSpanMake(zoomSpan[0],zoomSpan[1]))
         
+        
+       // self.locationManager.startUpdatingLocation()
+       
         mapView.setRegion(regionToZoom, animated: true)
         
         self.mapData =  CLLocationCoordinate2D(latitude: manager.location!.coordinate.latitude, longitude:     manager.location!.coordinate.longitude)
@@ -211,7 +208,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
         myLocation.text = "\(locationManager.location!)"
         // clearlocalUserFefaults()
-        // var timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector:  Selector("runPartneredBusiness"), userInfo: nil, repeats: false)
+      
         
         runPartneredBusiness()
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: { (placemarks, error) -> Void in
@@ -343,23 +340,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
     }
     
-    
+    //this method is when searching from the bar
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
-        //to remove all prev annotations
-        //let allAnnotations = self.mapView.annotations
-       // self.mapView.removeAnnotations(allAnnotations)
-     clearAllGeo()   
-        self.locationManager.startUpdatingLocation()
-        //this is important to get the most current location
-        self.locationManager.stopUpdatingLocation()
+        clearAllGeo()
         searchBy = self.autoCompleteDataSource[indexPath.row];
         let searchkey = self.autoCompleteDataSource[indexPath.row].lowercaseString;
-        
         let serviceHelper = ServiceHelper();
         let dynamicURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(mapData.latitude),\(mapData.longitude)&radius=5000&types=\(searchkey)&sensor=true&key=\(apiKey)"
         print(dynamicURL);
         serviceHelper.getServiceHandle(self.dataLoaded, url: dynamicURL);
+        zoomToFitMapAnnotations()
         // after the block closes it will check the notification cneter to get the observer
         
     }
@@ -372,22 +363,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     //
     
     @IBAction func zoomOut(sender: UIBarButtonItem) {
-        zoomSpan[0] = mapView.region.span.latitudeDelta*2
-        zoomSpan[1] = mapView.region.span.longitudeDelta*2
-        
-        
+//        zoomSpan[0] = mapView.region.span.latitudeDelta*2
+//        zoomSpan[1] = mapView.region.span.longitudeDelta*2
+//        
+        self.mapView.setZoomByDelta(2, animated: true)
+
     }
     
     //to zoom in and out the current location
     @IBAction func zoomIn(sender: UIBarButtonItem) {
-        
-        zoomSpan[0] = mapView.region.span.latitudeDelta/2
-        zoomSpan[1] = mapView.region.span.longitudeDelta/2
-        
-        
+        self.mapView.setZoomByDelta(0.5, animated: true)
+//        zoomSpan[0] = mapView.region.span.latitudeDelta/2
+//        zoomSpan[1] = mapView.region.span.longitudeDelta/2
     }
     
-    
+
     //Change the map Type
     @IBAction func changeMapType(sender: UIBarButtonItem) {
         
@@ -396,7 +386,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         }else{
             mapView.mapType = MKMapType.Standard
         }
-        
+    
     }
     
     func zoomToFitMapAnnotations(){
@@ -410,17 +400,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         bottomRightCoord.longitude = -180;
         
         var foundAnotation = false;
-        
-        for anotation in self.customAnotations{
-            topLeftCoord.longitude = fmin(topLeftCoord.longitude, anotation.coordinate.longitude);
-            topLeftCoord.latitude = fmax(topLeftCoord.latitude, anotation.coordinate.latitude);
-            
-            bottomRightCoord.longitude = fmax(bottomRightCoord.longitude, anotation.coordinate.longitude);
-            bottomRightCoord.latitude = fmin(bottomRightCoord.latitude, anotation.coordinate.latitude);
-            
-            self.mapView.addAnnotation(anotation);
-            foundAnotation = true;
-        }
+
         
         if(!foundAnotation){
             return;
@@ -434,8 +414,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
         self.mapView.regionThatFits(region);
         self.mapView.setRegion(region, animated: true);
-        
-        self.locationManager.stopUpdatingLocation()
+          var timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector:  Selector("runPartneredBusiness"), userInfo: nil, repeats: false)
+       // self.locationManager.stopUpdatingLocation()
         
     }
     
@@ -443,21 +423,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     //This method save the Geo in the array
     func saveAllGeotifications() {
         let items = NSMutableArray()
-        
         for geotification in geotifications {
-             startMonitoringGeotification(geotification)
+            startMonitoringGeotification(geotification)
             let item = NSKeyedArchiver.archivedDataWithRootObject(geotification)
             items.addObject(item)
         }
         let delegate = AppDelegate.getDelegate()
         delegate.items = items
-        
-//        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: kSavedItemsKey)
-//        
-//        NSUserDefaults.standardUserDefaults().setObject(items, forKey: kSavedItemsKey)
-//        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
+    
+    
+    //This Function is important as it recieve the result from the service
     func dataLoaded(userData:[SearchModel]){
         // print(userData);
         for geo in geotifications
@@ -465,30 +442,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
             mapView.removeAnnotation(geo)
             stopMonitoringGeotification(geo)
             removeGeotification(geo)
-            
-            
+        
         }
         
-       // self.customAnotations.removeAll(keepCapacity: false);
         self.mapModels = userData;
         
         for searchModel in self.mapModels!{
-            //            let customAnotation = Geotification()
-            //            customAnotation.coordinate = CLLocationCoordinate2D(latitude: searchModel.lat, longitude: searchModel.lon);
+      
+            //get the result from google service and make coordinate so we can create a geo on that location.
             let GeoCoordinate =  CLLocationCoordinate2D(latitude: searchModel.lat, longitude: searchModel.lon);
-            
-            //            customAnotation.title = "";
-            //            customAnotation.subtitle = ""
-            //             searchModel;
-            
+ 
+            //This is to create a geo according to the coordinate also sent the model for further info
             StartGeotification(GeoCoordinate,model: searchModel)
             
         }
         saveAllGeotifications()
-       
         
         
-        self.zoomToFitMapAnnotations();
+        
+     // self.zoomToFitMapAnnotations();
     }
     
     // MARK: Functions that update the model/associated views with geotification changes
@@ -518,22 +490,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     
     // MARK: AddGeotificationViewControllerDelegate
     
-//        func addGeotificationViewController(controller: AddGeotificationViewController, didAddCoordinate coordinate: CLLocationCoordinate2D, radius: Double, identifier: String, note: String, eventType: EventType) {
-//            controller.dismissViewControllerAnimated(true, completion: nil)
-//            // 1
-//            let clampedRadius = (radius > locationManager.maximumRegionMonitoringDistance) ? locationManager.maximumRegionMonitoringDistance : radius
-//    
-//            let geotification = Geotification(coordinate: coordinate, radius: clampedRadius, identifier: identifier, note: note, eventType: eventType)
-//            addGeotification(geotification)
-//            // 2
-//            startMonitoringGeotification(geotification)
-//    
-//            saveAllGeotifications()
-//        }
+    //        func addGeotificationViewController(controller: AddGeotificationViewController, didAddCoordinate coordinate: CLLocationCoordinate2D, radius: Double, identifier: String, note: String, eventType: EventType) {
+    //            controller.dismissViewControllerAnimated(true, completion: nil)
+    //            // 1
+    //            let clampedRadius = (radius > locationManager.maximumRegionMonitoringDistance) ? locationManager.maximumRegionMonitoringDistance : radius
+    //
+    //            let geotification = Geotification(coordinate: coordinate, radius: clampedRadius, identifier: identifier, note: note, eventType: eventType)
+    //            addGeotification(geotification)
+    //            // 2
+    //            startMonitoringGeotification(geotification)
+    //
+    //            saveAllGeotifications()
+    //        }
     func StartGeotification(coordinate: CLLocationCoordinate2D, model: SearchModel)// this method takes a coordinate and turn it in a geo and add it to using addgeo method  .
     {
         //clearlocalUserFefaults()
-       // loadAllGeotifications()
+        // loadAllGeotifications()
         // var coordinate = mapView.centerCoordinate
         let radius = (700).doubleValue
         let clampedRadius = (radius > locationManager.maximumRegionMonitoringDistance) ? locationManager.maximumRegionMonitoringDistance : radius
@@ -549,7 +521,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         addGeotification(geotification)
         // self.customAnotations.append(geotification)
         
-   
+        
     }
     
     
@@ -557,36 +529,33 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     
     
     
-            func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView){
-                if(!view.annotation!.isKindOfClass(MKUserLocation)){
-                    let flyOutView:CustomFlyout = (NSBundle.mainBundle().loadNibNamed("CustomFlyout", owner: self, options: nil))[0]as! CustomFlyout;
-                    var calloutViewFrame = flyOutView.frame;
-                    calloutViewFrame.origin = CGPointMake(-calloutViewFrame.size.width/2 + 15, -calloutViewFrame.size.height);
-                    flyOutView.frame = calloutViewFrame;
-    
-                    let customAnotation = view.annotation as! Geotification;
-                    let model = customAnotation.searchModel;
-                    flyOutView.lblTitle.text = model!.name;
-                    let url = NSURL(string: model!.icon);
-                    let urlData = NSData(contentsOfURL: url!);
-                    let img = UIImage(data: urlData!);
-                    flyOutView.lblIcon.image = img;
-                    flyOutView.lblPosition.text = model!.address; //"Longitude: \(model!.lon) & Latitude: \(model!.lat)";
-                    view.addSubview(flyOutView);
-                }
-            }
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView){
+        if(!view.annotation!.isKindOfClass(MKUserLocation)){
+            let flyOutView:CustomFlyout = (NSBundle.mainBundle().loadNibNamed("CustomFlyout", owner: self, options: nil))[0]as! CustomFlyout;
+            var calloutViewFrame = flyOutView.frame;
+            calloutViewFrame.origin = CGPointMake(-calloutViewFrame.size.width/2 + 15, -calloutViewFrame.size.height);
+            flyOutView.frame = calloutViewFrame;
+            
+            let customAnotation = view.annotation as! Geotification;
+            let model = customAnotation.searchModel;
+            flyOutView.lblTitle.text = model!.name;
+            let url = NSURL(string: model!.icon);
+            let urlData = NSData(contentsOfURL: url!);
+            let img = UIImage(data: urlData!);
+            flyOutView.lblIcon.image = img;
+            flyOutView.lblPosition.text = model!.address; //"Longitude: \(model!.lon) & Latitude: \(model!.lat)";
+            view.addSubview(flyOutView);
+        }
+    }
     
     
     func mapView(mapView: MKMapView,didAddAnnotationViews views: [MKAnnotationView]){
         for veiw in views {
             veiw.canShowCallout = false
-//            if(!view.annotation!.isKindOfClass(MKUserLocation)){
-//            
-//            }
         }
     }
     //this function is to customise the veiw for the annotation
-        
+    
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer! {
         if overlay is MKCircle {
             let circleRenderer = MKCircleRenderer(overlay: overlay)
@@ -598,13 +567,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         return nil
     }
     
-    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        // Delete geotification
-        let geotification = view.annotation as! Geotification
-        stopMonitoringGeotification(geotification)
-        removeGeotification(geotification)
-        saveAllGeotifications()
-    }
     
     // MARK: Map overlay functions
     //This add the overlay of the
@@ -632,11 +594,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     }
     
     
+    
+    //This function occur when there Adding fails to the set locationmanage.monitored set<Clregion>
     func locationManager(manager: CLLocationManager, monitoringDidFailForRegion region: CLRegion?, withError error: NSError) {
         print("Monitoring failed for region with identifier: \(region!.identifier) with error \(error)")
     }
     
- 
+    
     
     func regionWithGeotification(geotification: Geotification) -> CLCircularRegion {
         // 1
@@ -663,7 +627,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         // 4
         locationManager.startMonitoringForRegion(region)
         
-//        print(geotifications.count)
+        //        print(geotifications.count)
     }
     func loadAllGeotifications() {
         geotifications = []
