@@ -86,7 +86,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         //TODO This to clear NSuserdefveult of the local device to start over
         //  clearlocalUserFefaults()
         let monitoredRegions =  locationManager.monitoredRegions.count
@@ -102,7 +102,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("dataLoaded:"), name: "DataLoaded", object: nil);
-
+        
         autoCompleteDataSource.append("PartneredUser");
         autoCompleteDataSource.append("Restaurant");
         autoCompleteDataSource.append("Airport");
@@ -133,7 +133,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         self.mapView.delegate = self;
         // self.mapView.setUserTrackingMode(MAUserTrackingMode.Follow, animated: true)
         self.mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
-     
+        
         //relate to Geotifications
         
         
@@ -163,7 +163,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         clearAllGeo()
         
         let serviceHelper = ServiceHelper();
-        let dynamicURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(mapData.latitude),\(mapData.longitude)&radius=5000&types=Starbucks&sensor=true&key=\(apiKey)"
+        let dynamicURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(mapData.latitude),\(mapData.longitude)&radius=5000&types=Resturant&sensor=true&key=\(apiKey)"
         print(dynamicURL);
         serviceHelper.getServiceHandle(self.dataLoaded, url: dynamicURL);
         
@@ -184,14 +184,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     }
     
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-    // self.locationManager.distanceFilter = 5000.0;
+        // self.locationManager.distanceFilter = 5000.0;
     }
     
     
     @IBAction func currentLocationPressed(sender: AnyObject) {
         //this below to remove all annotioantion plus the custom
         runPartneredBusiness()
-       self.locationManager.startUpdatingLocation()
+        self.locationManager.startUpdatingLocation()
     }
     
     //this function get the current location of the user and keep updating the fields with the new Lat and lon
@@ -199,8 +199,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         let regionToZoom = MKCoordinateRegionMake(manager.location!.coordinate, MKCoordinateSpanMake(zoomSpan[0],zoomSpan[1]))
         
         
-       // self.locationManager.startUpdatingLocation()
-       
+        // self.locationManager.startUpdatingLocation()
+        
         mapView.setRegion(regionToZoom, animated: true)
         
         self.mapData =  CLLocationCoordinate2D(latitude: manager.location!.coordinate.latitude, longitude:     manager.location!.coordinate.longitude)
@@ -208,7 +208,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
         myLocation.text = "\(locationManager.location!)"
         // clearlocalUserFefaults()
-      
+        
         
         runPartneredBusiness()
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: { (placemarks, error) -> Void in
@@ -344,6 +344,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
     {
         clearAllGeo()
+       
         searchBy = self.autoCompleteDataSource[indexPath.row];
         let searchkey = self.autoCompleteDataSource[indexPath.row].lowercaseString;
         let serviceHelper = ServiceHelper();
@@ -363,21 +364,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     //
     
     @IBAction func zoomOut(sender: UIBarButtonItem) {
-//        zoomSpan[0] = mapView.region.span.latitudeDelta*2
-//        zoomSpan[1] = mapView.region.span.longitudeDelta*2
-//        
+        //        zoomSpan[0] = mapView.region.span.latitudeDelta*2
+        //        zoomSpan[1] = mapView.region.span.longitudeDelta*2
+        //
         self.mapView.setZoomByDelta(2, animated: true)
-
+        
     }
     
     //to zoom in and out the current location
     @IBAction func zoomIn(sender: UIBarButtonItem) {
         self.mapView.setZoomByDelta(0.5, animated: true)
-//        zoomSpan[0] = mapView.region.span.latitudeDelta/2
-//        zoomSpan[1] = mapView.region.span.longitudeDelta/2
+        //        zoomSpan[0] = mapView.region.span.latitudeDelta/2
+        //        zoomSpan[1] = mapView.region.span.longitudeDelta/2
     }
     
-
+    
     //Change the map Type
     @IBAction func changeMapType(sender: UIBarButtonItem) {
         
@@ -386,7 +387,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         }else{
             mapView.mapType = MKMapType.Standard
         }
-    
+        
     }
     
     func zoomToFitMapAnnotations(){
@@ -400,7 +401,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         bottomRightCoord.longitude = -180;
         
         var foundAnotation = false;
-
+        
         
         if(!foundAnotation){
             return;
@@ -414,8 +415,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
         self.mapView.regionThatFits(region);
         self.mapView.setRegion(region, animated: true);
-          var timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector:  Selector("runPartneredBusiness"), userInfo: nil, repeats: false)
-       // self.locationManager.stopUpdatingLocation()
+        var timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector:  Selector("runPartneredBusiness"), userInfo: nil, repeats: false)
+        // self.locationManager.stopUpdatingLocation()
         
     }
     
@@ -442,16 +443,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
             mapView.removeAnnotation(geo)
             stopMonitoringGeotification(geo)
             removeGeotification(geo)
-        
+            
         }
         
         self.mapModels = userData;
         
         for searchModel in self.mapModels!{
-      
+            
             //get the result from google service and make coordinate so we can create a geo on that location.
             let GeoCoordinate =  CLLocationCoordinate2D(latitude: searchModel.lat, longitude: searchModel.lon);
- 
+            
             //This is to create a geo according to the coordinate also sent the model for further info
             StartGeotification(GeoCoordinate,model: searchModel)
             
@@ -460,7 +461,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
         
         
-     // self.zoomToFitMapAnnotations();
+        // self.zoomToFitMapAnnotations();
     }
     
     // MARK: Functions that update the model/associated views with geotification changes
@@ -684,4 +685,3 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     }
     
 }
-
