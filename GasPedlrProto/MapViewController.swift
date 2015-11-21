@@ -191,7 +191,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     @IBAction func currentLocationPressed(sender: AnyObject) {
         //this below to remove all annotioantion plus the custom
         runPartneredBusiness()
-       // self.locationManager.startUpdatingLocation()
+       self.locationManager.startUpdatingLocation()
     }
     
     //this function get the current location of the user and keep updating the fields with the new Lat and lon
