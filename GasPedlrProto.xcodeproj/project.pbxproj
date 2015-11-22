@@ -22,6 +22,7 @@
 		037EF9FD1BEFEEAC00AB3E70 /* GamePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */; };
 		037EFA031BEFF21800AB3E70 /* MainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EFA021BEFF21800AB3E70 /* MainMapViewController.swift */; };
 		037EFA091BF55F0E00AB3E70 /* loginViewImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 037EFA081BF55F0E00AB3E70 /* loginViewImage.jpg */; };
+		03A00A4F1C0273C100D04208 /* sample_banner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03A00A4E1C0273C100D04208 /* sample_banner.jpg */; settings = {ASSET_TAGS = (); }; };
 		03A27BB81BDD30C000E00020 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A27BB71BDD30C000E00020 /* WebViewController.swift */; };
 		03A27BBA1BDD34F700E00020 /* RiderUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */; };
 		03A27BBF1BDD380F00E00020 /* Google-Maps-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */; };
@@ -113,6 +114,7 @@
 		037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePageViewController.swift; sourceTree = "<group>"; };
 		037EFA021BEFF21800AB3E70 /* MainMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapViewController.swift; sourceTree = "<group>"; };
 		037EFA081BF55F0E00AB3E70 /* loginViewImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginViewImage.jpg; sourceTree = "<group>"; };
+		03A00A4E1C0273C100D04208 /* sample_banner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sample_banner.jpg; path = Images.xcassets/sample_banner.jpg; sourceTree = "<group>"; };
 		03A27BB71BDD30C000E00020 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderUIViewController.swift; sourceTree = "<group>"; };
 		03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-Maps-icon.png"; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				B4FC9D1F1BEC8D6D007303FC /* CustomFlyout.swift */,
 				B4FC9D1D1BEC8D2E007303FC /* CustomFlyout.xib */,
 				B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */,
+				03A00A4E1C0273C100D04208 /* sample_banner.jpg */,
 				2C03A68D1BC98A1200335354 /* Main.storyboard */,
 				2C03A6901BC98A1200335354 /* Assets.xcassets */,
 				037EF9F11BEFEE0400AB3E70 /* MyPlayground.playground */,
@@ -530,6 +533,7 @@
 				036FA2961BF6DD07002E8956 /* tempAd1.jpg in Resources */,
 				037EFA091BF55F0E00AB3E70 /* loginViewImage.jpg in Resources */,
 				03A27BC01BDD380F00E00020 /* safari-icon.png in Resources */,
+				03A00A4F1C0273C100D04208 /* sample_banner.jpg in Resources */,
 				B4FC9D1E1BEC8D2E007303FC /* CustomFlyout.xib in Resources */,
 				B4FC9D281BECB640007303FC /* airport.png in Resources */,
 				03E316C51BF5820900DA6857 /* registerButton.jpg in Resources */,

@@ -129,14 +129,15 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         _ball.physicsBody = SKPhysicsBody(circleOfRadius:_ball.size.width / 2)
         _ball.physicsBody?.categoryBitMask = ballMask
         _ball.physicsBody?.friction = 0.0 // 摩擦無し
-        _ball.physicsBody?.restitution = 1.0 // 完全弾性
-        _ball.physicsBody?.linearDamping = 0.0 // 空気抵抗無し
+        _ball.physicsBody?.restitution = 1.0
+        _ball.physicsBody?.linearDamping = 0.0
 //        ball.physicsBody.allowsRotation = false
         _ball.physicsBody?.contactTestBitMask = blockMask|padMask|deadZoneMask
         addChild(_ball)
         
         padX = Float(size.width) / 2
-        _pad = SKSpriteNode(color:UIColor.lightGrayColor(), size:CGSize(width:50, height:10))
+        //_pad = SKSpriteNode(color:UIColor.lightGrayColor(), size:CGSize(width:50, height:10))
+        _pad = SKSpriteNode(imageNamed: "sample_banner.jpg")
         _pad.position = CGPoint(x:CGFloat(padX), y:10)
         _pad.physicsBody = SKPhysicsBody(rectangleOfSize:_pad.size)
         _pad.physicsBody?.categoryBitMask = padMask
