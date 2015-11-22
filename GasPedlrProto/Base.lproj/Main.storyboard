@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ho-86-mYt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ho-86-mYt">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -773,8 +771,8 @@
                                     <constraint firstAttribute="height" constant="613" id="jNP-hd-jv9"/>
                                 </constraints>
                             </webView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cr8-cr-NIs">
-                                <rect key="frame" x="20" y="0.0" width="565" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cr8-cr-NIs">
+                                <rect key="frame" x="20" y="-1" width="565" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="565" id="e8T-2A-3YX"/>
@@ -799,52 +797,47 @@
                                     <action selector="TheGoButton:" destination="Dga-3C-xjC" eventType="touchUpInside" id="mH5-pO-05l"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempAd1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sON-sc-F5x">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="128"/>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKA-z2-KHG">
+                                <rect key="frame" x="0.0" y="28" width="1024" height="125"/>
                                 <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempAd2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="la0-CE-GJe">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="128"/>
-                                <animations/>
-                            </imageView>
+                                <connections>
+                                    <outlet property="delegate" destination="Dga-3C-xjC" id="EYW-fT-yVt"/>
+                                </connections>
+                            </adBannerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.095829888020000004" green="0.30740941579999997" blue="0.46398478399999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="JKA-z2-KHG" firstAttribute="centerX" secondItem="mUQ-mt-kKS" secondAttribute="centerX" id="1F0-Rc-ftJ"/>
                             <constraint firstItem="DQJ-Yc-c6v" firstAttribute="leading" secondItem="Cr8-cr-NIs" secondAttribute="trailing" id="1yH-wb-57k"/>
-                            <constraint firstItem="sON-sc-F5x" firstAttribute="top" secondItem="la0-CE-GJe" secondAttribute="top" id="4zP-se-tkD"/>
-                            <constraint firstItem="la0-CE-GJe" firstAttribute="leading" secondItem="mUQ-mt-kKS" secondAttribute="leadingMargin" constant="-20" id="C9e-15-Utb"/>
+                            <constraint firstItem="JKA-z2-KHG" firstAttribute="top" secondItem="mUQ-mt-kKS" secondAttribute="topMargin" constant="28" id="21c-JG-7NS"/>
                             <constraint firstItem="Cr8-cr-NIs" firstAttribute="leading" secondItem="mUQ-mt-kKS" secondAttribute="leadingMargin" id="Dhu-qF-T0O"/>
-                            <constraint firstItem="sON-sc-F5x" firstAttribute="top" secondItem="uZV-zi-rD7" secondAttribute="bottom" constant="8" symbolic="YES" id="Eqg-Io-aHB"/>
+                            <constraint firstItem="QRc-Wi-UUP" firstAttribute="top" secondItem="JKA-z2-KHG" secondAttribute="bottom" constant="1" id="Dva-X5-p4L"/>
                             <constraint firstAttribute="trailingMargin" secondItem="soc-BD-mcR" secondAttribute="trailing" constant="24" id="HCh-hq-JIO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QRc-Wi-UUP" secondAttribute="trailing" constant="-20" id="K3v-Du-nff"/>
                             <constraint firstItem="QRc-Wi-UUP" firstAttribute="leading" secondItem="mUQ-mt-kKS" secondAttribute="leadingMargin" constant="-20" id="PF5-SX-rE7"/>
-                            <constraint firstItem="sON-sc-F5x" firstAttribute="bottom" secondItem="la0-CE-GJe" secondAttribute="bottom" id="QGd-x0-jp4"/>
-                            <constraint firstItem="hob-Lm-9WR" firstAttribute="top" secondItem="sON-sc-F5x" secondAttribute="bottom" constant="612" id="ShP-fc-2Vo"/>
-                            <constraint firstItem="sON-sc-F5x" firstAttribute="leading" secondItem="mUQ-mt-kKS" secondAttribute="leadingMargin" constant="-20" id="Wv4-Kc-AYA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JKA-z2-KHG" secondAttribute="trailing" constant="-20" id="Sot-Uw-qjh"/>
                             <constraint firstItem="Cr8-cr-NIs" firstAttribute="leading" secondItem="mUQ-mt-kKS" secondAttribute="leadingMargin" id="XKO-hL-ExD"/>
-                            <constraint firstItem="sON-sc-F5x" firstAttribute="trailing" secondItem="la0-CE-GJe" secondAttribute="trailing" id="ZEN-M9-edp"/>
                             <constraint firstItem="Cr8-cr-NIs" firstAttribute="top" secondItem="mUQ-mt-kKS" secondAttribute="top" id="bcx-xU-hMM"/>
                             <constraint firstItem="hob-Lm-9WR" firstAttribute="top" secondItem="QRc-Wi-UUP" secondAttribute="bottom" id="gs3-T7-gIF"/>
                             <constraint firstItem="Cr8-cr-NIs" firstAttribute="top" secondItem="DQJ-Yc-c6v" secondAttribute="top" id="khM-lH-B7v"/>
+                            <constraint firstItem="JKA-z2-KHG" firstAttribute="leading" secondItem="mUQ-mt-kKS" secondAttribute="leadingMargin" constant="-20" id="x5b-5a-1rM"/>
                             <constraint firstItem="Cr8-cr-NIs" firstAttribute="baseline" secondItem="soc-BD-mcR" secondAttribute="baseline" id="xim-3v-zKf"/>
                             <constraint firstItem="QRc-Wi-UUP" firstAttribute="centerX" secondItem="mUQ-mt-kKS" secondAttribute="centerX" id="yEZ-Xr-WvF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sON-sc-F5x" secondAttribute="trailing" constant="-20" id="yIu-HZ-K0q"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="Ad1" destination="sON-sc-F5x" id="DvJ-xj-dXX"/>
-                        <outlet property="Ad2" destination="la0-CE-GJe" id="m0f-Fd-5Dv"/>
                         <outlet property="TheTextField" destination="mUQ-mt-kKS" id="kb8-6s-gg4"/>
                         <outlet property="TheWebView" destination="QRc-Wi-UUP" id="pNy-GU-R58"/>
+                        <outlet property="webBannerAd" destination="JKA-z2-KHG" id="2Br-Mc-7DY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuB-3h-U23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3942" y="-1415"/>
+            <point key="canvasLocation" x="4208" y="-1456"/>
         </scene>
         <!--RiderUI View Controller-->
         <scene sceneID="KvG-08-Rjh">
@@ -951,21 +944,21 @@
                                 <rect key="frame" x="95" y="64" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6l-FB-fv4">
                                 <rect key="frame" x="151" y="92" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oL-sO-bHb">
                                 <rect key="frame" x="168" y="118" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1196,12 +1189,10 @@
         <image name="loginViewImage.jpg" width="1512" height="756"/>
         <image name="registerButton.jpg" width="455" height="111"/>
         <image name="safari-icon.png" width="144" height="144"/>
-        <image name="tempAd1.jpg" width="464" height="108"/>
-        <image name="tempAd2.jpg" width="464" height="108"/>
         <image name="transparent icon.png" width="720" height="418"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cau-LQ-5cY"/>
+        <segue reference="a7H-hw-IWD"/>
         <segue reference="17M-20-tVe"/>
         <segue reference="ybi-IT-bzM"/>
     </inferredMetricsTieBreakers>

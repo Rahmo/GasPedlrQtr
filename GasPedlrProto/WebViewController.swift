@@ -9,11 +9,11 @@
 import UIKit
 import WebKit
 import Parse
+import iAd
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, ADBannerViewDelegate {
 
-    @IBOutlet var Ad1: UIImageView!
-    @IBOutlet var Ad2: UIImageView!
+    @IBOutlet var webBannerAd: ADBannerView?
     
     @IBOutlet weak var TheTextField: UITextField!
     @IBOutlet weak var TheWebView: UIWebView!
@@ -28,12 +28,14 @@ class WebViewController: UIViewController {
         self.performSegueWithIdentifier("webBackView", sender: self)
         
     }
+    
+    
+    
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        
-        // Do any additional setup after loading the view, typically from a nib.
+        self.canDisplayBannerAds = true  // display banner ads
+
         let URL = NSURL(string: "https://www.google.com");
         TheWebView.loadRequest(NSURLRequest(URL:URL!));
     }
