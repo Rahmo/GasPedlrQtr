@@ -1,10 +1,3 @@
-//
-//  MyScene.swift
-//  SwiftBreakout
-//
-//  Created by Naoto Yoshioka on 2014/06/03.
-//  Copyright (c) 2014年 Naoto Yoshioka. All rights reserved.
-//
 
 import UIKit
 import SpriteKit
