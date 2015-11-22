@@ -226,8 +226,6 @@
 		2C03A67D1BC98A1200335354 = {
 			isa = PBXGroup;
 			children = (
-				B40D24DB1BF136E1007431DB /* Bolts.framework */,
-				B40D24DC1BF136E1007431DB /* Parse.framework */,
 				2C5CC7741BF023B2004629F0 /* Frameworks */,
 				2CF7D26D1BEAEAE8009A3BA7 /* libsqlite3.tbd */,
 				2CF7D26B1BEAEADF009A3BA7 /* libz.tbd */,
@@ -252,56 +250,22 @@
 		2C03A6881BC98A1200335354 /* GasPedlrProto */ = {
 			isa = PBXGroup;
 			children = (
+				2C86E0571C0231F700FC26CD /* Images */,
+				2C86E0561C02319800FC26CD /* Swift Files */,
+				2C86E0551C02315700FC26CD /* View Controllers */,
+				2C86E0531C02311D00FC26CD /* Google Analytics */,
 				B4FC9D1F1BEC8D6D007303FC /* CustomFlyout.swift */,
 				B4FC9D1D1BEC8D2E007303FC /* CustomFlyout.xib */,
-				B4FC9D0A1BEC3FD0007303FC /* Resources */,
-				2CDC08FE1BE85932009D330B /* GAI.h */,
-				2CDC08FF1BE85932009D330B /* GAIDictionaryBuilder.h */,
-				2CDC09001BE85932009D330B /* GAIFields.h */,
-				2CDC09011BE85932009D330B /* GAILogger.h */,
 				B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */,
-				2CDC09021BE85932009D330B /* GAITrackedViewController.h */,
-				2CDC09031BE85932009D330B /* GAITracker.h */,
-				B4A2D4AF1BFAC3940047DC08 /* Geotification.swift */,
-				2C03A6891BC98A1200335354 /* AppDelegate.swift */,
-				2C03A68B1BC98A1200335354 /* ViewController.swift */,
-				B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */,
-				B4E620871BD5BB8500923AA8 /* MapViewController.swift */,
-				B4A2D4AD1BFAC3200047DC08 /* Utilities.swift */,
-				03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */,
-				03E316C21BF5820900DA6857 /* loginButton.jpg */,
-				036FA2911BF6D098002E8956 /* breakout_icon.png */,
-				03E316C31BF5820900DA6857 /* registerButton.jpg */,
 				2C03A68D1BC98A1200335354 /* Main.storyboard */,
-				036FA2931BF6DD07002E8956 /* tempAd1.jpg */,
-				036FA2941BF6DD07002E8956 /* tempAd2.jpg */,
-				036FA2951BF6DD07002E8956 /* tempAd3.jpg */,
-				2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */,
-				037EFA021BEFF21800AB3E70 /* MainMapViewController.swift */,
-				037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */,
 				2C03A6901BC98A1200335354 /* Assets.xcassets */,
-				03CB62201BE6C8C6005D0854 /* GasPedlrIcon.png */,
-				03A27BC11BDD384E00E00020 /* Flappy_Bird_icon.png */,
-				03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */,
-				03E316C01BF56A9300DA6857 /* transparent icon.png */,
-				037EFA081BF55F0E00AB3E70 /* loginViewImage.jpg */,
 				037EF9F11BEFEE0400AB3E70 /* MyPlayground.playground */,
-				037EF9F21BEFEE0400AB3E70 /* MyScene.swift */,
 				037EF9F31BEFEE0400AB3E70 /* Ping.caf */,
 				037EF9F41BEFEE0400AB3E70 /* Pop.caf */,
 				037EF9F51BEFEE0400AB3E70 /* Smoke.sks */,
-				037EF9F61BEFEE0400AB3E70 /* spark.png */,
-				03A27BBD1BDD380F00E00020 /* safari-icon.png */,
 				037EF9ED1BEFEDF400AB3E70 /* Basso.caf */,
-				037EF9EE1BEFEDF400AB3E70 /* GameViewController.swift */,
 				2C03A6921BC98A1200335354 /* LaunchScreen.storyboard */,
 				2C03A6951BC98A1200335354 /* Info.plist */,
-				2C03A6B71BC9975A00335354 /* RegistrationViewController.swift */,
-				2C03A6B91BC9AFB800335354 /* LoginViewController.swift */,
-				03A27BB71BDD30C000E00020 /* WebViewController.swift */,
-				B4FC9D021BE9EEC0007303FC /* SearchModel.swift */,
-				B4FC9D061BEC2806007303FC /* CustomAnnotation.swift */,
-				B4FC9D081BEC30D2007303FC /* ServiceHelper.swift */,
 				2C5CC7781BF0250E004629F0 /* myConnector.h */,
 				2C5CC7791BF0250E004629F0 /* myConnector.m */,
 				2C5CC7771BF0250D004629F0 /* GasPedlrProto-Bridging-Header.h */,
@@ -330,6 +294,8 @@
 		2C5CC7741BF023B2004629F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B40D24DB1BF136E1007431DB /* Bolts.framework */,
+				B40D24DC1BF136E1007431DB /* Parse.framework */,
 				2C5CC7751BF02432004629F0 /* MobileCoreServices.framework */,
 				2CF7D2691BEAEAD2009A3BA7 /* StoreKit.framework */,
 				2CF7D2671BEAEACC009A3BA7 /* Security.framework */,
@@ -342,6 +308,72 @@
 				2CDC09041BE859AC009D330B /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C86E0531C02311D00FC26CD /* Google Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				2CDC09021BE85932009D330B /* GAITrackedViewController.h */,
+				2CDC08FE1BE85932009D330B /* GAI.h */,
+				2CDC08FF1BE85932009D330B /* GAIDictionaryBuilder.h */,
+				2CDC09001BE85932009D330B /* GAIFields.h */,
+				2CDC09011BE85932009D330B /* GAILogger.h */,
+				2CDC09031BE85932009D330B /* GAITracker.h */,
+			);
+			name = "Google Analytics";
+			sourceTree = "<group>";
+		};
+		2C86E0551C02315700FC26CD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				037EFA021BEFF21800AB3E70 /* MainMapViewController.swift */,
+				037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */,
+				2C03A68B1BC98A1200335354 /* ViewController.swift */,
+				B4E620871BD5BB8500923AA8 /* MapViewController.swift */,
+				03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */,
+				037EF9EE1BEFEDF400AB3E70 /* GameViewController.swift */,
+				2C03A6B71BC9975A00335354 /* RegistrationViewController.swift */,
+				2C03A6B91BC9AFB800335354 /* LoginViewController.swift */,
+				03A27BB71BDD30C000E00020 /* WebViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2C86E0561C02319800FC26CD /* Swift Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4A2D4AD1BFAC3200047DC08 /* Utilities.swift */,
+				B4A2D4AF1BFAC3940047DC08 /* Geotification.swift */,
+				2C03A6891BC98A1200335354 /* AppDelegate.swift */,
+				B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */,
+				037EF9F21BEFEE0400AB3E70 /* MyScene.swift */,
+				B4FC9D021BE9EEC0007303FC /* SearchModel.swift */,
+				B4FC9D061BEC2806007303FC /* CustomAnnotation.swift */,
+				B4FC9D081BEC30D2007303FC /* ServiceHelper.swift */,
+			);
+			name = "Swift Files";
+			sourceTree = "<group>";
+		};
+		2C86E0571C0231F700FC26CD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B4FC9D0A1BEC3FD0007303FC /* Resources */,
+				03E316C21BF5820900DA6857 /* loginButton.jpg */,
+				036FA2911BF6D098002E8956 /* breakout_icon.png */,
+				03E316C31BF5820900DA6857 /* registerButton.jpg */,
+				036FA2931BF6DD07002E8956 /* tempAd1.jpg */,
+				036FA2941BF6DD07002E8956 /* tempAd2.jpg */,
+				036FA2951BF6DD07002E8956 /* tempAd3.jpg */,
+				2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */,
+				03CB62201BE6C8C6005D0854 /* GasPedlrIcon.png */,
+				03A27BC11BDD384E00E00020 /* Flappy_Bird_icon.png */,
+				03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */,
+				03E316C01BF56A9300DA6857 /* transparent icon.png */,
+				037EFA081BF55F0E00AB3E70 /* loginViewImage.jpg */,
+				037EF9F61BEFEE0400AB3E70 /* spark.png */,
+				03A27BBD1BDD380F00E00020 /* safari-icon.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		B4FC9D0A1BEC3FD0007303FC /* Resources */ = {
@@ -429,6 +461,7 @@
 				TargetAttributes = {
 					2C03A6851BC98A1200335354 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = NA5A6S659D;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -688,6 +721,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -701,6 +736,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmgdevelopments.GasPedlrProto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GasPedlrProto/GasPedlrProto-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -711,6 +747,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -724,6 +762,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmgdevelopments.GasPedlrProto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GasPedlrProto/GasPedlrProto-Bridging-Header.h";
 			};
 			name = Release;
