@@ -128,7 +128,7 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
 //        _ball.physicsBody = SKPhysicsBody(rectangleOfSize:_ball.size)
         _ball.physicsBody = SKPhysicsBody(circleOfRadius:_ball.size.width / 2)
         _ball.physicsBody?.categoryBitMask = ballMask
-        _ball.physicsBody?.friction = 0.0 // 摩擦無し
+        _ball.physicsBody?.friction = 0.0
         _ball.physicsBody?.restitution = 1.0
         _ball.physicsBody?.linearDamping = 0.0
 //        ball.physicsBody.allowsRotation = false
