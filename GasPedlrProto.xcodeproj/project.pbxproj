@@ -19,7 +19,6 @@
 		037EF9FA1BEFEE0400AB3E70 /* Smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 037EF9F51BEFEE0400AB3E70 /* Smoke.sks */; };
 		037EF9FB1BEFEE0400AB3E70 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 037EF9F61BEFEE0400AB3E70 /* spark.png */; };
 		037EF9FD1BEFEEAC00AB3E70 /* GamePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */; };
-		037EFA031BEFF21800AB3E70 /* MainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EFA021BEFF21800AB3E70 /* MainMapViewController.swift */; };
 		037EFA091BF55F0E00AB3E70 /* loginViewImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 037EFA081BF55F0E00AB3E70 /* loginViewImage.jpg */; };
 		03A27BB81BDD30C000E00020 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A27BB71BDD30C000E00020 /* WebViewController.swift */; };
 		03A27BBA1BDD34F700E00020 /* RiderUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */; };
@@ -60,6 +59,7 @@
 		B4A2D4B21BFAC3AE0047DC08 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */; };
 		B4A2D4B41BFAC47A0047DC08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */; };
 		B4A6DE091BDC65BC00D31ACE /* Chicago.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B4A6DE081BDC65BC00D31ACE /* Chicago.gpx */; };
+		B4DC65291C032D20007BBC10 /* MainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DC65281C032D20007BBC10 /* MainMapViewController.swift */; };
 		B4E620881BD5BB8500923AA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E620871BD5BB8500923AA8 /* MapViewController.swift */; };
 		B4FC9D031BE9EEC0007303FC /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC9D021BE9EEC0007303FC /* SearchModel.swift */; };
 		B4FC9D071BEC2806007303FC /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC9D061BEC2806007303FC /* CustomAnnotation.swift */; };
@@ -109,7 +109,6 @@
 		037EF9F51BEFEE0400AB3E70 /* Smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smoke.sks; sourceTree = "<group>"; };
 		037EF9F61BEFEE0400AB3E70 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePageViewController.swift; sourceTree = "<group>"; };
-		037EFA021BEFF21800AB3E70 /* MainMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapViewController.swift; sourceTree = "<group>"; };
 		037EFA081BF55F0E00AB3E70 /* loginViewImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginViewImage.jpg; sourceTree = "<group>"; };
 		03A27BB71BDD30C000E00020 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderUIViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +164,7 @@
 		B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B4A6DE081BDC65BC00D31ACE /* Chicago.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Chicago.gpx; sourceTree = "<group>"; };
+		B4DC65281C032D20007BBC10 /* MainMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapViewController.swift; sourceTree = "<group>"; };
 		B4E620871BD5BB8500923AA8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B4FC9D021BE9EEC0007303FC /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		B4FC9D061BEC2806007303FC /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
@@ -326,7 +326,6 @@
 		2C86E0551C02315700FC26CD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				037EFA021BEFF21800AB3E70 /* MainMapViewController.swift */,
 				037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */,
 				2C03A68B1BC98A1200335354 /* ViewController.swift */,
 				B4E620871BD5BB8500923AA8 /* MapViewController.swift */,
@@ -335,6 +334,7 @@
 				2C03A6B71BC9975A00335354 /* RegistrationViewController.swift */,
 				2C03A6B91BC9AFB800335354 /* LoginViewController.swift */,
 				03A27BB71BDD30C000E00020 /* WebViewController.swift */,
+				B4DC65281C032D20007BBC10 /* MainMapViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -562,6 +562,7 @@
 			files = (
 				2C03A6BA1BC9AFB800335354 /* LoginViewController.swift in Sources */,
 				B4FC9D091BEC30D2007303FC /* ServiceHelper.swift in Sources */,
+				B4DC65291C032D20007BBC10 /* MainMapViewController.swift in Sources */,
 				03A27BB81BDD30C000E00020 /* WebViewController.swift in Sources */,
 				2C03A6B81BC9975A00335354 /* RegistrationViewController.swift in Sources */,
 				037EF9F01BEFEDF400AB3E70 /* GameViewController.swift in Sources */,
@@ -571,7 +572,6 @@
 				B4A2D4B01BFAC3940047DC08 /* Geotification.swift in Sources */,
 				B4FC9D071BEC2806007303FC /* CustomAnnotation.swift in Sources */,
 				B4A2D4B21BFAC3AE0047DC08 /* CollectionViewCell.swift in Sources */,
-				037EFA031BEFF21800AB3E70 /* MainMapViewController.swift in Sources */,
 				B4FC9D031BE9EEC0007303FC /* SearchModel.swift in Sources */,
 				03A27BBA1BDD34F700E00020 /* RiderUIViewController.swift in Sources */,
 				2C5CC77A1BF0250E004629F0 /* myConnector.m in Sources */,

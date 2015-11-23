@@ -89,17 +89,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
         //TODO This to clear NSuserdefveult of the local device to start over
         //  clearlocalUserFefaults()
-        let monitoredRegions =  locationManager.monitoredRegions.count
-        if (monitoredRegions > 0) {
-            
-            
-            //The part below is important which is to delete the monitored regions from the set in the locationmanager (even if the user closed the app and reopen )
-            let geoSet = locationManager.monitoredRegions
-            for geo in geoSet  {
-                locationManager.stopMonitoringForRegion(geo)
-            }
-        }
-        
+       refresh ()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("dataLoaded:"), name: "DataLoaded", object: nil);
         
@@ -126,7 +116,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         //this to make the location manager update each 1 km     if its 1000.0
         self.locationManager.distanceFilter = 1000.0;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
+      //  self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
@@ -142,7 +132,38 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        
+        let monitoredRegions =  locationManager.monitoredRegions.count
+        if (monitoredRegions > 0) {
+            
+            
+            //The part below is important which is to delete the monitored regions from the set in the locationmanager (even if the user closed the app and reopen )
+            let geoSet = locationManager.monitoredRegions
+            for geo in geoSet  {
+                locationManager.stopMonitoringForRegion(geo)
+            }
+        }
+        
+    }
     
+    
+    func refresh (){
+    
+        
+        let monitoredRegions =  locationManager.monitoredRegions.count
+        if (monitoredRegions > 0) {
+            
+            
+            //The part below is important which is to delete the monitored regions from the set in the locationmanager (even if the user closed the app and reopen )
+            let geoSet = locationManager.monitoredRegions
+            for geo in geoSet  {
+                locationManager.stopMonitoringForRegion(geo)
+            }
+        }
+        
+    }
     //clearlocal nsuser default as a replacment for database
     func clearAllGeo(){
         
@@ -209,8 +230,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         myLocation.text = "\(locationManager.location!)"
         // clearlocalUserFefaults()
         
-        
-        runPartneredBusiness()
+        refresh()
+       runPartneredBusiness()
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: { (placemarks, error) -> Void in
             if error != nil {
                 print("Error: " + error!.localizedDescription)
@@ -415,7 +436,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
         self.mapView.regionThatFits(region);
         self.mapView.setRegion(region, animated: true);
-        var timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector:  Selector("runPartneredBusiness"), userInfo: nil, repeats: false)
+//        var timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: self, selector:  Selector("runPartneredBusiness"), userInfo: nil, repeats: false)
         // self.locationManager.stopUpdatingLocation()
         
     }
@@ -626,7 +647,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         // 3
         let region = regionWithGeotification(geotification)
         // 4
-        locationManager.startMonitoringForRegion(region)
+        let monitoredNum = locationManager.monitoredRegions.count
+        if (monitoredNum <= 19){
+     //   locationManager.startMonitoringForRegion(region)
+        }
+        
         
         //        print(geotifications.count)
     }

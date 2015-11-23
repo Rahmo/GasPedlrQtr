@@ -218,6 +218,7 @@
         <!--Main Map View Controller-->
         <scene sceneID="54o-qk-MZM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f85-3d-XB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="obf-Wa-6gZ" customClass="MainMapViewController" customModule="GasPedlrProto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F1S-10-NRc"/>
@@ -227,18 +228,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fsO-hA-ZCd">
-                                <rect key="frame" x="0.0" y="0.0" width="651" height="285"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-e5-SRR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="274"/>
                                 <animations/>
                             </mapView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JPl-e5-SRR" firstAttribute="leading" secondItem="0Aq-64-dmR" secondAttribute="leading" id="JrA-Y6-JtQ"/>
+                            <constraint firstItem="m5j-eG-X4L" firstAttribute="top" secondItem="JPl-e5-SRR" secondAttribute="bottom" constant="326" id="P3q-uF-Bdu"/>
+                            <constraint firstAttribute="trailing" secondItem="JPl-e5-SRR" secondAttribute="trailing" id="Scf-9o-6OM"/>
+                            <constraint firstItem="JPl-e5-SRR" firstAttribute="top" secondItem="0Aq-64-dmR" secondAttribute="top" id="cMB-u8-pi9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="JPl-e5-SRR" id="K5X-FX-6Gz"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f85-3d-XB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264.5" y="1084"/>
+            <point key="canvasLocation" x="2048" y="1352"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="IO5-MW-N6S">
@@ -931,7 +940,7 @@
                                 <rect key="frame" x="187" y="411" width="651" height="314"/>
                                 <animations/>
                                 <connections>
-                                    <segue destination="obf-Wa-6gZ" kind="embed" id="9JY-Mj-bu2"/>
+                                    <segue destination="obf-Wa-6gZ" kind="embed" id="778-P0-lhq"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrQ-4u-I4V">
