@@ -28,6 +28,8 @@
 		03A27BBF1BDD380F00E00020 /* Google-Maps-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */; };
 		03A27BC01BDD380F00E00020 /* safari-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BBD1BDD380F00E00020 /* safari-icon.png */; };
 		03A27BC21BDD384E00E00020 /* Flappy_Bird_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BC11BDD384E00E00020 /* Flappy_Bird_icon.png */; };
+		03B75CC31C032072005B652E /* UpdatedWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75CC21C032072005B652E /* UpdatedWebViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		03B75CC51C0321E5005B652E /* NewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B75CC41C0321E5005B652E /* NewWebViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		03E316C11BF56A9300DA6857 /* transparent icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E316C01BF56A9300DA6857 /* transparent icon.png */; };
 		03E316C41BF5820900DA6857 /* loginButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E316C21BF5820900DA6857 /* loginButton.jpg */; };
 		03E316C51BF5820900DA6857 /* registerButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E316C31BF5820900DA6857 /* registerButton.jpg */; };
@@ -120,6 +122,8 @@
 		03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-Maps-icon.png"; sourceTree = "<group>"; };
 		03A27BBD1BDD380F00E00020 /* safari-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safari-icon.png"; sourceTree = "<group>"; };
 		03A27BC11BDD384E00E00020 /* Flappy_Bird_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Flappy_Bird_icon.png; path = Assets.xcassets/Flappy_Bird_icon.png; sourceTree = "<group>"; };
+		03B75CC21C032072005B652E /* UpdatedWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatedWebViewController.swift; sourceTree = "<group>"; };
+		03B75CC41C0321E5005B652E /* NewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWebViewController.swift; sourceTree = "<group>"; };
 		03CB62201BE6C8C6005D0854 /* GasPedlrIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GasPedlrIcon.png; sourceTree = "<group>"; };
 		03E316C01BF56A9300DA6857 /* transparent icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transparent icon.png"; sourceTree = "<group>"; };
 		03E316C21BF5820900DA6857 /* loginButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginButton.jpg; sourceTree = "<group>"; };
@@ -342,6 +346,8 @@
 				2C03A6B71BC9975A00335354 /* RegistrationViewController.swift */,
 				2C03A6B91BC9AFB800335354 /* LoginViewController.swift */,
 				03A27BB71BDD30C000E00020 /* WebViewController.swift */,
+				03B75CC21C032072005B652E /* UpdatedWebViewController.swift */,
+				03B75CC41C0321E5005B652E /* NewWebViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -569,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C03A6BA1BC9AFB800335354 /* LoginViewController.swift in Sources */,
+				03B75CC51C0321E5005B652E /* NewWebViewController.swift in Sources */,
 				B4FC9D091BEC30D2007303FC /* ServiceHelper.swift in Sources */,
 				03A27BB81BDD30C000E00020 /* WebViewController.swift in Sources */,
 				2C03A6B81BC9975A00335354 /* RegistrationViewController.swift in Sources */,
@@ -581,6 +588,7 @@
 				B4A2D4B21BFAC3AE0047DC08 /* CollectionViewCell.swift in Sources */,
 				037EFA031BEFF21800AB3E70 /* MainMapViewController.swift in Sources */,
 				B4FC9D031BE9EEC0007303FC /* SearchModel.swift in Sources */,
+				03B75CC31C032072005B652E /* UpdatedWebViewController.swift in Sources */,
 				03A27BBA1BDD34F700E00020 /* RiderUIViewController.swift in Sources */,
 				2C5CC77A1BF0250E004629F0 /* myConnector.m in Sources */,
 				B4E620881BD5BB8500923AA8 /* MapViewController.swift in Sources */,

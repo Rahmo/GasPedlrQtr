@@ -751,6 +751,83 @@
             </objects>
             <point key="canvasLocation" x="81" y="260"/>
         </scene>
+        <!--New Web View Controller-->
+        <scene sceneID="vaZ-h6-9F3">
+            <objects>
+                <viewController id="mZB-6Y-Gb4" customClass="NewWebViewController" customModule="GasPedlrProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C67-9j-Nqo"/>
+                        <viewControllerLayoutGuide type="bottom" id="fSO-Av-rkd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kDU-9z-44O">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CWi-xH-2Y9"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D52-Me-wd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4796" y="-2602"/>
+        </scene>
+        <!--Updated Web View Controller-->
+        <scene sceneID="Qpj-CZ-RLE">
+            <objects>
+                <viewController id="Ru9-OU-KrX" customClass="UpdatedWebViewController" customModule="GasPedlrProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oP4-aQ-sDU"/>
+                        <viewControllerLayoutGuide type="bottom" id="0oZ-PH-iiK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c8k-BN-Zra">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWD-tR-aZf">
+                                <rect key="frame" x="352" y="20" width="320" height="66"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ru9-OU-KrX" id="ww8-vY-Bq2"/>
+                                </connections>
+                            </adBannerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kD7-d2-d7X">
+                                <rect key="frame" x="0.0" y="94" width="1024" height="674"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="h9b-JM-kCR" kind="embed" id="lhd-6c-etP"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9C-Yd-rkd">
+                                <rect key="frame" x="970" y="38" width="34" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="QAY-Fl-5dS" kind="show" id="ft2-xl-qYg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h9C-Yd-rkd" firstAttribute="trailing" secondItem="c8k-BN-Zra" secondAttribute="trailingMargin" constant="10" id="EHf-A6-Aid"/>
+                            <constraint firstItem="SWD-tR-aZf" firstAttribute="centerX" secondItem="c8k-BN-Zra" secondAttribute="centerX" id="Wzq-qB-7zo"/>
+                            <constraint firstItem="h9C-Yd-rkd" firstAttribute="centerY" secondItem="SWD-tR-aZf" secondAttribute="centerY" id="qa7-3M-HQR"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="backButton" destination="h9C-Yd-rkd" id="rxV-UX-suc"/>
+                        <outlet property="webBanner" destination="SWD-tR-aZf" id="SLX-Ij-Sj2"/>
+                        <outlet property="webContainer" destination="kD7-d2-d7X" id="0AY-qc-jDX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L2Q-GG-SN3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3462" y="-1687"/>
+        </scene>
         <!--Web View Controller-->
         <scene sceneID="LDY-Vh-uP5">
             <objects>
@@ -786,7 +863,6 @@
                                 <state key="normal" title="Back to Selection Screen"/>
                                 <connections>
                                     <action selector="webBackButton:" destination="Dga-3C-xjC" eventType="touchUpInside" id="TS6-UV-XdI"/>
-                                    <segue destination="QAY-Fl-5dS" kind="show" identifier="webBackView" id="a7H-hw-IWD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQJ-Yc-c6v">
@@ -837,7 +913,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuB-3h-U23" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4208" y="-1456"/>
+            <point key="canvasLocation" x="4832" y="-1704"/>
         </scene>
         <!--RiderUI View Controller-->
         <scene sceneID="KvG-08-Rjh">
@@ -876,7 +952,7 @@
                                 <animations/>
                                 <state key="normal" image="safari-icon.png"/>
                                 <connections>
-                                    <segue destination="Dga-3C-xjC" kind="show" id="heo-Pp-80S"/>
+                                    <segue destination="Ru9-OU-KrX" kind="show" id="8xF-hB-aOK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get deals while you ride." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78z-xo-rqZ">
@@ -1019,7 +1095,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFt-pq-WxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2800" y="452"/>
+            <point key="canvasLocation" x="2820" y="330"/>
         </scene>
         <!--Game Page View Controller-->
         <scene sceneID="7Am-o0-e5G">
@@ -1075,7 +1151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQc-R9-8Rh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3917" y="-223"/>
+            <point key="canvasLocation" x="3973" y="-251"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="idY-cG-aVg">
@@ -1179,6 +1255,27 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5049" y="-223.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sPX-fu-ixj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h9b-JM-kCR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1YR-wM-d5d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mZB-6Y-Gb4" kind="relationship" relationship="rootViewController" id="B53-Fw-AIH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0H-Or-MjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3690" y="-2619"/>
         </scene>
     </scenes>
     <resources>

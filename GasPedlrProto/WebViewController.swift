@@ -17,6 +17,7 @@ class WebViewController: UIViewController, ADBannerViewDelegate {
     
     @IBOutlet weak var TheTextField: UITextField!
     @IBOutlet weak var TheWebView: UIWebView!
+    
     @IBAction func TheGoButton(sender: AnyObject) {
         let text = TheTextField.text;
         let url = NSURL(string: text!);
@@ -28,9 +29,6 @@ class WebViewController: UIViewController, ADBannerViewDelegate {
         self.performSegueWithIdentifier("webBackView", sender: self)
         
     }
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
