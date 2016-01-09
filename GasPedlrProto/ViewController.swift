@@ -11,16 +11,29 @@ import Parse
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var driverWebView: UIWebView!
+    
+    var URLPath = "https://analytics.google.com/analytics/web/#report/app-overview/a69637408w106680312p111074914/"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        loadAddressURL ()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
+    }
+    
+    func loadAddressURL(){
+        let requestURL = NSURL(string: URLPath)
+        let request = NSURLRequest(URL:requestURL!)
+        driverWebView.loadRequest(request)
     }
 
     override func viewDidAppear(animated: Bool)

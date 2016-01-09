@@ -8,9 +8,11 @@
 
 import UIKit
 import Parse
+import MapKit
 
 class RiderUIViewController: UIViewController {
 
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var BrowserButton: UIButton!
     @IBOutlet weak var MapButton: UIButton!
     @IBOutlet weak var GameButton: UIButton!
@@ -24,6 +26,7 @@ class RiderUIViewController: UIViewController {
          //print("Object has been saved.")
         //}
         super.viewDidLoad()
+        mapView.showsUserLocation = true
 
         // Do any additional setup after loading the view.
     }

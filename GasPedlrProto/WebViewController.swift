@@ -9,12 +9,12 @@
 import UIKit
 import WebKit
 import Parse
+import iAd
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, ADBannerViewDelegate{
 
-    @IBOutlet var Ad1: UIImageView!
-    @IBOutlet var Ad2: UIImageView!
     
+
     @IBOutlet weak var TheTextField: UITextField!
     @IBOutlet weak var TheWebView: UIWebView!
     @IBAction func TheGoButton(sender: AnyObject) {
@@ -28,9 +28,13 @@ class WebViewController: UIViewController {
         self.performSegueWithIdentifier("webBackView", sender: self)
         
     }
+    @IBOutlet weak var adBanner: ADBannerView!
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        self.canDisplayBannerAds = true
+   
+        
         
         
         // Do any additional setup after loading the view, typically from a nib.
