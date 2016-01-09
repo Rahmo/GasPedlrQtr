@@ -616,7 +616,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     }
     
     
-    
+    //will delete this one TBD  Because it is always occur
     //This function occur when there Adding fails to the set locationmanage.monitored set<Clregion>
     func locationManager(manager: CLLocationManager, monitoringDidFailForRegion region: CLRegion?, withError error: NSError) {
         print("Monitoring failed for region with identifier: \(region!.identifier) with error \(error)")
@@ -649,7 +649,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         // 4
         let monitoredNum = locationManager.monitoredRegions.count
         if (monitoredNum <= 19){
-     //   locationManager.startMonitoringForRegion(region)
+        locationManager.startMonitoringForRegion(region)
         }
         
         
