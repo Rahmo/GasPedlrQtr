@@ -89,7 +89,7 @@ class RegistrationViewController: UIViewController {
             
             // Display alert message with confirmation
             
-            var myAlert = UIAlertController(title:"Alert", message:"Registration is Successful. Enjoy using GadPedlr", preferredStyle: UIAlertControllerStyle.Alert);
+            let myAlert = UIAlertController(title:"Alert", message:"Registration is Successful. Enjoy using GadPedlr", preferredStyle: UIAlertControllerStyle.Alert);
             
             
             let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.Default){action in

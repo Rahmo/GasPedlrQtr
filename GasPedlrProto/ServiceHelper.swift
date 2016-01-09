@@ -43,7 +43,7 @@ class ServiceHelper{
                 print(jsonObject);
                 if(jsonObject!.isKindOfClass(NSDictionary)){
                     
-                    let jsonData = jsonObject as! NSDictionary;
+               //     let jsonData = jsonObject as! NSDictionary;
                     let datas =  jsonObject!.valueForKey("results")as! NSArray;
                     
                     
@@ -72,8 +72,8 @@ class ServiceHelper{
                         else {
                             address = dictEach.valueForKey("formatted_address")as!  String;
                         }
-                        
-                        var searchModel:SearchModel = SearchModel(name: name as String, icon: icon, lon: lon, lat: lat,address:address);
+                        //Changed this from Var to Let
+                        let searchModel:SearchModel = SearchModel(name: name as String, icon: icon, lon: lon, lat: lat,address:address);
                         publishData.append(searchModel);
                         
                         
