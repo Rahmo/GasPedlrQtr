@@ -133,8 +133,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
             }
         case .Unknown:
             print("BeaconManager:didDetermineState CLRegionState.Unknown");
-        default:
-            print("BeaconManager:didDetermineState default");
+//        default:
+//            print("BeaconManager:didDetermineState default");
         }
     }
     
@@ -146,7 +146,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
                     if geotification.identifier == identifier {
                         // return geotification.note
                         let Emoji = "😀"
-                        var text:String = "Welcome to \(geotification.note) \(Emoji) \n" +
+                        let text:String = "Welcome to \(geotification.note) \(Emoji) \n" +
                         "address: \(geotification.address)"
                         return text
                     }
