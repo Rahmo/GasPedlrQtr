@@ -30,7 +30,6 @@
 		03E316C51BF5820900DA6857 /* registerButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E316C31BF5820900DA6857 /* registerButton.jpg */; };
 		2C03A68A1BC98A1200335354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03A6891BC98A1200335354 /* AppDelegate.swift */; };
 		2C03A68C1BC98A1200335354 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03A68B1BC98A1200335354 /* ViewController.swift */; };
-		2C03A68F1BC98A1200335354 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C03A68D1BC98A1200335354 /* Main.storyboard */; };
 		2C03A6911BC98A1200335354 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C03A6901BC98A1200335354 /* Assets.xcassets */; };
 		2C03A6941BC98A1200335354 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C03A6921BC98A1200335354 /* LaunchScreen.storyboard */; };
 		2C03A69F1BC98A1200335354 /* GasPedlrProtoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03A69E1BC98A1200335354 /* GasPedlrProtoTests.swift */; };
@@ -61,6 +60,8 @@
 		B4A2D4B21BFAC3AE0047DC08 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */; };
 		B4A2D4B41BFAC47A0047DC08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */; };
 		B4A6DE091BDC65BC00D31ACE /* Chicago.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B4A6DE081BDC65BC00D31ACE /* Chicago.gpx */; };
+		B4B53DDF1C42FD51007B0CCA /* MainMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B53DDE1C42FD51007B0CCA /* MainMapViewController.swift */; };
+		B4B53DE31C430023007B0CCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B53DE21C430023007B0CCA /* Main.storyboard */; };
 		B4E620881BD5BB8500923AA8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E620871BD5BB8500923AA8 /* MapViewController.swift */; };
 		B4FC9D031BE9EEC0007303FC /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC9D021BE9EEC0007303FC /* SearchModel.swift */; };
 		B4FC9D071BEC2806007303FC /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC9D061BEC2806007303FC /* CustomAnnotation.swift */; };
@@ -123,7 +124,6 @@
 		2C03A6861BC98A1200335354 /* GasPedlrProto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GasPedlrProto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C03A6891BC98A1200335354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C03A68B1BC98A1200335354 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C03A68E1BC98A1200335354 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C03A6901BC98A1200335354 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C03A6931BC98A1200335354 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C03A6951BC98A1200335354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +167,8 @@
 		B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B4A6DE081BDC65BC00D31ACE /* Chicago.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Chicago.gpx; sourceTree = "<group>"; };
+		B4B53DDE1C42FD51007B0CCA /* MainMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapViewController.swift; sourceTree = "<group>"; };
+		B4B53DE21C430023007B0CCA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B4E620871BD5BB8500923AA8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		B4FC9D021BE9EEC0007303FC /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		B4FC9D061BEC2806007303FC /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 		2C03A6881BC98A1200335354 /* GasPedlrProto */ = {
 			isa = PBXGroup;
 			children = (
+				B4B53DE21C430023007B0CCA /* Main.storyboard */,
 				2C86E0571C0231F700FC26CD /* Images */,
 				2C86E0561C02319800FC26CD /* Swift Files */,
 				2C86E0551C02315700FC26CD /* View Controllers */,
@@ -260,7 +263,6 @@
 				B4FC9D1F1BEC8D6D007303FC /* CustomFlyout.swift */,
 				B4FC9D1D1BEC8D2E007303FC /* CustomFlyout.xib */,
 				B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */,
-				2C03A68D1BC98A1200335354 /* Main.storyboard */,
 				2C03A6901BC98A1200335354 /* Assets.xcassets */,
 				037EF9F11BEFEE0400AB3E70 /* MyPlayground.playground */,
 				037EF9F31BEFEE0400AB3E70 /* Ping.caf */,
@@ -330,6 +332,7 @@
 		2C86E0551C02315700FC26CD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B4B53DDE1C42FD51007B0CCA /* MainMapViewController.swift */,
 				037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */,
 				2C03A68B1BC98A1200335354 /* ViewController.swift */,
 				B4E620871BD5BB8500923AA8 /* MapViewController.swift */,
@@ -525,12 +528,12 @@
 				B4FC9D261BECB5FF007303FC /* atm-.png in Resources */,
 				B4A2D4B41BFAC47A0047DC08 /* Images.xcassets in Resources */,
 				B4FC9D221BEC8FAE007303FC /* close.png in Resources */,
-				2C03A68F1BC98A1200335354 /* Main.storyboard in Resources */,
 				037EF9FB1BEFEE0400AB3E70 /* spark.png in Resources */,
 				037EF9F81BEFEE0400AB3E70 /* Ping.caf in Resources */,
 				036FA2961BF6DD07002E8956 /* tempAd1.jpg in Resources */,
 				037EFA091BF55F0E00AB3E70 /* loginViewImage.jpg in Resources */,
 				03A27BC01BDD380F00E00020 /* safari-icon.png in Resources */,
+				B4B53DE31C430023007B0CCA /* Main.storyboard in Resources */,
 				B4FC9D1E1BEC8D2E007303FC /* CustomFlyout.xib in Resources */,
 				B4FC9D281BECB640007303FC /* airport.png in Resources */,
 				03E316C51BF5820900DA6857 /* registerButton.jpg in Resources */,
@@ -567,6 +570,7 @@
 			files = (
 				2C03A6BA1BC9AFB800335354 /* LoginViewController.swift in Sources */,
 				B4FC9D091BEC30D2007303FC /* ServiceHelper.swift in Sources */,
+				B4B53DDF1C42FD51007B0CCA /* MainMapViewController.swift in Sources */,
 				03A27BB81BDD30C000E00020 /* WebViewController.swift in Sources */,
 				2C03A6B81BC9975A00335354 /* RegistrationViewController.swift in Sources */,
 				037EF9F01BEFEDF400AB3E70 /* GameViewController.swift in Sources */,
@@ -618,14 +622,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2C03A68D1BC98A1200335354 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C03A68E1BC98A1200335354 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C03A6921BC98A1200335354 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

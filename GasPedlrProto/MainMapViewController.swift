@@ -18,6 +18,7 @@ class MainMapViewController: UIViewController,CLLocationManagerDelegate,MKMapVie
 
 
     @IBOutlet weak var mapView: MKMapView!
+
     
     //relate to get the user location
     let locationManager = CLLocationManager()
