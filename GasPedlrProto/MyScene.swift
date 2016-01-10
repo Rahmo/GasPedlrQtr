@@ -142,8 +142,10 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         _ball.physicsBody?.contactTestBitMask = blockMask|padMask|deadZoneMask
         addChild(_ball)
         
-        padX = Float(size.width) / 2
-        _pad = SKSpriteNode(color:UIColor.lightGrayColor(), size:CGSize(width:50, height:10))
+        padX = Float(size.width) / 6
+   //     _pad = SKSpriteNode(color:UIColor.lightGrayColor(), size:CGSize(width:50, height:10))
+        _pad = SKSpriteNode(imageNamed: "sampban.gif")
+
         _pad.position = CGPoint(x:CGFloat(padX), y:10)
         _pad.physicsBody = SKPhysicsBody(rectangleOfSize:_pad.size)
         _pad.physicsBody?.categoryBitMask = padMask

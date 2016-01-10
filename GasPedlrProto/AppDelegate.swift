@@ -9,11 +9,15 @@
 import UIKit
 import Parse
 import Bolts
+import CoreLocation
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
     
     var window: UIWindow?
+    
+    
     let locationManager = CLLocationManager()
     var items = NSMutableArray()
     
