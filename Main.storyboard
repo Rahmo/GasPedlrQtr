@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ho-86-mYt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QAY-Fl-5dS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -156,6 +156,7 @@
                                             </barButtonItem>
                                             <barButtonItem title="Return To Menu" id="dpm-Cs-3yi">
                                                 <connections>
+                                                    <action selector="mapBackButton:" destination="bfz-zq-dWH" id="Gx6-2k-8LK"/>
                                                     <segue destination="QAY-Fl-5dS" kind="show" identifier="mapBackView" id="gDu-pb-Vxd"/>
                                                 </connections>
                                             </barButtonItem>
@@ -211,20 +212,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="216" height="171"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SXL-iB-gQM">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JPl-e5-SRR">
                                 <rect key="frame" x="0.0" y="0.0" width="216" height="171"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SXL-iB-gQM" firstAttribute="leading" secondItem="0Aq-64-dmR" secondAttribute="leading" id="5DK-aa-m4T"/>
-                            <constraint firstAttribute="trailing" secondItem="SXL-iB-gQM" secondAttribute="trailing" id="Ilh-10-XZs"/>
-                            <constraint firstItem="SXL-iB-gQM" firstAttribute="top" secondItem="F1S-10-NRc" secondAttribute="bottom" id="Khp-xT-cuC"/>
-                            <constraint firstItem="SXL-iB-gQM" firstAttribute="bottom" secondItem="m5j-eG-X4L" secondAttribute="top" id="XMV-04-6Ea"/>
+                            <constraint firstItem="JPl-e5-SRR" firstAttribute="leading" secondItem="0Aq-64-dmR" secondAttribute="leading" id="JrA-Y6-JtQ"/>
+                            <constraint firstItem="m5j-eG-X4L" firstAttribute="top" secondItem="JPl-e5-SRR" secondAttribute="bottom" id="P3q-uF-Bdu"/>
+                            <constraint firstAttribute="trailing" secondItem="JPl-e5-SRR" secondAttribute="trailing" id="Scf-9o-6OM"/>
+                            <constraint firstItem="JPl-e5-SRR" firstAttribute="top" secondItem="0Aq-64-dmR" secondAttribute="top" id="cMB-u8-pi9"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="SXL-iB-gQM" id="pwl-sk-fhX"/>
+                        <outlet property="mapView" destination="JPl-e5-SRR" id="NjT-yq-zVp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f85-3d-XB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -328,14 +329,14 @@
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-3D-cqo">
                                 <rect key="frame" x="305" y="368" width="415" height="30"/>
-                                <color key="backgroundColor" red="0.94509803921568625" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.91218777268760909" green="0.91218777268760909" blue="0.91218777268760909" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="PEh-CC-GyU"/>
                                     <constraint firstAttribute="height" constant="30" id="aBv-5l-Cjr"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="415" id="fJ8-nD-8fR"/>
                                     <constraint firstAttribute="width" constant="402" id="mBh-k2-caN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -385,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CA5-ua-yKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="943" y="-429"/>
+            <point key="canvasLocation" x="2091" y="-529"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="lb2-7V-Yec">
@@ -616,6 +617,7 @@
                                 <state key="normal" title="Rider View"/>
                                 <connections>
                                     <action selector="logoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D2a-XG-Rby"/>
+                                    <segue destination="QAY-Fl-5dS" kind="show" id="OLR-CG-5aG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Driver Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFO-YR-vFG">
@@ -672,7 +674,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879" y="-1955"/>
+            <point key="canvasLocation" x="1103" y="-1423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yJy-2a-mgN">
@@ -1152,8 +1154,8 @@
         <image name="transparent icon.png" width="720" height="418"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y6X-Pd-2j3"/>
-        <segue reference="ybi-IT-bzM"/>
-        <segue reference="gDu-pb-Vxd"/>
+        <segue reference="cau-LQ-5cY"/>
+        <segue reference="17M-20-tVe"/>
+        <segue reference="Tjz-Cg-SyX"/>
     </inferredMetricsTieBreakers>
 </document>
