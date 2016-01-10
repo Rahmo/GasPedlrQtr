@@ -35,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         
+        
+        
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
           MapViewController().refresh()
