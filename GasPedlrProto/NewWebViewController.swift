@@ -7,17 +7,23 @@
 //
 
 import UIKit
+import WebKit
+import iAd
 
 class NewWebViewController: UIViewController {
     
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var webView: UIWebView!
+    @IBOutlet var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         activityIndicator.hidden = true
+        self.canDisplayBannerAds = true
+        let URL = NSURL(string: "https://www.google.com");
+        webView.loadRequest(NSURLRequest(URL:URL!));
     }
     
     override func didReceiveMemoryWarning() {
