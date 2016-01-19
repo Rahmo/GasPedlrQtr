@@ -631,9 +631,6 @@
                                     <segue destination="QAY-Fl-5dS" kind="show" identifier="ridersView" id="538-Gt-NrF"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google-analytics-chart-growth.png" translatesAutoresizingMaskIntoConstraints="NO" id="Atf-UG-MDb">
-                                <rect key="frame" x="46" y="402" width="952" height="280"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whr-6T-uvj">
                                 <rect key="frame" x="32" y="102" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
@@ -648,6 +645,9 @@
                                     <constraint firstAttribute="width" constant="764" id="CQv-bw-XRp"/>
                                 </constraints>
                             </webView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google-analytics-chart-growth.png" translatesAutoresizingMaskIntoConstraints="NO" id="Atf-UG-MDb">
+                                <rect key="frame" x="30" y="439" width="937" height="252"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -1154,6 +1154,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Y6X-Pd-2j3"/>
         <segue reference="ybi-IT-bzM"/>
-        <segue reference="gDu-pb-Vxd"/>
+        <segue reference="538-Gt-NrF"/>
     </inferredMetricsTieBreakers>
 </document>
