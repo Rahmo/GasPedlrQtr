@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import iAd
 
 protocol MySceneDelegate {
     func dead()
@@ -44,7 +45,8 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
             let blockSize = CGSize(width:0.9*blockWidth, height:10)
             
             for i in 0..<n {
-                let sprite = SKSpriteNode(color:color, size:blockSize)
+                //let sprite = SKSpriteNode(color:color, size:blockSize)
+                let sprite = SKSpriteNode(imageNamed: "sampban.gif")
                 sprite.position = CGPoint(x:(CGFloat(i) + 0.5) * blockWidth, y:y)
                 sprite.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.size)
                 sprite.physicsBody?.categoryBitMask = blockMask
@@ -135,9 +137,9 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
 //        _ball.physicsBody = SKPhysicsBody(rectangleOfSize:_ball.size)
         _ball.physicsBody = SKPhysicsBody(circleOfRadius:_ball.size.width / 2)
         _ball.physicsBody?.categoryBitMask = ballMask
-        _ball.physicsBody?.friction = 0.0 // 摩擦無し
-        _ball.physicsBody?.restitution = 1.0 // 完全弾性
-        _ball.physicsBody?.linearDamping = 0.0 // 空気抵抗無し
+        _ball.physicsBody?.friction = 0.0
+        _ball.physicsBody?.restitution = 1.0
+        _ball.physicsBody?.linearDamping = 0.0
 //        ball.physicsBody.allowsRotation = false
         _ball.physicsBody?.contactTestBitMask = blockMask|padMask|deadZoneMask
         addChild(_ball)
