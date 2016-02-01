@@ -23,7 +23,15 @@ class ViewController: UIViewController {
         
         loadAddressURL ()
     }
+    
+    //var browserCounter = 0
+    //var mapCounter = 0
+    //var gameCounter = 0
+    
 
+    //@IBOutlet weak var browserCountLabel: UILabel!
+    //@IBOutlet weak var mapCountLabel: UILabel!
+    //@IBOutlet weak var gameCountLabel: UILabel!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
