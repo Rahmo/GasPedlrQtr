@@ -11,6 +11,8 @@
 		036FA2961BF6DD07002E8956 /* tempAd1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2931BF6DD07002E8956 /* tempAd1.jpg */; };
 		036FA2971BF6DD07002E8956 /* tempAd2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2941BF6DD07002E8956 /* tempAd2.jpg */; };
 		036FA2981BF6DD07002E8956 /* tempAd3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2951BF6DD07002E8956 /* tempAd3.jpg */; };
+		037C4CA01C5D2EFC0082E47E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037C4C9F1C5D2EFC0082E47E /* GameKit.framework */; };
+		037C4CA21C5D3E040082E47E /* bannerHalfAcre.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */; };
 		037EF9EF1BEFEDF400AB3E70 /* Basso.caf in Resources */ = {isa = PBXBuildFile; fileRef = 037EF9ED1BEFEDF400AB3E70 /* Basso.caf */; };
 		037EF9F01BEFEDF400AB3E70 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EF9EE1BEFEDF400AB3E70 /* GameViewController.swift */; };
 		037EF9F71BEFEE0400AB3E70 /* MyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EF9F21BEFEE0400AB3E70 /* MyScene.swift */; };
@@ -103,6 +105,8 @@
 		036FA2931BF6DD07002E8956 /* tempAd1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAd1.jpg; sourceTree = "<group>"; };
 		036FA2941BF6DD07002E8956 /* tempAd2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAd2.jpg; sourceTree = "<group>"; };
 		036FA2951BF6DD07002E8956 /* tempAd3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAd3.jpg; sourceTree = "<group>"; };
+		037C4C9F1C5D2EFC0082E47E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerHalfAcre.png; sourceTree = "<group>"; };
 		037EF9ED1BEFEDF400AB3E70 /* Basso.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.caf; sourceTree = "<group>"; };
 		037EF9EE1BEFEDF400AB3E70 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		037EF9F11BEFEE0400AB3E70 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				037C4CA01C5D2EFC0082E47E /* GameKit.framework in Frameworks */,
 				2C5A4CDA1C03B8CC00F56AA3 /* iAd.framework in Frameworks */,
 				2CF7D26E1BEAEAE8009A3BA7 /* libsqlite3.tbd in Frameworks */,
 				2CF7D26C1BEAEADF009A3BA7 /* libz.tbd in Frameworks */,
@@ -301,6 +306,7 @@
 		2C5CC7741BF023B2004629F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				037C4C9F1C5D2EFC0082E47E /* GameKit.framework */,
 				2C5A4CD91C03B8CC00F56AA3 /* iAd.framework */,
 				B40D24DB1BF136E1007431DB /* Bolts.framework */,
 				B40D24DC1BF136E1007431DB /* Parse.framework */,
@@ -373,6 +379,7 @@
 				036FA2931BF6DD07002E8956 /* tempAd1.jpg */,
 				036FA2941BF6DD07002E8956 /* tempAd2.jpg */,
 				2C5A4CDB1C03C13C00F56AA3 /* sampban.gif */,
+				037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */,
 				036FA2951BF6DD07002E8956 /* tempAd3.jpg */,
 				2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */,
 				03CB62201BE6C8C6005D0854 /* GasPedlrIcon.png */,
@@ -542,6 +549,7 @@
 				03E316C51BF5820900DA6857 /* registerButton.jpg in Resources */,
 				03E316C11BF56A9300DA6857 /* transparent icon.png in Resources */,
 				03E316C41BF5820900DA6857 /* loginButton.jpg in Resources */,
+				037C4CA21C5D3E040082E47E /* bannerHalfAcre.png in Resources */,
 				037EF9F91BEFEE0400AB3E70 /* Pop.caf in Resources */,
 				037EF9FA1BEFEE0400AB3E70 /* Smoke.sks in Resources */,
 				B4FC9D171BEC4034007303FC /* noimage.gif in Resources */,

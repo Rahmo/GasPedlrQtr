@@ -13,7 +13,10 @@ import MapKit
 class RiderUIViewController: UIViewController {
 
    
-    //test
+    @IBOutlet weak var BrowserButton: UIButton!
+    @IBOutlet weak var MapButton: UIButton!
+    @IBOutlet weak var GameButton: UIButton!
+    //kkk
     @IBOutlet weak var driverName: UILabel!
     override func viewDidLoad() {
         //Parse Test Object DO NOT REMOVE
@@ -24,15 +27,6 @@ class RiderUIViewController: UIViewController {
         //}
         super.viewDidLoad()
       
-   
-        
-        
-        
-        
-        
-        
-        
-        
 
         // Do any additional setup after loading the view.
     }
