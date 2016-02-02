@@ -24,6 +24,8 @@ class RiderUIViewController: UIViewController {
         //}
         super.viewDidLoad()
       
+   
+        
         
         
         
