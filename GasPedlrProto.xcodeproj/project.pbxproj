@@ -11,6 +11,8 @@
 		036FA2961BF6DD07002E8956 /* tempAd1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2931BF6DD07002E8956 /* tempAd1.jpg */; };
 		036FA2971BF6DD07002E8956 /* tempAd2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2941BF6DD07002E8956 /* tempAd2.jpg */; };
 		036FA2981BF6DD07002E8956 /* tempAd3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2951BF6DD07002E8956 /* tempAd3.jpg */; };
+		037C4CA01C5D2EFC0082E47E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037C4C9F1C5D2EFC0082E47E /* GameKit.framework */; };
+		037C4CA21C5D3E040082E47E /* bannerHalfAcre.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */; };
 		037EF9EF1BEFEDF400AB3E70 /* Basso.caf in Resources */ = {isa = PBXBuildFile; fileRef = 037EF9ED1BEFEDF400AB3E70 /* Basso.caf */; };
 		037EF9F01BEFEDF400AB3E70 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EF9EE1BEFEDF400AB3E70 /* GameViewController.swift */; };
 		037EF9F71BEFEE0400AB3E70 /* MyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EF9F21BEFEE0400AB3E70 /* MyScene.swift */; };
@@ -21,7 +23,6 @@
 		037EF9FD1BEFEEAC00AB3E70 /* GamePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */; };
 		037EFA091BF55F0E00AB3E70 /* loginViewImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 037EFA081BF55F0E00AB3E70 /* loginViewImage.jpg */; };
 		038A4B1E1C4C25F600A80884 /* NewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A4B1D1C4C25F600A80884 /* NewWebViewController.swift */; };
-		03A27BB81BDD30C000E00020 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A27BB71BDD30C000E00020 /* WebViewController.swift */; };
 		03A27BBA1BDD34F700E00020 /* RiderUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */; };
 		03A27BBF1BDD380F00E00020 /* Google-Maps-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */; };
 		03A27BC01BDD380F00E00020 /* safari-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BBD1BDD380F00E00020 /* safari-icon.png */; };
@@ -104,6 +105,8 @@
 		036FA2931BF6DD07002E8956 /* tempAd1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAd1.jpg; sourceTree = "<group>"; };
 		036FA2941BF6DD07002E8956 /* tempAd2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAd2.jpg; sourceTree = "<group>"; };
 		036FA2951BF6DD07002E8956 /* tempAd3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAd3.jpg; sourceTree = "<group>"; };
+		037C4C9F1C5D2EFC0082E47E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerHalfAcre.png; sourceTree = "<group>"; };
 		037EF9ED1BEFEDF400AB3E70 /* Basso.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.caf; sourceTree = "<group>"; };
 		037EF9EE1BEFEDF400AB3E70 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		037EF9F21BEFEE0400AB3E70 /* MyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScene.swift; sourceTree = "<group>"; };
@@ -114,7 +117,6 @@
 		037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePageViewController.swift; sourceTree = "<group>"; };
 		037EFA081BF55F0E00AB3E70 /* loginViewImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginViewImage.jpg; sourceTree = "<group>"; };
 		038A4B1D1C4C25F600A80884 /* NewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWebViewController.swift; sourceTree = "<group>"; };
-		03A27BB71BDD30C000E00020 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderUIViewController.swift; sourceTree = "<group>"; };
 		03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-Maps-icon.png"; sourceTree = "<group>"; };
 		03A27BBD1BDD380F00E00020 /* safari-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safari-icon.png"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				037C4CA01C5D2EFC0082E47E /* GameKit.framework in Frameworks */,
 				2C5A4CDA1C03B8CC00F56AA3 /* iAd.framework in Frameworks */,
 				2CF7D26E1BEAEAE8009A3BA7 /* libsqlite3.tbd in Frameworks */,
 				2CF7D26C1BEAEADF009A3BA7 /* libz.tbd in Frameworks */,
@@ -302,7 +305,11 @@
 		2C5CC7741BF023B2004629F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				B4154F241C4DCD0100CA86AE /* MapKit.framework */,
+=======
+				037C4C9F1C5D2EFC0082E47E /* GameKit.framework */,
+>>>>>>> 44c12194b0af8d7e58f7cf3044f3a40e561e7d57
 				2C5A4CD91C03B8CC00F56AA3 /* iAd.framework */,
 				B40D24DB1BF136E1007431DB /* Bolts.framework */,
 				B40D24DC1BF136E1007431DB /* Parse.framework */,
@@ -345,7 +352,6 @@
 				037EF9EE1BEFEDF400AB3E70 /* GameViewController.swift */,
 				2C03A6B71BC9975A00335354 /* RegistrationViewController.swift */,
 				2C03A6B91BC9AFB800335354 /* LoginViewController.swift */,
-				03A27BB71BDD30C000E00020 /* WebViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 				036FA2931BF6DD07002E8956 /* tempAd1.jpg */,
 				036FA2941BF6DD07002E8956 /* tempAd2.jpg */,
 				2C5A4CDB1C03C13C00F56AA3 /* sampban.gif */,
+				037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */,
 				036FA2951BF6DD07002E8956 /* tempAd3.jpg */,
 				2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */,
 				03CB62201BE6C8C6005D0854 /* GasPedlrIcon.png */,
@@ -547,6 +554,7 @@
 				03E316C51BF5820900DA6857 /* registerButton.jpg in Resources */,
 				03E316C11BF56A9300DA6857 /* transparent icon.png in Resources */,
 				03E316C41BF5820900DA6857 /* loginButton.jpg in Resources */,
+				037C4CA21C5D3E040082E47E /* bannerHalfAcre.png in Resources */,
 				037EF9F91BEFEE0400AB3E70 /* Pop.caf in Resources */,
 				037EF9FA1BEFEE0400AB3E70 /* Smoke.sks in Resources */,
 				B4FC9D171BEC4034007303FC /* noimage.gif in Resources */,
@@ -579,7 +587,6 @@
 				2C03A6BA1BC9AFB800335354 /* LoginViewController.swift in Sources */,
 				B4FC9D091BEC30D2007303FC /* ServiceHelper.swift in Sources */,
 				B4B53DDF1C42FD51007B0CCA /* MainMapViewController.swift in Sources */,
-				03A27BB81BDD30C000E00020 /* WebViewController.swift in Sources */,
 				2C03A6B81BC9975A00335354 /* RegistrationViewController.swift in Sources */,
 				037EF9F01BEFEDF400AB3E70 /* GameViewController.swift in Sources */,
 				B4FC9D201BEC8D6D007303FC /* CustomFlyout.swift in Sources */,

@@ -8,6 +8,8 @@
 
 import UIKit
 import SpriteKit
+import iAd
+import GameKit
 
 protocol MySceneDelegate {
     func dead()
@@ -36,15 +38,21 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
             (UIColor.redColor(),    y0-0),
             (UIColor.orangeColor(), y0-12),
             (UIColor.yellowColor(), y0-24),
-            (UIColor.greenColor(),  y0-36),
-            (UIColor.blueColor(),   y0-48),
+            (UIColor.greenColor(),  y0-57),
+            (UIColor.blueColor(),   y0-90),
             ] {
             let n = 10
             let blockWidth = size.width / CGFloat(n)
             let blockSize = CGSize(width:0.9*blockWidth, height:10)
             
             for i in 0..<n {
-                let sprite = SKSpriteNode(color:color, size:blockSize)
+                var sprite: SKSpriteNode
+                if (color == UIColor.greenColor()) {
+                    sprite = SKSpriteNode(imageNamed: "bannerHalfAcre.png")
+                    sprite.name = "test"
+                } else {
+                    sprite = SKSpriteNode(color:color, size:blockSize)
+                }
                 sprite.position = CGPoint(x:(CGFloat(i) + 0.5) * blockWidth, y:y)
                 sprite.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.size)
                 sprite.physicsBody?.categoryBitMask = blockMask
@@ -89,6 +97,26 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         
         if (againstBody.categoryBitMask & blockMask) != 0 {
             runAction(_blockSound)
+            //let textView = UITextView(frame: CGRectMake(20.0, 30.0, 600.0, 50.0))
+            //textView.backgroundColor = UIColor.blackColor()
+            //self.view!.addSubview(textView)
+            if (againstBody.node!.name == "test") {
+                let imageName = "tempAd1.jpg"
+                let image = UIImage(named: imageName)
+                let imageView = UIImageView(image: image!)
+                imageView.frame = CGRectMake(20.0, 30.0, 600.0, 50.0)
+                view?.addSubview(imageView)
+                
+                //sendNotification()
+                //let verticalCenter = NSLayoutConstraint(item: textView, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: 0.0)
+                //textView.textAlignment = NSTextAlignment.Center
+                //textView.textColor = UIColor.redColor()
+                //textView.backgroundColor = UIColor.blackColor()
+                //textView.text = "Test text!!!"
+                //textView.font = UIFont(name: "Arial", size: 20)
+                //self.view!.addSubview(textView)
+                //self.view!.addConstraint(verticalCenter)
+            }
             _blocks.removeObject(againstBody.node!)
             againstBody.node?.removeFromParent()
             let v = ballBody.velocity
@@ -115,6 +143,15 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    func sendNotification() {
+        let deadline = NSDate()
+        let notification = UILocalNotification()
+        notification.alertBody = "TEST!!!"
+        print("reaching sendNoteifaiont")
+        notification.fireDate = deadline
+        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+    }
+    
     override init(size aSize: CGSize) {
         super.init(size: aSize)
 
@@ -135,9 +172,9 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
 //        _ball.physicsBody = SKPhysicsBody(rectangleOfSize:_ball.size)
         _ball.physicsBody = SKPhysicsBody(circleOfRadius:_ball.size.width / 2)
         _ball.physicsBody?.categoryBitMask = ballMask
-        _ball.physicsBody?.friction = 0.0 // 摩擦無し
-        _ball.physicsBody?.restitution = 1.0 // 完全弾性
-        _ball.physicsBody?.linearDamping = 0.0 // 空気抵抗無し
+        _ball.physicsBody?.friction = 0.0
+        _ball.physicsBody?.restitution = 1.0
+        _ball.physicsBody?.linearDamping = 0.0
 //        ball.physicsBody.allowsRotation = false
         _ball.physicsBody?.contactTestBitMask = blockMask|padMask|deadZoneMask
         addChild(_ball)

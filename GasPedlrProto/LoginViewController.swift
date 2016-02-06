@@ -36,6 +36,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(sender: AnyObject) {
         
+<<<<<<< HEAD
   
         
 //        var query = PFQuery(className: "Partners")
@@ -83,13 +84,23 @@ class LoginViewController: UIViewController {
 //            }
 //        }
         
+=======
+        // Store Login & Password fields from Parse to label
+>>>>>>> 44c12194b0af8d7e58f7cf3044f3a40e561e7d57
         let userEmail = userEmailTextField.text;
         let userPassword = userPasswordTextField.text;
+        
         
         
         PFUser.logInWithUsernameInBackground(userEmail!, password: userPassword!) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil
+<<<<<<< HEAD
+=======
+                
+                
+                
+>>>>>>> 44c12194b0af8d7e58f7cf3044f3a40e561e7d57
             {
                 
              
@@ -98,21 +109,23 @@ class LoginViewController: UIViewController {
                 // Login is succesfull
                NSUserDefaults.standardUserDefaults().setBool(true, forKey:"isUserLoggedIn");
                NSUserDefaults.standardUserDefaults().synchronize();
-               print("User logged in")
+    
                 
-           //     self.dismissViewControllerAnimated(true, completion:nil);
+              // self.dismissViewControllerAnimated(true, completion:nil);
                 
-            //}else{
-             //   print("Could not find user")
-            //}
-            
-       
-                self.performSegueWithIdentifier("LoginSuccess", sender: self)
-                
-            }  else {
-                
-                let alert: UIAlertView = UIAlertView(title: "error", message: "Make sure of the entered information", delegate: self, cancelButtonTitle: "Ok")
+            }else{
+            print("Could not find user")
+              
+        
+
+             
+              let alert: UIAlertView = UIAlertView(title: "error", message: "Make sure of the entered information", delegate: self, cancelButtonTitle: "Ok")
              alert.show()
+                
+                self.dismissViewControllerAnimated(false, completion:nil)
+            }
+            
+            
             }
             
             
@@ -137,4 +150,3 @@ class LoginViewController: UIViewController {
     }
     */
     
-}
