@@ -2,8 +2,7 @@
 //  MyScene.swift
 //  SwiftBreakout
 //
-//  Created by Naoto Yoshioka on 2014/06/03.
-//  Copyright (c) 2014年 Naoto Yoshioka. All rights reserved.
+// TEST COMMENT 02/01/16
 //
 
 import UIKit
@@ -97,14 +96,14 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         
         if (againstBody.categoryBitMask & blockMask) != 0 {
             runAction(_blockSound)
-            //let textView = UITextView(frame: CGRectMake(20.0, 30.0, 600.0, 50.0))
+            //let textView = UITextView(frame: CGRectMake(20.0, 20.0, 800.0, 60.0))
             //textView.backgroundColor = UIColor.blackColor()
             //self.view!.addSubview(textView)
             if (againstBody.node!.name == "test") {
                 let imageName = "tempAd1.jpg"
                 let image = UIImage(named: imageName)
                 let imageView = UIImageView(image: image!)
-                imageView.frame = CGRectMake(20.0, 30.0, 600.0, 50.0)
+                imageView.frame = CGRectMake(20.0, 20.0, 800.0, 60.0)
                 view?.addSubview(imageView)
                 
                 //sendNotification()

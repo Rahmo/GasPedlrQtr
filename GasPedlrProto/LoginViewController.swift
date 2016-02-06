@@ -51,16 +51,16 @@ class LoginViewController: UIViewController {
                NSUserDefaults.standardUserDefaults().synchronize();
                print("User logged in")
                 
-           //     self.dismissViewControllerAnimated(true, completion:nil);
+               self.dismissViewControllerAnimated(true, completion:nil);
                 
             //}else{
-             //   print("Could not find user")
+            //    print("Could not find user")
             //}
             
        
                 self.performSegueWithIdentifier("LoginSuccess", sender: self)
                 
-            }  else {
+            } else {
                 
                 let alert: UIAlertView = UIAlertView(title: "error", message: "Make sure of the entered information", delegate: self, cancelButtonTitle: "Ok")
              alert.show()
