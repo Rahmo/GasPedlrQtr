@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var userEmailTextField: UITextField!
-    
+      var PartnersArray = NSMutableArray()
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var userPasswordTextField:
     UITextField!
@@ -36,6 +36,53 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(sender: AnyObject) {
         
+  
+        
+//        var query = PFQuery(className: "Partners")
+//        query.whereKeyExists("PartnerName")
+//      
+//        
+//        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+//            
+//            if error == nil
+//            {
+//                if let pfObjects = objects as [PFObject]!
+//                {
+//                    print(pfObjects)
+//            
+//                    return
+//                }
+//            }
+//            
+//        
+//        }
+    
+
+//        var query = PFQuery(className: "Partners")
+//        query.findObjectsInBackgroundWithBlock {
+//            (objects: [PFObject]?, error: NSError?) -> Void in
+//            
+//            if error == nil {
+//                
+//                // query successful - display number of rows found
+//                print("Successfully retrieved \(objects!.count) people")
+//                
+//                // print name & hair color of each person found
+//                for object in objects! {
+//                    
+//                    let name = object["PartnerName"] as! NSString
+//                   
+//                    
+//                    print("\(name) has ")
+//                    
+//                }
+//            } else {
+//                
+//                // Log details of the failure
+//                NSLog("Error: %@ %@", error!, (error?.userInfo)!)
+//            }
+//        }
+        
         let userEmail = userEmailTextField.text;
         let userPassword = userPasswordTextField.text;
         
@@ -43,10 +90,12 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(userEmail!, password: userPassword!) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil
-                
             {
-                // Login is succesfull
                 
+             
+                
+                
+                // Login is succesfull
                NSUserDefaults.standardUserDefaults().setBool(true, forKey:"isUserLoggedIn");
                NSUserDefaults.standardUserDefaults().synchronize();
                print("User logged in")
@@ -74,6 +123,7 @@ class LoginViewController: UIViewController {
     
     
     
+
     // Do any additional setup after loading the view.
     
     
