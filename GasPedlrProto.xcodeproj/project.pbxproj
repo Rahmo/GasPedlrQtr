@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0352180A1C67DB78009AE754 /* bannerStarbucks.png in Resources */ = {isa = PBXBuildFile; fileRef = 035218091C67DB78009AE754 /* bannerStarbucks.png */; };
+		0352180C1C67DBA0009AE754 /* bannerTacoBell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0352180B1C67DBA0009AE754 /* bannerTacoBell.jpg */; };
+		0352180E1C67DBFC009AE754 /* bannerSpa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0352180D1C67DBFC009AE754 /* bannerSpa.png */; };
+		035218101C67E31F009AE754 /* adSpa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0352180F1C67E31F009AE754 /* adSpa.png */; };
+		035218121C67E3D0009AE754 /* adStarbucks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 035218111C67E3D0009AE754 /* adStarbucks.jpg */; };
+		035218141C67E52E009AE754 /* adHalfAcre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 035218131C67E52E009AE754 /* adHalfAcre.jpg */; };
+		035218161C67E653009AE754 /* adTacoBell.png in Resources */ = {isa = PBXBuildFile; fileRef = 035218151C67E653009AE754 /* adTacoBell.png */; };
 		036FA2921BF6D098002E8956 /* breakout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2911BF6D098002E8956 /* breakout_icon.png */; };
 		036FA2961BF6DD07002E8956 /* tempAd1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2931BF6DD07002E8956 /* tempAd1.jpg */; };
 		036FA2971BF6DD07002E8956 /* tempAd2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2941BF6DD07002E8956 /* tempAd2.jpg */; };
@@ -100,6 +107,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		035218091C67DB78009AE754 /* bannerStarbucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerStarbucks.png; sourceTree = "<group>"; };
+		0352180B1C67DBA0009AE754 /* bannerTacoBell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bannerTacoBell.jpg; sourceTree = "<group>"; };
+		0352180D1C67DBFC009AE754 /* bannerSpa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerSpa.png; sourceTree = "<group>"; };
+		0352180F1C67E31F009AE754 /* adSpa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adSpa.png; sourceTree = "<group>"; };
+		035218111C67E3D0009AE754 /* adStarbucks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adStarbucks.jpg; sourceTree = "<group>"; };
+		035218131C67E52E009AE754 /* adHalfAcre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adHalfAcre.jpg; sourceTree = "<group>"; };
+		035218151C67E653009AE754 /* adTacoBell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adTacoBell.png; sourceTree = "<group>"; };
 		036FA2911BF6D098002E8956 /* breakout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breakout_icon.png; sourceTree = "<group>"; };
 		036FA2931BF6DD07002E8956 /* tempAd1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAd1.jpg; sourceTree = "<group>"; };
 		036FA2941BF6DD07002E8956 /* tempAd2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAd2.jpg; sourceTree = "<group>"; };
@@ -376,7 +390,14 @@
 				036FA2931BF6DD07002E8956 /* tempAd1.jpg */,
 				036FA2941BF6DD07002E8956 /* tempAd2.jpg */,
 				2C5A4CDB1C03C13C00F56AA3 /* sampban.gif */,
+				035218111C67E3D0009AE754 /* adStarbucks.jpg */,
+				035218131C67E52E009AE754 /* adHalfAcre.jpg */,
+				035218151C67E653009AE754 /* adTacoBell.png */,
+				0352180D1C67DBFC009AE754 /* bannerSpa.png */,
+				0352180F1C67E31F009AE754 /* adSpa.png */,
+				035218091C67DB78009AE754 /* bannerStarbucks.png */,
 				037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */,
+				0352180B1C67DBA0009AE754 /* bannerTacoBell.jpg */,
 				036FA2951BF6DD07002E8956 /* tempAd3.jpg */,
 				2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */,
 				03CB62201BE6C8C6005D0854 /* GasPedlrIcon.png */,
@@ -519,6 +540,7 @@
 			files = (
 				037EF9EF1BEFEDF400AB3E70 /* Basso.caf in Resources */,
 				036FA2921BF6D098002E8956 /* breakout_icon.png in Resources */,
+				0352180E1C67DBFC009AE754 /* bannerSpa.png in Resources */,
 				B4FC9D241BECB5AB007303FC /* restaurent.png in Resources */,
 				2C5A4CDC1C03C13C00F56AA3 /* sampban.gif in Resources */,
 				2C03A6941BC98A1200335354 /* LaunchScreen.storyboard in Resources */,
@@ -530,11 +552,15 @@
 				B4FC9D2A1BECB6B7007303FC /* bank.png in Resources */,
 				036FA2981BF6DD07002E8956 /* tempAd3.jpg in Resources */,
 				B4A6DE091BDC65BC00D31ACE /* Chicago.gpx in Resources */,
+				0352180C1C67DBA0009AE754 /* bannerTacoBell.jpg in Resources */,
 				03A27BBF1BDD380F00E00020 /* Google-Maps-icon.png in Resources */,
 				B4FC9D141BEC4034007303FC /* cinema.png in Resources */,
+				035218101C67E31F009AE754 /* adSpa.png in Resources */,
 				B4FC9D261BECB5FF007303FC /* atm-.png in Resources */,
 				B4A2D4B41BFAC47A0047DC08 /* Images.xcassets in Resources */,
 				B4FC9D221BEC8FAE007303FC /* close.png in Resources */,
+				035218141C67E52E009AE754 /* adHalfAcre.jpg in Resources */,
+				035218161C67E653009AE754 /* adTacoBell.png in Resources */,
 				037EF9FB1BEFEE0400AB3E70 /* spark.png in Resources */,
 				037EF9F81BEFEE0400AB3E70 /* Ping.caf in Resources */,
 				036FA2961BF6DD07002E8956 /* tempAd1.jpg in Resources */,
@@ -547,9 +573,11 @@
 				03E316C11BF56A9300DA6857 /* transparent icon.png in Resources */,
 				03E316C41BF5820900DA6857 /* loginButton.jpg in Resources */,
 				037C4CA21C5D3E040082E47E /* bannerHalfAcre.png in Resources */,
+				0352180A1C67DB78009AE754 /* bannerStarbucks.png in Resources */,
 				037EF9F91BEFEE0400AB3E70 /* Pop.caf in Resources */,
 				037EF9FA1BEFEE0400AB3E70 /* Smoke.sks in Resources */,
 				B4FC9D171BEC4034007303FC /* noimage.gif in Resources */,
+				035218121C67E3D0009AE754 /* adStarbucks.jpg in Resources */,
 				B4FC9D1A1BEC4034007303FC /* hospital.png in Resources */,
 				036FA2971BF6DD07002E8956 /* tempAd2.jpg in Resources */,
 			);

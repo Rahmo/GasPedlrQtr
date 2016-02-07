@@ -12,6 +12,8 @@ class GameViewController: UIViewController, MySceneDelegate {
     @IBOutlet var adImage: UIImageView!
     @IBOutlet var backButton: UIButton!
     
+    var adDict = ["bannerSpa.png": "adSpa.png", "bannerStarbucks.png": "adStarbucks.png", "bannerHalfAcre.png": "adHalfAcre.png", "bannerTacoBell.jpg": "adTacoBell.png"]
+    
     
     var _myScene : MyScene!
     var _readyToFire = false
@@ -56,9 +58,8 @@ class GameViewController: UIViewController, MySceneDelegate {
         _readyToFire = false
     }
     
-    func updateAd() {
-        print("made it tp the dunction")
-        adImage.image = UIImage(named: "tempAd1.jpg")
+    func updateAd(spriteName: String) {
+        adImage.image = UIImage(named: adDict[spriteName]!)
     }
 
     func setPadPosition(value:Float) {

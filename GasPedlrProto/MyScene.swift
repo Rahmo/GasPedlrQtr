@@ -13,13 +13,15 @@ import GameKit
 protocol MySceneDelegate {
     func dead()
     func clear()
-    func updateAd()
+    func updateAd(spriteName: String)
 }
 
 class MyScene: SKScene, SKPhysicsContactDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    var adArray = ["bannerSpa.png", "bannerStarbucks.png", "bannerHalfAcre.png", "bannerTacoBell.jpg"]
     
     var padX: Float! {
     didSet {
@@ -36,20 +38,25 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         let y0 = size.height - 50
         for (color, y) in [
             (UIColor.redColor(),    y0-0),
-            (UIColor.orangeColor(), y0-12),
-            (UIColor.yellowColor(), y0-24),
-            (UIColor.greenColor(),  y0-57),
-            (UIColor.blueColor(),   y0-90),
+            (UIColor.orangeColor(), y0-50),
+            (UIColor.yellowColor(), y0-100),
+            (UIColor.greenColor(),  y0-150),
+            (UIColor.blueColor(),   y0-200),
             ] {
             let n = 10
             let blockWidth = size.width / CGFloat(n)
-            let blockSize = CGSize(width:0.9*blockWidth, height:10)
+            let blockSize = CGSize(width:0.9*blockWidth, height:50)
             
             for i in 0..<n {
                 var sprite: SKSpriteNode
-                if (color == UIColor.greenColor()) {
-                    sprite = SKSpriteNode(imageNamed: "bannerHalfAcre.png")
-                    sprite.name = "test"
+                let randomNum = Int(arc4random_uniform(10) + 1)
+                if (randomNum % 2 == 0) {
+                //if (color == UIColor.greenColor()) {
+                    //sprite = SKSpriteNode(imageNamed: "bannerHalfAcre.png")
+                    //sprite.name = "test"
+                    let randomIndex = Int(arc4random_uniform(UInt32(adArray.count)))
+                    sprite = SKSpriteNode(imageNamed: adArray[randomIndex])
+                    sprite.name = adArray[randomIndex]
                 } else {
                     sprite = SKSpriteNode(color:color, size:blockSize)
                 }
@@ -100,15 +107,8 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
             //let textView = UITextView(frame: CGRectMake(20.0, 20.0, 800.0, 60.0))
             //textView.backgroundColor = UIColor.blackColor()
             //self.view!.addSubview(textView)
-            if (againstBody.node!.name == "test") {
-                //let imageName = "tempAd1.jpg"
-                //let image = UIImage(named: imageName)
-                //let imageView = UIImageView(image: image!)
-                //imageView.frame = CGRectMake(20.0, 20.0, 800.0, 60.0)
-                //view?.addSubview(imageView)
-                
-                mySceneDelegate?.updateAd()
-                
+            if (againstBody.node!.name != nil) {
+                mySceneDelegate?.updateAd(againstBody.node!.name!)
             }
             _blocks.removeObject(againstBody.node!)
             againstBody.node?.removeFromParent()
