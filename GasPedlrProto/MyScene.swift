@@ -13,6 +13,7 @@ import GameKit
 protocol MySceneDelegate {
     func dead()
     func clear()
+    func updateAd()
 }
 
 class MyScene: SKScene, SKPhysicsContactDelegate {
@@ -100,21 +101,14 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
             //textView.backgroundColor = UIColor.blackColor()
             //self.view!.addSubview(textView)
             if (againstBody.node!.name == "test") {
-                let imageName = "tempAd1.jpg"
-                let image = UIImage(named: imageName)
-                let imageView = UIImageView(image: image!)
-                imageView.frame = CGRectMake(20.0, 20.0, 800.0, 60.0)
-                view?.addSubview(imageView)
+                //let imageName = "tempAd1.jpg"
+                //let image = UIImage(named: imageName)
+                //let imageView = UIImageView(image: image!)
+                //imageView.frame = CGRectMake(20.0, 20.0, 800.0, 60.0)
+                //view?.addSubview(imageView)
                 
-                //sendNotification()
-                //let verticalCenter = NSLayoutConstraint(item: textView, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: 0.0)
-                //textView.textAlignment = NSTextAlignment.Center
-                //textView.textColor = UIColor.redColor()
-                //textView.backgroundColor = UIColor.blackColor()
-                //textView.text = "Test text!!!"
-                //textView.font = UIFont(name: "Arial", size: 20)
-                //self.view!.addSubview(textView)
-                //self.view!.addConstraint(verticalCenter)
+                mySceneDelegate?.updateAd()
+                
             }
             _blocks.removeObject(againstBody.node!)
             againstBody.node?.removeFromParent()

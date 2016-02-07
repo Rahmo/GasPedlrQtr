@@ -621,8 +621,8 @@
                                     <constraint firstAttribute="width" constant="764" id="CQv-bw-XRp"/>
                                 </constraints>
                             </webView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Driver Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFO-YR-vFG">
-                                <rect key="frame" x="449" y="70" width="102" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFO-YR-vFG">
+                                <rect key="frame" x="461" y="35" width="102" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -942,10 +942,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-ew-1Mn" customClass="SKView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-ew-1Mn" customClass="SKView">
                                 <rect key="frame" x="20" y="0.0" width="784" height="656"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKz-Ht-Xev">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKz-Ht-Xev">
                                         <rect key="frame" x="317" y="290" width="150" height="76"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
                                         <state key="normal" title="CLEAR!">
@@ -955,7 +955,7 @@
                                             <action selector="restart:" destination="Fzm-FY-Z6G" eventType="touchUpInside" id="OAN-2j-cgA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZn-bh-nki">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZn-bh-nki">
                                         <rect key="frame" x="270" y="290" width="245" height="76"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
                                         <state key="normal" title="GAME OVER">
@@ -992,12 +992,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWB-We-Ie8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Flappy_Bird_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="OWB-We-Ie8">
                                 <rect key="frame" x="814" y="0.0" width="180" height="656"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ch0-Kx-xma">
-                                <rect key="frame" x="881" y="702" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="887" y="702" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="QAY-Fl-5dS" kind="show" id="Dhc-Qf-bZC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1034,6 +1037,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="adImage" destination="OWB-We-Ie8" id="OPD-pu-jwa"/>
+                        <outlet property="backButton" destination="Ch0-Kx-xma" id="VtL-ye-4Zs"/>
                         <outlet property="gameClearButton" destination="UKz-Ht-Xev" id="1MQ-tX-JeG"/>
                         <outlet property="gameOverButton" destination="aZn-bh-nki" id="5NM-Ig-Fg5"/>
                         <outlet property="lifeLabel" destination="HLZ-Io-yGy" id="IXF-jj-2wC"/>
@@ -1095,7 +1100,7 @@
                                 </connections>
                             </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msu-sB-2f3">
-                                <rect key="frame" x="20" y="10" width="560" height="66"/>
+                                <rect key="frame" x="20" y="10" width="984" height="66"/>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1140,6 +1145,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Flappy_Bird_icon.png" width="175" height="175"/>
         <image name="Google-Maps-icon.png" width="144" height="144"/>
         <image name="breakout_icon.png" width="300" height="300"/>
         <image name="loginButton.jpg" width="455" height="111"/>
@@ -1150,7 +1156,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="17M-20-tVe"/>
-        <segue reference="538-Gt-NrF"/>
+        <segue reference="Dhc-Qf-bZC"/>
         <segue reference="ybi-IT-bzM"/>
     </inferredMetricsTieBreakers>
 </document>

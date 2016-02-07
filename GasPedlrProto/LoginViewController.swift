@@ -66,8 +66,8 @@ class LoginViewController: UIViewController {
                 
             } else {
                 
-            }else{
-            print("Could not find user")
+
+            //print("Could not find user")
               
         
 
