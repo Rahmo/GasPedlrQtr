@@ -5,9 +5,6 @@
 //  Created by Lisa Bernkopf on 11/8/15.
 //  Copyright © 2015 GMG Developments. All rights reserved.
 
-//  TEST COMMENT 11/22/15
-// TEST COMMENT 02/01/16
-
 import UIKit
 
 class GamePageViewController: UIViewController {
