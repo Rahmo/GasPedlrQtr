@@ -53,12 +53,21 @@ class LoginViewController: UIViewController {
                 
                NSUserDefaults.standardUserDefaults().setBool(true, forKey:"isUserLoggedIn");
                NSUserDefaults.standardUserDefaults().synchronize();
-    
+               print("User logged in")
                 
-              // self.dismissViewControllerAnimated(true, completion:nil);
+               self.dismissViewControllerAnimated(true, completion:nil);
                 
-            }else{
-            print("Could not find user")
+            //}else{
+            //    print("Could not find user")
+            //}
+            
+       
+                self.performSegueWithIdentifier("LoginSuccess", sender: self)
+                
+            } else {
+                
+
+            //print("Could not find user")
               
         
 

@@ -9,7 +9,12 @@ class GameViewController: UIViewController, MySceneDelegate {
     @IBOutlet weak var lifeLabel : UILabel!
     @IBOutlet weak var gameOverButton : UIButton!
     @IBOutlet weak var gameClearButton : UIButton!
-
+    @IBOutlet var adImage: UIImageView!
+    @IBOutlet var backButton: UIButton!
+    
+    var adDict = ["bannerSpa.png": "adSpa.png", "bannerStarbucks.png": "adStarbucks.png", "bannerHalfAcre.png": "adHalfAcre.png", "bannerTacoBell.jpg": "adTacoBell.png"]
+    
+    
     var _myScene : MyScene!
     var _readyToFire = false
     var _lifeCount : Int = 0 {
@@ -51,6 +56,10 @@ class GameViewController: UIViewController, MySceneDelegate {
     func clear() {
         gameClearButton.hidden = false
         _readyToFire = false
+    }
+    
+    func updateAd(spriteName: String) {
+        adImage.image = UIImage(named: adDict[spriteName]!)
     }
 
     func setPadPosition(value:Float) {

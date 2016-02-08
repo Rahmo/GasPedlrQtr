@@ -776,7 +776,7 @@
                                 <rect key="frame" x="807" y="297" width="90" height="94"/>
                                 <state key="normal" image="breakout_icon.png"/>
                                 <connections>
-                                    <segue destination="edy-Q5-BOi" kind="show" id="Dx6-Jo-ZTU"/>
+                                    <segue destination="Fzm-FY-Z6G" kind="show" id="u0D-iY-NP5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrQ-4u-I4V">
@@ -909,9 +909,6 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aX6-Ao-cpe">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="768"/>
-                                <connections>
-                                    <segue destination="Fzm-FY-Z6G" kind="embed" id="D3H-ml-8Jp"/>
-                                </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbH-RD-KJK">
                                 <rect key="frame" x="876" y="369" width="34" height="30"/>
@@ -920,7 +917,6 @@
                                 </state>
                                 <connections>
                                     <action selector="gameBackButton:" destination="edy-Q5-BOi" eventType="touchUpInside" id="aU5-UC-t8p"/>
-                                    <segue destination="QAY-Fl-5dS" kind="show" identifier="gameBackView" id="cau-LQ-5cY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -946,7 +942,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQc-R9-8Rh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3917" y="-223"/>
+            <point key="canvasLocation" x="4009" y="-795"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="idY-cG-aVg">
@@ -957,14 +953,14 @@
                         <viewControllerLayoutGuide type="bottom" id="A9D-Pv-RAd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EzK-9Y-3jn">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-ew-1Mn" customClass="SKView">
-                                <rect key="frame" x="20" y="20" width="728" height="468"/>
+                                <rect key="frame" x="20" y="0.0" width="784" height="656"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKz-Ht-Xev">
-                                        <rect key="frame" x="289" y="196" width="150" height="76"/>
+                                        <rect key="frame" x="317" y="290" width="150" height="76"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
                                         <state key="normal" title="CLEAR!">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -974,7 +970,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZn-bh-nki">
-                                        <rect key="frame" x="242" y="196" width="245" height="76"/>
+                                        <rect key="frame" x="270" y="290" width="245" height="76"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
                                         <state key="normal" title="GAME OVER">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -993,7 +989,7 @@
                                 </constraints>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="WEF-U6-5yU">
-                                <rect key="frame" x="18" y="702" width="732" height="31"/>
+                                <rect key="frame" x="18" y="702" width="788" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="sJu-TJ-UM0"/>
                                 </constraints>
@@ -1010,25 +1006,53 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWB-We-Ie8">
+                                <rect key="frame" x="814" y="0.0" width="180" height="656"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ch0-Kx-xma">
+                                <rect key="frame" x="887" y="702" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="QAY-Fl-5dS" kind="show" id="Dhc-Qf-bZC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="OWB-We-Ie8" firstAttribute="top" secondItem="ybT-ew-1Mn" secondAttribute="top" id="0yA-qb-DUG"/>
                             <constraint firstItem="HLZ-Io-yGy" firstAttribute="leading" secondItem="EzK-9Y-3jn" secondAttribute="leading" constant="20" id="7rD-oa-J2S"/>
+                            <constraint firstItem="WEF-U6-5yU" firstAttribute="trailing" secondItem="ybT-ew-1Mn" secondAttribute="trailing" id="9nI-c3-N3l"/>
                             <constraint firstItem="A9D-Pv-RAd" firstAttribute="top" secondItem="WEF-U6-5yU" secondAttribute="bottom" constant="36" id="Dh9-GA-GcR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OWB-We-Ie8" secondAttribute="trailing" constant="10" id="FDX-g0-DGz"/>
                             <constraint firstAttribute="trailing" secondItem="ybT-ew-1Mn" secondAttribute="trailing" constant="20" id="KCU-vx-Vz4"/>
+                            <constraint firstItem="Ch0-Kx-xma" firstAttribute="centerY" secondItem="WEF-U6-5yU" secondAttribute="centerY" id="KSH-hh-I0B"/>
                             <constraint firstItem="WEF-U6-5yU" firstAttribute="leading" secondItem="EzK-9Y-3jn" secondAttribute="leading" constant="20" id="MTN-xZ-249"/>
                             <constraint firstItem="ybT-ew-1Mn" firstAttribute="top" secondItem="ni8-X1-e0k" secondAttribute="bottom" id="O8v-Wq-PNs"/>
+                            <constraint firstItem="Ch0-Kx-xma" firstAttribute="centerX" secondItem="OWB-We-Ie8" secondAttribute="centerX" id="Qla-C9-Aj7"/>
                             <constraint firstItem="HLZ-Io-yGy" firstAttribute="top" secondItem="ybT-ew-1Mn" secondAttribute="bottom" constant="8" id="cyu-ca-qMd"/>
+                            <constraint firstItem="OWB-We-Ie8" firstAttribute="bottom" secondItem="ybT-ew-1Mn" secondAttribute="bottom" id="euH-Dr-ox8"/>
                             <constraint firstItem="WEF-U6-5yU" firstAttribute="top" secondItem="HLZ-Io-yGy" secondAttribute="bottom" constant="17.5" id="g2h-JA-Ob7"/>
                             <constraint firstItem="ybT-ew-1Mn" firstAttribute="leading" secondItem="EzK-9Y-3jn" secondAttribute="leading" constant="20" id="gyI-mD-AYV"/>
+                            <constraint firstItem="OWB-We-Ie8" firstAttribute="leading" secondItem="ybT-ew-1Mn" secondAttribute="trailing" constant="10" id="lKk-ZC-mdo"/>
                             <constraint firstAttribute="trailing" secondItem="WEF-U6-5yU" secondAttribute="trailing" constant="20" id="xXM-Ah-qWd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ybT-ew-1Mn" secondAttribute="trailing" constant="200" id="z1R-v0-F1D"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KCU-vx-Vz4"/>
+                                <exclude reference="xXM-Ah-qWd"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="HMK-lI-frZ" appends="YES" id="Q6X-e8-Tro"/>
                         </connections>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="adImage" destination="OWB-We-Ie8" id="OPD-pu-jwa"/>
+                        <outlet property="backButton" destination="Ch0-Kx-xma" id="VtL-ye-4Zs"/>
                         <outlet property="gameClearButton" destination="UKz-Ht-Xev" id="1MQ-tX-JeG"/>
                         <outlet property="gameOverButton" destination="aZn-bh-nki" id="5NM-Ig-Fg5"/>
                         <outlet property="lifeLabel" destination="HLZ-Io-yGy" id="IXF-jj-2wC"/>
@@ -1043,7 +1067,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5049" y="-223.5"/>
+            <point key="canvasLocation" x="4211" y="0.0"/>
         </scene>
         <!--New Web View-->
         <scene sceneID="vvB-zr-kXO">
@@ -1090,7 +1114,7 @@
                                 </connections>
                             </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msu-sB-2f3">
-                                <rect key="frame" x="20" y="10" width="560" height="66"/>
+                                <rect key="frame" x="20" y="10" width="984" height="66"/>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
