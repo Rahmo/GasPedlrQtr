@@ -17,7 +17,7 @@ enum EventType: Int {
   case OnExit
 }
 
-class Geotification: NSObject, NSCoding, MKAnnotation {
+class Geotification:  NSObject, NSCoding, MKAnnotation {
   var coordinate: CLLocationCoordinate2D
   var radius: CLLocationDistance
   var identifier: String

@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var userEmailTextField: UITextField!
-    
+      var PartnersArray = NSMutableArray()
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var userPasswordTextField:
     UITextField!
@@ -36,7 +36,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(sender: AnyObject) {
         
+
         // Store Login & Password fields from Parse to label
+
         let userEmail = userEmailTextField.text;
         let userPassword = userPasswordTextField.text;
         
@@ -45,12 +47,16 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(userEmail!, password: userPassword!) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil
+        
                 
                 
-                
+
             {
-                // Login is succesfull
                 
+             
+                
+                
+                // Login is succesfull
                NSUserDefaults.standardUserDefaults().setBool(true, forKey:"isUserLoggedIn");
                NSUserDefaults.standardUserDefaults().synchronize();
                print("User logged in")
@@ -89,6 +95,7 @@ class LoginViewController: UIViewController {
     
     
     
+
     // Do any additional setup after loading the view.
     
     

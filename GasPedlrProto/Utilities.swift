@@ -2,8 +2,7 @@
 //  Utilities.swift
 //  Geotify
 //
-//  Created by Ken Toh on 3/3/15.
-//  Copyright (c) 2015 Ken Toh. All rights reserved.
+//  Created by Rahmo
 //
 
 import UIKit

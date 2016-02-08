@@ -3,99 +3,107 @@
 //  GasPedlrProto
 //
 //  Created by Abdulrahman on 2015-11-05.
-//  Copyright © 2015 GMG Developments. All rights reserved.
+//  Copyright © Rahmo
 //
 
 import Foundation
 class ServiceHelper{
     
     
+    /**
+     This method read the serielized object (below) and put it in array to be returned.
+     
+     - parameter object: The object is the one that has been serilized from Json an dneed to be read
+     */
+    func readJSONObject(object: [String: AnyObject]) -> [SearchModel] {
+
+        var Data:[SearchModel] = [SearchModel]();
+        
+        /// The lest side of the Json which string the contains "result"
+        let datas = object["results"] as! NSArray
+        
+        /**
+        *  The right side of the first node can contain many data types
+        */
+        for dictData : AnyObject in datas{
+            let dictEach = dictData as! NSDictionary;
+            let name = dictEach.valueForKey("name")as!  NSString;
+            let icon = dictEach.valueForKey("icon")as!  String;
+            let gematries = dictEach.valueForKey("geometry")as!  NSDictionary;
+            let locations:AnyObject = gematries.valueForKey("location")!;
+            let lon = locations.valueForKey("lng")as!  Double;
+            let lat = locations.valueForKey("lat")as! Double;
+            var address : String
+            
+            //it follows this if we are searching according the type (catagory) using the nearbysearch APi
+            if ((dictEach.valueForKey("vicinity") ) != nil)
+            {
+                address = dictEach.valueForKey("vicinity")as!  String;
+            }
+                // this follows text search api
+            else {
+                address = dictEach.valueForKey("formatted_address")as!  String;
+            }
+            //Changed this from Var to Let
+            let searchModel:SearchModel = SearchModel(name: name as String, icon: icon, lon: lon, lat: lat,address:address);
+            if (Data.count <= 20 ) {
+                Data.append(searchModel);
+            }
+            else {
+                for index in 1...Data.count {
+                    Data.removeAtIndex(index)
+                }
+                Data.append(searchModel);
+            }
+           
+        }
+            
+   
+    return Data
+    }
+    
+    
+    /**
+     This service reads the data from google line that is Json and serilalize it then put it in an array to be returned
+     return the result from the URl request into an array of [SearchModel]
+     
+     - parameter afterDownload: This is the array that is to be returned
+     - parameter url:           This is the URL that conatins the request (will return Json )
+     ** Updated 2/3/2016
+     */
     
     func getServiceHandle(afterDownload:([SearchModel]) -> Void ,url:String){
         
-        let nsURL:NSURL = NSURL(string: url)!;
-        print(url);
-        let urlRequest = NSMutableURLRequest(URL: nsURL);
-        urlRequest.timeoutInterval = 30.0;
-        urlRequest.HTTPMethod = "GET";
-        let queue:NSOperationQueue = NSOperationQueue.mainQueue();
+        /// This is the result to be returned to the caller mathod
+       var publishData:[SearchModel] = [SearchModel]();
         
         
-        NSURLConnection.sendAsynchronousRequest(urlRequest, queue: queue, completionHandler: { response, data, error in
-            print(response);
-            print(data);
-            if(data!.length > 0){
-                var publishData:[SearchModel] = [SearchModel]();
-                // var errorPointer:NSError?
-                var jsonObject:AnyObject? = nil
-                
-                do {
-                    jsonObject   = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! [String:AnyObject]
-                    // use anyObj here
-                    
-                    
-                } catch let error as NSError {
-                    print("json error: \(error.localizedDescription)")
-                }
-                
-                
-                
-                print(jsonObject);
-                if(jsonObject!.isKindOfClass(NSDictionary)){
-                    
-               //     let jsonData = jsonObject as! NSDictionary;
-                    let datas =  jsonObject!.valueForKey("results")as! NSArray;
-                    
-                    
-                    for dictData : AnyObject in datas{
-                        let dictEach = dictData as! NSDictionary;
-                        let name = dictEach.valueForKey("name")as!  NSString;
-                        let icon = dictEach.valueForKey("icon")as!  String;
-                        
-                        print(name);
-                        print(icon);
-                        
-                        let gematries = dictEach.valueForKey("geometry")as!  NSDictionary;
-                        let locations:AnyObject = gematries.valueForKey("location")!;
-                        let lon = locations.valueForKey("lng")as!  Double;
-                        let lat = locations.valueForKey("lat")as! Double;
-                    
-                        var address : String
-                        
-                        
-                        //it follows this if we are searching according the type (catagory) using the nearbysearch APi
-                        if ((dictEach.valueForKey("vicinity") ) != nil)
-                        {
-                         address = dictEach.valueForKey("vicinity")as!  String;
-                        }
-                            // this follows text search api 
-                        else {
-                            address = dictEach.valueForKey("formatted_address")as!  String;
-                        }
-                        //Changed this from Var to Let
-                        let searchModel:SearchModel = SearchModel(name: name as String, icon: icon, lon: lon, lat: lat,address:address);
-                        publishData.append(searchModel);
-                        
-                        
-                    }
-                    print(publishData);
-                    for  item in publishData{
-                        print(item.name);
-                        print(item.icon);
-                        print(item.lat);
-                        print(item.lon);
-                    }
-                    afterDownload(publishData);
-                    //block(publishData);
-                    //NSNotificationCenter.defaultCenter()?.postNotificationName("DataLoaded", object: nil, userInfo: ["data":publishData]);
-                }
-            }
-            else{
-                //error cought here
-            }
+        
+      let nsURL:NSURL? = NSURL(string: url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!);
+        
+
+        /// 1) Get the URl Link
+        let data = NSData(contentsOfURL: nsURL!)
+        /**
+        *  2) Serielize the Json to an object so we can do work on it.
+        */
+        do {
+            let object = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
             
-        });
-        //completionHandler: ((response:NSURLResponse!, data:NSData!, error:NSError!), -> Void)
-        
-    }
+            
+            /// Check that it is a dictionary type meaning its Json
+            if let dictionary = object as? [String: AnyObject] {
+               publishData = readJSONObject(dictionary)
+                
+                /**
+                *  Send this paramete to the caller with the result "Publish Datas"
+                */
+                afterDownload(publishData)
+            }
+        }
+        /// It is important to catch the error like that and not only putting catch... we put let error
+        catch let error as NSError {
+           print("json error: \(error.localizedDescription)")
+        }
+       }
 }
