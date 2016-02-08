@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     func loadAddressURL(){
         let requestURL = NSURL(string: URLPath)
         let request = NSURLRequest(URL:requestURL!)
-        driverWebView.loadRequest(request)
+      //  driverWebView.loadRequest(request)
     }
 
     override func viewDidAppear(animated: Bool)
