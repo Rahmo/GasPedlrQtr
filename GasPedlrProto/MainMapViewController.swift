@@ -3,7 +3,7 @@
 //  GasPedlrProto
 //
 //  Created by Abdulrahman on 2015-11-23.
-//  Copyright © 2015 GMG Developments. All rights reserved.
+//  @Rahmo
 //
 
 

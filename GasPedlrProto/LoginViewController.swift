@@ -36,57 +36,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(sender: AnyObject) {
         
-<<<<<<< HEAD
-  
-        
-//        var query = PFQuery(className: "Partners")
-//        query.whereKeyExists("PartnerName")
-//      
-//        
-//        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
-//            
-//            if error == nil
-//            {
-//                if let pfObjects = objects as [PFObject]!
-//                {
-//                    print(pfObjects)
-//            
-//                    return
-//                }
-//            }
-//            
-//        
-//        }
-    
 
-//        var query = PFQuery(className: "Partners")
-//        query.findObjectsInBackgroundWithBlock {
-//            (objects: [PFObject]?, error: NSError?) -> Void in
-//            
-//            if error == nil {
-//                
-//                // query successful - display number of rows found
-//                print("Successfully retrieved \(objects!.count) people")
-//                
-//                // print name & hair color of each person found
-//                for object in objects! {
-//                    
-//                    let name = object["PartnerName"] as! NSString
-//                   
-//                    
-//                    print("\(name) has ")
-//                    
-//                }
-//            } else {
-//                
-//                // Log details of the failure
-//                NSLog("Error: %@ %@", error!, (error?.userInfo)!)
-//            }
-//        }
-        
-=======
         // Store Login & Password fields from Parse to label
->>>>>>> 44c12194b0af8d7e58f7cf3044f3a40e561e7d57
+
         let userEmail = userEmailTextField.text;
         let userPassword = userPasswordTextField.text;
         
@@ -95,12 +47,10 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsernameInBackground(userEmail!, password: userPassword!) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil
-<<<<<<< HEAD
-=======
+        
                 
                 
-                
->>>>>>> 44c12194b0af8d7e58f7cf3044f3a40e561e7d57
+
             {
                 
              

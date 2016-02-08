@@ -17,7 +17,7 @@
 //.CustomAnnotation
 //.ServiceHelper
 //.SearchModel : This to be added to the Geaotification to contain the srecieved info about each place
-// Copyright © 2015 GMG Developments. All rights reserved.
+// Copyright © Rahmo
 
 
 import Foundation
@@ -183,8 +183,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
             veiw.canShowCallout = false
         }
     }
-    //this function is to customise the veiw for the annotation
     
+    
+    //this function is to customise the veiw for the annotation
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer! {
         if overlay is MKCircle {
             let circleRenderer = MKCircleRenderer(overlay: overlay)
@@ -528,7 +529,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     
     
     
-    // MARK: Map overlay functions
+    // Map overlay functions
     //This add the overlay of the
     func addRadiusOverlayForGeotification(geotification: Geotification) {
         mapView?.addOverlay(MKCircle(centerCoordinate: geotification.coordinate, radius: geotification.radius))
