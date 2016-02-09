@@ -2,8 +2,8 @@
 //  CollectionViewCell.swift
 //  IOS8SwiftCustomCollectionViewCellsTutorial
 //
-//  Created by Arthur Knopper on 22/12/14.
-//  Copyright (c) 2014 Arthur Knopper. All rights reserved.
+//  Created by Abdulrahman on 22/12/14.
+// @ Rahmo
 //
 
 import UIKit

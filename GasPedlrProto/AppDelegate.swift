@@ -83,20 +83,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
     }
     
     func handleRegionEvent(region: CLRegion) {
-        // Show an alert if application is active
-        if UIApplication.sharedApplication().applicationState == .Active {
+        /**
+        *  This method checks the App if its in active session it shows a
+        *
+        *  @return <#return value description#>
+        */
+        
+        
+        if UIApplication.sharedApplication().applicationState == .Active
+        {
             if let message = notefromRegionIdentifier(region.identifier) {
                 if let viewController = window?.rootViewController {
                     showSimpleAlertWithTitle(nil, message: message, viewController: viewController)
+                   
+                    
+                    // March 10, 1876 was 3,938,698,800 seconds before the third millennium (January 1, 2001 midnight UTC)
+                    //let firstLandPhoneCallDate = NSDate(timeIntervalSinceReferenceDate: -3_938_698_800.0)
+                   
+
+//                    let notification = UILocalNotification()
+//                    notification.alertBody = notefromRegionIdentifier(region.identifier)
+//                    notification.soundName = "Default";
+//                    notification.fireDate = firstLandPhoneCallDate
+//                    UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+                    
                 }
             }
+        
+        
         } else {
             // Otherwise present a local notification
             let notification = UILocalNotification()
             notification.alertBody = notefromRegionIdentifier(region.identifier)
             notification.soundName = "Default";
+           
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)
         }
+       
         
     }
     
@@ -116,7 +139,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         NSLog("\(error)")
         
     }
-    func locationManager(manager: CLLocationManager, didDetermineState state: CLRegionState, forRegion region: CLRegion) {
+    func locationManager(manager: CLLocationManager, didDetermineState state: CLRegionState, forRegion region: CLRegion)
+    {
         print("BM didDetermineState \(state)");
         //  let delegate = AppDelegate.getDelegate()
         switch state {

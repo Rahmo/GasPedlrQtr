@@ -67,6 +67,7 @@
 		2CF7D26E1BEAEAE8009A3BA7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF7D26D1BEAEAE8009A3BA7 /* libsqlite3.tbd */; };
 		B40D24DD1BF136E1007431DB /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40D24DB1BF136E1007431DB /* Bolts.framework */; };
 		B40D24DE1BF136E1007431DB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40D24DC1BF136E1007431DB /* Parse.framework */; };
+		B4154F251C4DCD0100CA86AE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4154F241C4DCD0100CA86AE /* MapKit.framework */; };
 		B4A2D4AE1BFAC3200047DC08 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D4AD1BFAC3200047DC08 /* Utilities.swift */; };
 		B4A2D4B01BFAC3940047DC08 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D4AF1BFAC3940047DC08 /* Geotification.swift */; };
 		B4A2D4B21BFAC3AE0047DC08 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */; };
@@ -125,7 +126,6 @@
 		037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerHalfAcre.png; sourceTree = "<group>"; };
 		037EF9ED1BEFEDF400AB3E70 /* Basso.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Basso.caf; sourceTree = "<group>"; };
 		037EF9EE1BEFEDF400AB3E70 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		037EF9F11BEFEE0400AB3E70 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		037EF9F21BEFEE0400AB3E70 /* MyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyScene.swift; sourceTree = "<group>"; };
 		037EF9F31BEFEE0400AB3E70 /* Ping.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ping.caf; sourceTree = "<group>"; };
 		037EF9F41BEFEE0400AB3E70 /* Pop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pop.caf; sourceTree = "<group>"; };
@@ -186,6 +186,7 @@
 		2CF7D26D1BEAEAE8009A3BA7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B40D24DB1BF136E1007431DB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B40D24DC1BF136E1007431DB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B4154F241C4DCD0100CA86AE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B4A2D4AD1BFAC3200047DC08 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		B4A2D4AF1BFAC3940047DC08 /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
 		B4A2D4B11BFAC3AE0047DC08 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -226,6 +227,7 @@
 				2CF7D2681BEAEACC009A3BA7 /* Security.framework in Frameworks */,
 				2CF7D2661BEAEAC6009A3BA7 /* QuartzCore.framework in Frameworks */,
 				2C5CC7761BF02432004629F0 /* MobileCoreServices.framework in Frameworks */,
+				B4154F251C4DCD0100CA86AE /* MapKit.framework in Frameworks */,
 				2CF7D2641BEAEAC1009A3BA7 /* CoreLocation.framework in Frameworks */,
 				2CF7D2621BEAEABA009A3BA7 /* CoreGraphics.framework in Frameworks */,
 				2CF7D2601BEAEAB4009A3BA7 /* CFNetwork.framework in Frameworks */,
@@ -289,7 +291,6 @@
 				B4FC9D1D1BEC8D2E007303FC /* CustomFlyout.xib */,
 				B4A2D4B31BFAC47A0047DC08 /* Images.xcassets */,
 				2C03A6901BC98A1200335354 /* Assets.xcassets */,
-				037EF9F11BEFEE0400AB3E70 /* MyPlayground.playground */,
 				037EF9F31BEFEE0400AB3E70 /* Ping.caf */,
 				037EF9F41BEFEE0400AB3E70 /* Pop.caf */,
 				037EF9F51BEFEE0400AB3E70 /* Smoke.sks */,
@@ -324,6 +325,7 @@
 		2C5CC7741BF023B2004629F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4154F241C4DCD0100CA86AE /* MapKit.framework */,
 				037C4C9F1C5D2EFC0082E47E /* GameKit.framework */,
 				2C5A4CD91C03B8CC00F56AA3 /* iAd.framework */,
 				B40D24DB1BF136E1007431DB /* Bolts.framework */,
@@ -504,9 +506,12 @@
 				TargetAttributes = {
 					2C03A6851BC98A1200335354 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = NA5A6S659D;
+						DevelopmentTeam = 8UX9S9A9LQ;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
 						};
@@ -768,6 +773,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -794,6 +800,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -816,11 +823,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GasPedlrProtoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmgdevelopments.GasPedlrProtoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GasPedlrProto.app/GasPedlrProto";
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
@@ -828,11 +836,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = GasPedlrProtoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmgdevelopments.GasPedlrProtoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GasPedlrProto.app/GasPedlrProto";
+				TEST_HOST = "";
 			};
 			name = Release;
 		};
