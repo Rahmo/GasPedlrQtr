@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ho-86-mYt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ho-86-mYt">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -600,75 +600,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R53-X1-7tX">
-                                <rect key="frame" x="30" y="30" width="50" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4n1-wY-stI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8M-Kh-LnZ">
-                                <rect key="frame" x="941" y="30" width="73" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Rider View"/>
-                                <connections>
-                                    <action selector="logoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D2a-XG-Rby"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Driver Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFO-YR-vFG">
-                                <rect key="frame" x="461" y="35" width="102" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLS-LJ-MX0">
-                                <rect key="frame" x="820" y="102" width="122" height="30"/>
-                                <state key="normal" title="Customer System"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLS-LJ-MX0">
+                                <rect key="frame" x="866" y="28" width="121" height="96"/>
+                                <state key="normal" image="custsystem.png"/>
                                 <connections>
                                     <segue destination="QAY-Fl-5dS" kind="show" identifier="ridersView" id="538-Gt-NrF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whr-6T-uvj">
-                                <rect key="frame" x="32" y="102" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whr-6T-uvj">
+                                <rect key="frame" x="12" y="40" width="135" height="56"/>
+                                <state key="normal" image="logout-button-blue-hi.png"/>
                                 <connections>
                                     <segue destination="4Ho-86-mYt" kind="show" identifier="logOut" id="Y6X-Pd-2j3"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lvu-6G-uk6">
-                                <rect key="frame" x="118" y="170" width="764" height="485"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="764" id="CQv-bw-XRp"/>
-                                </constraints>
-                            </webView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google-analytics-chart-growth.png" translatesAutoresizingMaskIntoConstraints="NO" id="Atf-UG-MDb">
-                                <rect key="frame" x="30" y="439" width="937" height="252"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Driver Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFO-YR-vFG">
+                                <rect key="frame" x="319" y="40" width="359" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Browser View Engagement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHG-Im-g5t">
+                                <rect key="frame" x="51" y="282" width="205" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maps Engagement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn5-zm-pAA">
+                                <rect key="frame" x="457" y="281" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Engagement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXF-O4-AlO">
+                                <rect key="frame" x="774" y="282" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advertisements Redeemed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgW-q9-frQ">
+                                <rect key="frame" x="425" y="582" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b.png" translatesAutoresizingMaskIntoConstraints="NO" id="erw-rD-y5L">
+                                <rect key="frame" x="40" y="336" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b.png" translatesAutoresizingMaskIntoConstraints="NO" id="laS-LY-Rqu">
+                                <rect key="frame" x="415" y="336" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Qd-2n-x4a">
+                                <rect key="frame" x="740" y="336" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b.png" translatesAutoresizingMaskIntoConstraints="NO" id="GlH-pV-Cy5">
+                                <rect key="frame" x="415" y="620" width="240" height="128"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jFO-YR-vFG" firstAttribute="top" secondItem="Whr-6T-uvj" secondAttribute="top" id="CEo-2q-b4I"/>
-                            <constraint firstItem="Lvu-6G-uk6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="98" id="FWR-5K-Ire"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XLS-LJ-MX0" secondAttribute="trailing" constant="45" id="Osv-Ul-p4E"/>
-                            <constraint firstItem="Whr-6T-uvj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="S9t-2Y-KfT"/>
-                            <constraint firstItem="Lvu-6G-uk6" firstAttribute="top" secondItem="jFO-YR-vFG" secondAttribute="bottom" constant="92" id="SVf-8U-9rx"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lvu-6G-uk6" secondAttribute="bottom" constant="113" id="bdP-j3-Sta"/>
-                            <constraint firstItem="jFO-YR-vFG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="d22-8b-rV3"/>
-                            <constraint firstItem="Lvu-6G-uk6" firstAttribute="top" secondItem="XLS-LJ-MX0" secondAttribute="bottom" constant="90" id="xob-3Q-B21"/>
-                            <constraint firstItem="jFO-YR-vFG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yi5-J6-eEI"/>
-                            <constraint firstItem="XLS-LJ-MX0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="yxj-iq-01s"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.11976279808633068" green="0.44029654779575245" blue="0.84536773989898983" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="RHU-fC-cNm"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="driverWebView" destination="Lvu-6G-uk6" id="GCd-w8-rSO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -1252,10 +1245,12 @@
     </scenes>
     <resources>
         <image name="Google-Maps-icon.png" width="144" height="144"/>
+        <image name="b.png" width="342" height="272"/>
         <image name="breakout_icon.png" width="300" height="300"/>
-        <image name="google-analytics-chart-growth.png" width="640" height="200"/>
+        <image name="custsystem.png" width="200" height="200"/>
         <image name="loginButton.jpg" width="455" height="111"/>
         <image name="loginViewImage.jpg" width="1512" height="756"/>
+        <image name="logout-button-blue-hi.png" width="600" height="233"/>
         <image name="registerButton.jpg" width="455" height="111"/>
         <image name="safari-icon.png" width="144" height="144"/>
         <image name="tempAd1.jpg" width="464" height="108"/>
@@ -1263,8 +1258,8 @@
         <image name="transparent icon.png" width="720" height="418"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gDu-pb-Vxd"/>
-        <segue reference="17M-20-tVe"/>
+        <segue reference="538-Gt-NrF"/>
         <segue reference="ybi-IT-bzM"/>
+        <segue reference="Y6X-Pd-2j3"/>
     </inferredMetricsTieBreakers>
 </document>
