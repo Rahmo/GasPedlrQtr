@@ -12,7 +12,7 @@ class GameViewController: UIViewController, MySceneDelegate {
     @IBOutlet var adImage: UIImageView!
     @IBOutlet var backButton: UIButton!
     
-    var adDict = ["bannerSpa.png": "adSpa.png", "bannerStarbucks.png": "adStarbucks.png", "bannerHalfAcre.png": "adHalfAcre.png", "bannerTacoBell.jpg": "adTacoBell.png"]
+    var adDict = ["bannerSpa.png": "adSpa.png", "bannerStarbucks.png": "adStarbucks.jpg", "bannerHalfAcre.png": "adHalfAcre.jpg", "bannerTacoBell.jpg": "adTacoBell.png"]
     
     
     var _myScene : MyScene!
