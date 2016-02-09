@@ -12,8 +12,6 @@
 		0352180E1C67DBFC009AE754 /* bannerSpa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0352180D1C67DBFC009AE754 /* bannerSpa.png */; };
 		035218101C67E31F009AE754 /* adSpa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0352180F1C67E31F009AE754 /* adSpa.png */; };
 		035218121C67E3D0009AE754 /* adStarbucks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 035218111C67E3D0009AE754 /* adStarbucks.jpg */; };
-		035218141C67E52E009AE754 /* adHalfAcre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 035218131C67E52E009AE754 /* adHalfAcre.jpg */; };
-		035218161C67E653009AE754 /* adTacoBell.png in Resources */ = {isa = PBXBuildFile; fileRef = 035218151C67E653009AE754 /* adTacoBell.png */; };
 		036FA2921BF6D098002E8956 /* breakout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2911BF6D098002E8956 /* breakout_icon.png */; };
 		036FA2961BF6DD07002E8956 /* tempAd1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2931BF6DD07002E8956 /* tempAd1.jpg */; };
 		036FA2971BF6DD07002E8956 /* tempAd2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2941BF6DD07002E8956 /* tempAd2.jpg */; };
@@ -30,6 +28,7 @@
 		037EF9FD1BEFEEAC00AB3E70 /* GamePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */; };
 		037EFA091BF55F0E00AB3E70 /* loginViewImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 037EFA081BF55F0E00AB3E70 /* loginViewImage.jpg */; };
 		038A4B1E1C4C25F600A80884 /* NewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A4B1D1C4C25F600A80884 /* NewWebViewController.swift */; };
+		03A172671C6972010034990F /* bannerTacoBell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03A172661C6972010034990F /* bannerTacoBell.jpg */; };
 		03A27BBA1BDD34F700E00020 /* RiderUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */; };
 		03A27BBF1BDD380F00E00020 /* Google-Maps-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */; };
 		03A27BC01BDD380F00E00020 /* safari-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BBD1BDD380F00E00020 /* safari-icon.png */; };
@@ -134,6 +133,7 @@
 		037EF9FC1BEFEEAC00AB3E70 /* GamePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePageViewController.swift; sourceTree = "<group>"; };
 		037EFA081BF55F0E00AB3E70 /* loginViewImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginViewImage.jpg; sourceTree = "<group>"; };
 		038A4B1D1C4C25F600A80884 /* NewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWebViewController.swift; sourceTree = "<group>"; };
+		03A172661C6972010034990F /* bannerTacoBell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bannerTacoBell.jpg; sourceTree = "<group>"; };
 		03A27BB91BDD34F700E00020 /* RiderUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderUIViewController.swift; sourceTree = "<group>"; };
 		03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-Maps-icon.png"; sourceTree = "<group>"; };
 		03A27BBD1BDD380F00E00020 /* safari-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safari-icon.png"; sourceTree = "<group>"; };
@@ -404,6 +404,7 @@
 				035218131C67E52E009AE754 /* adHalfAcre.jpg */,
 				035218151C67E653009AE754 /* adTacoBell.png */,
 				0352180D1C67DBFC009AE754 /* bannerSpa.png */,
+				03A172661C6972010034990F /* bannerTacoBell.jpg */,
 				0352180F1C67E31F009AE754 /* adSpa.png */,
 				035218091C67DB78009AE754 /* bannerStarbucks.png */,
 				037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */,
@@ -576,6 +577,7 @@
 				B4FC9D221BEC8FAE007303FC /* close.png in Resources */,
 				2C06798D1C69167500F2C20F /* b.png in Resources */,
 				037EF9FB1BEFEE0400AB3E70 /* spark.png in Resources */,
+				03A172671C6972010034990F /* bannerTacoBell.jpg in Resources */,
 				037EF9F81BEFEE0400AB3E70 /* Ping.caf in Resources */,
 				036FA2961BF6DD07002E8956 /* tempAd1.jpg in Resources */,
 				037EFA091BF55F0E00AB3E70 /* loginViewImage.jpg in Resources */,
