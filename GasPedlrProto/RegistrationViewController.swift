@@ -13,6 +13,7 @@ class RegistrationViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     
+    @IBOutlet weak var firstLastName: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
     
     @IBOutlet weak var userPasswordTextField: UITextField!
@@ -44,6 +45,7 @@ class RegistrationViewController: UIViewController {
         let userVehicle = vehicleTextField.text;
         let userlicensePlate = licensePlateTextField.text;
         let userRepeatPassword = repeatPassword.text;
+        let userFirstName = firstLastName.text;
         
         
         // Check for empty fields
@@ -80,6 +82,7 @@ class RegistrationViewController: UIViewController {
         myUser.email = userEmail
         myUser.setObject(userVehicle!, forKey: "User_Vehicle")
         myUser.setObject(userlicensePlate!, forKey: "User_Plate")
+         myUser.setObject(userFirstName!, forKey: "First_Name")
         
         myUser.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             print("User successfully registered")
