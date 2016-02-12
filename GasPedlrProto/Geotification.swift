@@ -12,6 +12,7 @@ let kGeotificationNoteKey = "note"
 let kGeotificationEventTypeKey = "eventType"
 let kGeotificationIconKey = "Icon"
 let kGeotificationAddressKey = "Address"
+let kGeotificationCouponKey = "Coupon"
 enum EventType: Int {
   case OnEntry = 0
   case OnExit
@@ -23,9 +24,11 @@ class Geotification:  NSObject, NSCoding, MKAnnotation {
   var identifier: String
   var note: String
 var address : String
+var coupon: String?
     var icon : String
   var eventType: EventType
-  var searchModel:SearchModel?
+  var searchModel:SearchModel!
+   
   
  //
     
@@ -52,8 +55,10 @@ var address : String
     self.note = Model.name
    self.icon = Model.icon
     self.address = Model.address
+    self.coupon = Model.coupon
     self.eventType = eventType
     self.searchModel = Model
+   
   }
     
     
@@ -68,7 +73,9 @@ var address : String
     note = decoder.decodeObjectForKey(kGeotificationNoteKey) as! String
     eventType = EventType(rawValue: decoder.decodeIntegerForKey(kGeotificationEventTypeKey))!
     address = decoder.decodeObjectForKey(kGeotificationAddressKey) as! String
+    coupon = decoder.decodeObjectForKey(kGeotificationCouponKey) as? String
     icon = decoder.decodeObjectForKey(kGeotificationIconKey) as! String
+  
   }
 
   func encodeWithCoder(coder: NSCoder) {
@@ -80,6 +87,6 @@ var address : String
     coder.encodeInt(Int32(eventType.rawValue), forKey: kGeotificationEventTypeKey)
     coder.encodeObject(icon, forKey: kGeotificationIconKey)
     coder.encodeObject(address, forKey: kGeotificationAddressKey)
-
+   coder.encodeObject(coupon, forKey: kGeotificationCouponKey)
   }
 }
