@@ -12,7 +12,9 @@ class GameViewController: UIViewController, MySceneDelegate {
     @IBOutlet var adImage: UIImageView!
     @IBOutlet var backButton: UIButton!
     
-    var adDict = ["bannerSpa.png": "adSpa.png", "bannerStarbucks.png": "adStarbucks.jpg", "bannerHalfAcre.png": "adHalfAcre.jpg", "bannerTacoBell.jpg": "adTacoBell.png"]
+    //var adDict = ["bannerSpa.png": "adSpa.png", "bannerStarbucks.png": "adStarbucks.jpg", "bannerHalfAcre.png": "adHalfAcre.jpg", "bannerTacoBell.jpg": "adTacoBell.png"]
+    
+    var newDict = ["bannerSpa.png": "newAdSpa.jpg", "bannerTacoBell.jpg": "newAdTacoBell.png", "bannerStarbucks.png": "newAdStarbucks.jpg", "bannerHalfAcre.png": "newAdHalfAcre.jpg"]
     
     
     var _myScene : MyScene!
@@ -59,7 +61,7 @@ class GameViewController: UIViewController, MySceneDelegate {
     }
     
     func updateAd(spriteName: String) {
-        adImage.image = UIImage(named: adDict[spriteName]!)
+        adImage.image = UIImage(named: newDict[spriteName]!)
     }
 
     func setPadPosition(value:Float) {
