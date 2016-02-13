@@ -34,6 +34,8 @@ class ServiceHelper{
             let lon = locations.valueForKey("lng")as!  Double;
             let lat = locations.valueForKey("lat")as! Double;
             var address : String
+          
+            
             
             //it follows this if we are searching according the type (catagory) using the nearbysearch APi
             if ((dictEach.valueForKey("vicinity") ) != nil)
@@ -44,10 +46,14 @@ class ServiceHelper{
             else {
                 address = dictEach.valueForKey("formatted_address")as!  String;
             }
-            //Changed this from Var to Let
-            let searchModel:SearchModel = SearchModel(name: name as String, icon: icon, lon: lon, lat: lat,address:address);
+        
+            
+            var searchModel:SearchModel = SearchModel(name: name as String, icon: icon, lon: lon, lat: lat,address:address );
             if (Data.count <= 20 ) {
+                
                 Data.append(searchModel);
+                
+              
             }
             else {
                 for index in 1...Data.count {
@@ -94,10 +100,13 @@ class ServiceHelper{
             /// Check that it is a dictionary type meaning its Json
             if let dictionary = object as? [String: AnyObject] {
                publishData = readJSONObject(dictionary)
-                
+               // cacheResult(dictionary)
+                //readCache()
                 /**
                 *  Send this paramete to the caller with the result "Publish Datas"
                 */
+                
+               
                 afterDownload(publishData)
             }
         }
@@ -106,4 +115,28 @@ class ServiceHelper{
            print("json error: \(error.localizedDescription)")
         }
        }
+    
+    
+    func readCache(){
+    let cache = NSCache()
+        
+      let myObject =   cache.valueForKey("CachedObject")
+        print("rrrrrr \(myObject?.valueForKey("CachedObject"))")
+    }
+    
+    func cacheResult ( var myObject: [String: AnyObject]){
+        let cache = NSCache()
+        
+        
+        if let cachedVersion = cache.objectForKey("CachedObject") as? [String: AnyObject] {
+            // use the cached version
+            myObject = cachedVersion
+        } else {
+            // create it from scratch then store in the cache
+           
+            cache.setObject(myObject, forKey: "CachedObject")
+        }
+    
+    }
+    
 }

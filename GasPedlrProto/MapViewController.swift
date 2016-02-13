@@ -50,9 +50,9 @@ extension MKMapView {
 class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapViewDelegate ,UISearchBarDelegate   {
     
     
-    
+    var flagRideMode = 0
     var geotifications = [Geotification]()
-    var partnersArray = [String]()
+    var partnerDict: [String: String] = [String: String]()
     var searchController:UISearchController!
     var autoCompleteDataSource:Array<String> = [];
     @IBOutlet weak var mapView: MKMapView!
@@ -178,10 +178,89 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     }
     
     
+    
+    /**
+     This function changes the pins
+     
+     - parameter mapView:    <#mapView description#>
+     - parameter annotation: <#annotation description#>
+     
+     - returns: <#return value description#>
+     */
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        // simple and inefficient example
+       
+         let annotationView = MKPinAnnotationView()
+        if (flagRideMode == 1) {
+        annotationView.pinColor = .Green
+        }
+        else {
+        
+          annotationView.pinColor = .Red
+        }
+    
+        if (annotation is MKUserLocation) {
+          
+                return nil
+        
+        }
+      return annotationView
+    }
+    
+
+    
+    /**
+     This function animate the pin drops as well as disabling the canShowCallout veiw when we click the pin.
+     
+     - parameter mapView: <#mapView description#>
+     - parameter views:   <#views description#>
+     */
     func mapView(mapView: MKMapView,didAddAnnotationViews views: [MKAnnotationView]){
         for veiw in views {
             veiw.canShowCallout = false
+            
+            
         }
+        
+        /// Animation code start
+        var i = -1;
+        for view in views {
+            i++;
+            let mkView = view as! MKAnnotationView
+            if view.annotation is MKUserLocation {
+                continue;
+            }
+            
+            // Check if current annotation is inside visible map rect, else go to next one
+            let point:MKMapPoint  =  MKMapPointForCoordinate(mkView.annotation!.coordinate);
+            if (!MKMapRectContainsPoint(self.mapView.visibleMapRect, point)) {
+                continue;
+            }
+            
+            let endFrame:CGRect = mkView.frame;
+            
+            // Move annotation out of view
+            mkView.frame = CGRectMake(mkView.frame.origin.x, mkView.frame.origin.y - self.view.frame.size.height, mkView.frame.size.width, mkView.frame.size.height);
+           
+            // Animate drop
+            let delay = 0.03 * Double(i)
+            UIView.animateWithDuration(0.5, delay: delay, options: UIViewAnimationOptions.CurveEaseIn, animations:{() in
+                mkView.frame = endFrame
+                // Animate squash
+                }, completion:{(Bool) in
+                    UIView.animateWithDuration(0.05, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations:{() in
+                        mkView.transform = CGAffineTransformMakeScale(1.0, 0.6)
+                        
+                        }, completion: {(Bool) in
+                            UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations:{() in
+                                mkView.transform = CGAffineTransformIdentity
+                                }, completion: nil)
+                    })
+                    
+            })
+        }
+        
+        
     }
     
     
@@ -189,15 +268,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer! {
         if overlay is MKCircle {
             let circleRenderer = MKCircleRenderer(overlay: overlay)
+            if (flagRideMode == 1)
+            {
             circleRenderer.lineWidth = 1.0
-            circleRenderer.strokeColor = UIColor.purpleColor()
-            circleRenderer.fillColor = UIColor.purpleColor().colorWithAlphaComponent(0.4)
+            circleRenderer.strokeColor = UIColor.greenColor()
+                circleRenderer.fillColor = UIColor.grayColor().colorWithAlphaComponent(0.4)
+            }
+            else {
+                circleRenderer.lineWidth = 1.0
+                circleRenderer.strokeColor = UIColor.redColor()
+                circleRenderer.fillColor = UIColor.grayColor().colorWithAlphaComponent(0.4)
+            }
             return circleRenderer
         }
         return nil
     }
     
 
+    
+    
     
     @IBAction func currentLocationPressed(sender: AnyObject) {
         //this below to remove all annotioantion plus the custom
@@ -383,7 +472,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
 
     func runPartneredBusiness(){
         
-        if (self.partnersArray.count != 0 ){
+        if (self.partnerDict.count != 0 ){
             let allAnnotations = self.mapView.annotations
             self.mapView.removeAnnotations(allAnnotations)
             clearAllGeo()
@@ -395,8 +484,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
                 
             }
             let serviceHelper = ServiceHelper();
-            for Partner in partnersArray {
-                let dynamicURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(mapData.latitude),\(mapData.longitude)&radius=5000&name=\(Partner)&sensor=true&key=\(apiKey)"
+            for Partner in partnerDict {
+                let dynamicURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(mapData.latitude),\(mapData.longitude)&radius=5000&name=\(Partner.0)&sensor=true&key=\(apiKey)"
                 serviceHelper.getServiceHandle(self.DataLoadedForPartner, url: dynamicURL);
             }
             
@@ -411,9 +500,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
             if error == nil {
             if objects?.count > 0{
                     for obj in objects!{
-              if self.partnersArray.count < objects?.count {
-              self.partnersArray.append(obj["PartnerName"] as! String)
-                                                           }
+              if self.partnerDict.count < objects?.count {
+              //self.partnersArray.append(obj["PartnerName"] as! String)
+              
+                let partnerName = obj["PartnerName"] as! String
+                let partnerCoupon = obj["CouponCode"] as! String
+                self.partnerDict.updateValue(partnerCoupon, forKey: partnerName)
+                
+                        }
                                         }
                         self.runPartneredBusiness()
                                  }
@@ -493,11 +587,54 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     }
     
     
+    /**
+     this is a helper method for the dictionary in the following method
+     
+     - parameter key:        Key to return its value
+     - parameter dictionary: The dictionary where we searhc the value from
+     
+     - returns: <#return value description#>
+     */
+    func findValueForKey(key: String, dictionary: [String: String]) ->String?
+    {
+        for (k, value) in dictionary
+        {
+           
+            if (k.lowercaseString == key.stringByReplacingOccurrencesOfString("'", withString: "").lowercaseString)
+            {
+                return value
+            }
+        }
+        
+        return nil
+    }
+    
     //This Function is important as it recieve the result from the service
     func DataLoadedForPartner(userData:[SearchModel]){
-        self.mapModels = userData;
+        flagRideMode = 1
+        
+        /**
+        *  <#Description#>
+      TODO add the coupon from the partner Dict
+        */
+       
+        var UserDataResultsWithCoupons : [SearchModel] = [SearchModel]()
+        
+        for model  in userData {
+            var m : SearchModel = SearchModel(name: model.name, icon: model.icon, lon: model.lon, lat: model.lat, address: model.address)
+          
+            if let lookupcoupon = self.findValueForKey(model.name, dictionary: partnerDict)
+            { m.coupon = "\(lookupcoupon)"}
+           
+           UserDataResultsWithCoupons.append(m)
+        }
+       
+        
+        self.mapModels = UserDataResultsWithCoupons;
+        
         var counter = 0
         for searchModel in self.mapModels!{
+       
             if (counter > 2) {
                 break
             }
@@ -508,11 +645,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
             StartGeotification(GeoCoordinate,model: searchModel)
             counter++
         }
+        
+        /**
+        The save is important to make the region monitoring
+        */
         saveAllGeotifications()
         updateGeotificationsCount()
     }
     
     func DataLoadedWithoutMonitoringRegion(userData:[SearchModel]){
+       flagRideMode = 0
         self.mapModels = userData;
         var counter = 0
         for searchModel in self.mapModels!{
@@ -573,7 +715,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         // 1
         let region = CLCircularRegion(center: geotification.coordinate, radius: geotification.radius, identifier: geotification.identifier)
         // 2
-        region.notifyOnEntry = (geotification.eventType == .OnExit)
+        region.notifyOnEntry = (geotification.eventType == .OnEntry)
         region.notifyOnExit = !region.notifyOnEntry
         return region
     }

@@ -176,8 +176,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
                     if geotification.identifier == identifier {
                         // return geotification.note
                         let Emoji = "😀"
-                        let text:String = "Welcome to \(geotification.note) \(Emoji) \n" +
+                        var text:String = "Welcome to \(geotification.note) \(Emoji) \n" +
                         "address: \(geotification.address)"
+                        if (geotification.coupon?.characters.count > 2){
+                        text = text + "\n 🤑Coupon : \(geotification.coupon!) "
+                        }
                         return text
                     }
                 }
