@@ -963,7 +963,7 @@
                                 <rect key="frame" x="887" y="702" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="QAY-Fl-5dS" kind="show" id="Dhc-Qf-bZC"/>
+                                    <action selector="backToMainView:" destination="Fzm-FY-Z6G" eventType="touchUpInside" id="tzp-xb-MJc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1017,7 +1017,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3939" y="-12"/>
+            <point key="canvasLocation" x="4195" y="-316"/>
         </scene>
         <!--New Web View-->
         <scene sceneID="vvB-zr-kXO">

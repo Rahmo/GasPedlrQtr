@@ -12,10 +12,13 @@ class GameViewController: UIViewController, MySceneDelegate {
     @IBOutlet var adImage: UIImageView!
     @IBOutlet var backButton: UIButton!
     
+    @IBAction func backToMainView(sender: AnyObject) {
+        skView.presentScene(nil)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     //var adDict = ["bannerSpa.png": "adSpa.png", "bannerStarbucks.png": "adStarbucks.jpg", "bannerHalfAcre.png": "adHalfAcre.jpg", "bannerTacoBell.jpg": "adTacoBell.png"]
     
     var newDict = ["bannerSpa.png": "newAdSpa.jpg", "bannerTacoBell.jpg": "newAdTacoBell.png", "bannerStarbucks.png": "newAdStarbucks.jpg", "bannerHalfAcre.png": "newAdHalfAcre.jpg"]
-    
     
     var _myScene : MyScene!
     var _readyToFire = false
@@ -62,6 +65,14 @@ class GameViewController: UIViewController, MySceneDelegate {
     
     func updateAd(spriteName: String) {
         adImage.image = UIImage(named: newDict[spriteName]!)
+        adImage.backgroundColor = getRandomColor()
+    }
+    
+    func getRandomColor() -> UIColor{
+        let randomRed:CGFloat = CGFloat(drand48())
+        let randomGreen:CGFloat = CGFloat(drand48())
+        let randomBlue:CGFloat = CGFloat(drand48())
+        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
     }
 
     func setPadPosition(value:Float) {
