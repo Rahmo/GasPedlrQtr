@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ho-86-mYt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ho-86-mYt">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -702,91 +702,6 @@
             </objects>
             <point key="canvasLocation" x="81" y="260"/>
         </scene>
-        <!--Web View Controller-->
-        <scene sceneID="LDY-Vh-uP5">
-            <objects>
-                <viewController id="Dga-3C-xjC" customClass="WebViewController" customModule="GasPedlrProto" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uZV-zi-rD7"/>
-                        <viewControllerLayoutGuide type="bottom" id="hob-Lm-9WR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mUQ-mt-kKS">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRc-Wi-UUP">
-                                <rect key="frame" x="0.0" y="155" width="1024" height="613"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="613" id="jNP-hd-jv9"/>
-                                </constraints>
-                            </webView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www." borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cr8-cr-NIs">
-                                <rect key="frame" x="20" y="0.0" width="565" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="565" id="e8T-2A-3YX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQJ-Yc-c6v">
-                                <rect key="frame" x="585" y="0.0" width="30" height="30"/>
-                                <state key="normal" title="Go"/>
-                                <connections>
-                                    <action selector="TheGoButton:" destination="Dga-3C-xjC" eventType="touchUpInside" id="mH5-pO-05l"/>
-                                </connections>
-                            </button>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pT-Ff-6u9">
-                                <rect key="frame" x="4" y="655" width="1020" height="111"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Dga-3C-xjC" id="kOX-xJ-qhK"/>
-                                </connections>
-                            </adBannerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soc-BD-mcR">
-                                <rect key="frame" x="692" y="6" width="268" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Back to Selection Screen"/>
-                                <connections>
-                                    <action selector="webBackButton:" destination="Dga-3C-xjC" eventType="touchUpInside" id="TS6-UV-XdI"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tempAd1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sON-sc-F5x">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="128"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tempAd2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="la0-CE-GJe">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="128"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="0.095829888020000004" green="0.30740941579999997" blue="0.46398478399999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="7pT-Ff-6u9" firstAttribute="top" secondItem="QRc-Wi-UUP" secondAttribute="bottom" constant="6" id="1Ib-YX-ORO"/>
-                            <constraint firstItem="DQJ-Yc-c6v" firstAttribute="leading" secondItem="Cr8-cr-NIs" secondAttribute="trailing" id="1yH-wb-57k"/>
-                            <constraint firstItem="Cr8-cr-NIs" firstAttribute="leading" secondItem="mUQ-mt-kKS" secondAttribute="leadingMargin" id="Dhu-qF-T0O"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="soc-BD-mcR" secondAttribute="trailing" constant="24" id="HCh-hq-JIO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QRc-Wi-UUP" secondAttribute="trailing" constant="-20" id="K3v-Du-nff"/>
-                            <constraint firstItem="QRc-Wi-UUP" firstAttribute="leading" secondItem="mUQ-mt-kKS" secondAttribute="leadingMargin" constant="-20" id="PF5-SX-rE7"/>
-                            <constraint firstItem="7pT-Ff-6u9" firstAttribute="leading" secondItem="QRc-Wi-UUP" secondAttribute="leading" id="SOt-2c-Oza"/>
-                            <constraint firstItem="Cr8-cr-NIs" firstAttribute="leading" secondItem="mUQ-mt-kKS" secondAttribute="leadingMargin" id="XKO-hL-ExD"/>
-                            <constraint firstItem="Cr8-cr-NIs" firstAttribute="top" secondItem="mUQ-mt-kKS" secondAttribute="top" id="bcx-xU-hMM"/>
-                            <constraint firstItem="hob-Lm-9WR" firstAttribute="top" secondItem="QRc-Wi-UUP" secondAttribute="bottom" id="gs3-T7-gIF"/>
-                            <constraint firstItem="Cr8-cr-NIs" firstAttribute="top" secondItem="DQJ-Yc-c6v" secondAttribute="top" id="khM-lH-B7v"/>
-                            <constraint firstItem="Cr8-cr-NIs" firstAttribute="baseline" secondItem="soc-BD-mcR" secondAttribute="baseline" id="xim-3v-zKf"/>
-                            <constraint firstItem="QRc-Wi-UUP" firstAttribute="centerX" secondItem="mUQ-mt-kKS" secondAttribute="centerX" id="yEZ-Xr-WvF"/>
-                        </constraints>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="TheTextField" destination="mUQ-mt-kKS" id="kb8-6s-gg4"/>
-                        <outlet property="TheWebView" destination="QRc-Wi-UUP" id="pNy-GU-R58"/>
-                        <outlet property="adBanner" destination="7pT-Ff-6u9" id="Hev-iE-Aig"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AuB-3h-U23" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3839" y="-1402"/>
-        </scene>
         <!--RiderUI View Controller-->
         <scene sceneID="KvG-08-Rjh">
             <objects>
@@ -979,55 +894,6 @@
             </objects>
             <point key="canvasLocation" x="2668" y="452"/>
         </scene>
-        <!--Game Page View Controller-->
-        <scene sceneID="7Am-o0-e5G">
-            <objects>
-                <viewController id="edy-Q5-BOi" customClass="GamePageViewController" customModule="GasPedlrProto" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Dox-Zc-PZ9"/>
-                        <viewControllerLayoutGuide type="bottom" id="k5m-Ka-sM0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9tz-Oz-wpk">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aX6-Ao-cpe">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="768"/>
-                            </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbH-RD-KJK">
-                                <rect key="frame" x="876" y="369" width="34" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="gameBackButton:" destination="edy-Q5-BOi" eventType="touchUpInside" id="aU5-UC-t8p"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.095829888020000004" green="0.30740941579999997" blue="0.46398478399999998" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="aX6-Ao-cpe" firstAttribute="centerY" secondItem="nbH-RD-KJK" secondAttribute="centerY" id="Bfh-qk-Qc6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nbH-RD-KJK" secondAttribute="trailing" constant="94" id="Dan-RW-yu6"/>
-                            <constraint firstAttribute="trailing" secondItem="aX6-Ao-cpe" secondAttribute="trailing" constant="256" id="FAp-ql-Qqn"/>
-                            <constraint firstItem="aX6-Ao-cpe" firstAttribute="leading" secondItem="9tz-Oz-wpk" secondAttribute="leadingMargin" constant="-20" id="ZgP-by-yBc"/>
-                            <constraint firstItem="nbH-RD-KJK" firstAttribute="centerY" secondItem="9tz-Oz-wpk" secondAttribute="centerY" id="ewh-FQ-bIO"/>
-                            <constraint firstItem="nbH-RD-KJK" firstAttribute="centerX" secondItem="9tz-Oz-wpk" secondAttribute="centerX" id="lUm-WQ-YQy"/>
-                            <constraint firstItem="aX6-Ao-cpe" firstAttribute="bottom" secondItem="k5m-Ka-sM0" secondAttribute="top" id="rV6-Yy-xks"/>
-                            <constraint firstItem="aX6-Ao-cpe" firstAttribute="top" secondItem="9tz-Oz-wpk" secondAttribute="top" id="w5T-bD-pS4"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="lUm-WQ-YQy"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vQc-R9-8Rh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4009" y="-795"/>
-        </scene>
         <!--Game View Controller-->
         <scene sceneID="idY-cG-aVg">
             <objects>
@@ -1097,7 +963,7 @@
                                 <rect key="frame" x="887" y="702" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="QAY-Fl-5dS" kind="show" id="Dhc-Qf-bZC"/>
+                                    <action selector="backToMainView:" destination="Fzm-FY-Z6G" eventType="touchUpInside" id="tzp-xb-MJc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1151,7 +1017,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3939" y="-12"/>
+            <point key="canvasLocation" x="4195" y="-316"/>
         </scene>
         <!--New Web View-->
         <scene sceneID="vvB-zr-kXO">
@@ -1252,8 +1118,6 @@
         <image name="logout-button-blue-hi.png" width="600" height="233"/>
         <image name="registerButton.jpg" width="455" height="111"/>
         <image name="safari-icon.png" width="144" height="144"/>
-        <image name="tempAd1.jpg" width="464" height="108"/>
-        <image name="tempAd2.jpg" width="464" height="108"/>
         <image name="transparent icon.png" width="720" height="418"/>
     </resources>
     <inferredMetricsTieBreakers>

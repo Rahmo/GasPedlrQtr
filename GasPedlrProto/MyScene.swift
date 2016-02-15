@@ -103,12 +103,13 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if (againstBody.categoryBitMask & blockMask) != 0 {
-            runAction(_blockSound)
-            //let textView = UITextView(frame: CGRectMake(20.0, 20.0, 800.0, 60.0))
-            //textView.backgroundColor = UIColor.blackColor()
-            //self.view!.addSubview(textView)
+            
+
             if (againstBody.node!.name != nil) {
                 mySceneDelegate?.updateAd(againstBody.node!.name!)
+                runAction(_padSound)
+            } else {
+                runAction(_blockSound)
             }
             _blocks.removeObject(againstBody.node!)
             againstBody.node?.removeFromParent()
@@ -122,7 +123,7 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
                 mySceneDelegate?.clear()
             }
         } else if (againstBody.categoryBitMask & padMask) != 0 {
-            runAction(_padSound)
+            runAction(_blockSound)
         } else if (againstBody.categoryBitMask & deadZoneMask) != 0 {
             runAction(_deadSound)
             _ball.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
