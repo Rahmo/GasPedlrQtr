@@ -48,9 +48,6 @@ class LoginViewController: UIViewController {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil
         
-                
-                
-
             {
                 
              

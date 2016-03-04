@@ -11,6 +11,7 @@ import Parse
 import Bolts
 import CoreLocation
 
+var items = NSMutableArray()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
@@ -19,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
     
     
     let locationManager = CLLocationManager()
-    var items = NSMutableArray()
+    
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -146,7 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         switch state {
         case .Inside:
             print("BeaconManager:didDetermineState CLRegionState.Inside \(region.identifier)")
-            for savedItem in self.items {
+            for savedItem in items {
                 if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(savedItem as! NSData) as? Geotification {
                     if geotification.identifier == region.identifier {
                         print("BeaconManager:didDetermineState CLRegionState.Inside \(region.identifier) is Equal to \(geotification.identifier)")                    }
@@ -155,7 +156,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
             //   delegate.insideRegion(region.identifier)
         case .Outside:
             print("BeaconManager:didDetermineState CLRegionState.Outside");
-            for savedItem in self.items {
+            for savedItem in items {
                 if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(savedItem as! NSData) as? Geotification {
                     if geotification.identifier != region.identifier {
                         print("BeaconManager:didDetermineState CLRegionState.Inside \(region.identifier) does NOT Equal to \(geotification.identifier)")                    }
@@ -169,7 +170,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
     }
     
     func notefromRegionIdentifier(identifier: String) -> String? {
-        let savedGeos = self.items
+        let savedGeos = items
         if let savedItems = savedGeos as? NSMutableArray {
             for savedItem in savedItems {
                 if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(savedItem as! NSData) as? Geotification {

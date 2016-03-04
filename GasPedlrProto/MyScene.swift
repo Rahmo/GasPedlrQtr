@@ -24,13 +24,13 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
     var adArray = ["bannerSpa.png", "bannerStarbucks.png", "bannerHalfAcre.png", "bannerTacoBell.jpg"]
     
     var padX: Float! {
-    didSet {
-        if _pad != nil {
-            _pad.position = CGPoint(x:CGFloat(padX), y:_pad.position.y)
+        didSet {
+            if _pad != nil {
+                _pad.position = CGPoint(x:CGFloat(padX), y:_pad.position.y)
+            }
         }
     }
-    }
-    
+
     var mySceneDelegate: MySceneDelegate?
     
     func reset() {
@@ -52,13 +52,28 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
                 let randomNum = Int(arc4random_uniform(10) + 1)
                 if (randomNum % 2 == 0) {
                 //if (color == UIColor.greenColor()) {
-                    //sprite = SKSpriteNode(imageNamed: "bannerHalfAcre.png")
-                    //sprite.name = "test"
-                    let randomIndex = Int(arc4random_uniform(UInt32(adArray.count)))
-                    sprite = SKSpriteNode(imageNamed: adArray[randomIndex])
-                    sprite.name = adArray[randomIndex]
+                    let randomIndex = Int(arc4random_uniform(UInt32(items.count)))
+                    let nextAd = items[randomIndex]
+                    var adName:String = ""
+                    if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(nextAd as! NSData) as? Geotification {
+                        adName = "\(geotification.note)"
+                    }
+                    sprite = SKSpriteNode(imageNamed: "\(adName).png")
+                    sprite.name = "\(adName).png"
+                    //sprite.position = CGPoint(x:(CGFloat(i) + 0.5) * blockWidth, y:y)
+                    //sprite.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.size)
+                    //sprite.physicsBody?.categoryBitMask = blockMask
+                    //sprite.physicsBody?.dynamic = false
+                    //addChild(sprite)
+                    //_blocks.addObject(sprite)
                 } else {
                     sprite = SKSpriteNode(color:color, size:blockSize)
+                    //sprite.position = CGPoint(x:(CGFloat(i) + 0.5) * blockWidth, y:y)
+                    //sprite.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.size)
+                    //sprite.physicsBody?.categoryBitMask = blockMask
+                    //sprite.physicsBody?.dynamic = false
+                    //addChild(sprite)
+                    //_blocks.addObject(sprite)
                 }
                 sprite.position = CGPoint(x:(CGFloat(i) + 0.5) * blockWidth, y:y)
                 sprite.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.size)
@@ -66,6 +81,44 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
                 sprite.physicsBody?.dynamic = false
                 addChild(sprite)
                 _blocks.addObject(sprite)
+            }
+        }
+    }
+    
+    func updateBoard() {
+        if(items.count > 0) {
+            var newBlock: SKSpriteNode
+            for block in _blocks {
+                let randomNum = Int(arc4random_uniform(10) + 1)
+                if (randomNum % 2 == 0) {
+                    let randomIndex = Int(arc4random_uniform(UInt32(items.count)))
+                    let nextAd = items[randomIndex]
+                    var adName:String = ""
+                    if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(nextAd as! NSData) as? Geotification {
+                        adName = "\(geotification.note)"
+                    }
+                    newBlock = SKSpriteNode(imageNamed: "\(adName).png")
+                    newBlock.name = "\(adName).png"
+                    newBlock.position = block.position
+                    newBlock.physicsBody = block.physicsBody
+                    newBlock.physicsBody?.categoryBitMask = blockMask
+                    newBlock.physicsBody?.dynamic = false
+                    _blocks.removeObject(block)
+                    block.removeFromParent()
+                    addChild(newBlock)
+                    _blocks.addObject(newBlock)
+                } else {
+                    newBlock = SKSpriteNode(color: UIColor.blueColor(), size: CGSize(width:0.9*(size.width / CGFloat(10)), height:50))
+                    newBlock.name = nil
+                    newBlock.position = block.position
+                    newBlock.physicsBody = block.physicsBody
+                    newBlock.physicsBody?.categoryBitMask = blockMask
+                    newBlock.physicsBody?.dynamic = false
+                    _blocks.removeObject(block)
+                    block.removeFromParent()
+                    addChild(newBlock)
+                    _blocks.addObject(newBlock)
+                }
             }
         }
     }
@@ -137,14 +190,14 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func sendNotification() {
+    /*func sendNotification() {
         let deadline = NSDate()
         let notification = UILocalNotification()
         notification.alertBody = "TEST!!!"
         print("reaching sendNoteifaiont")
         notification.fireDate = deadline
         UIApplication.sharedApplication().presentLocalNotificationNow(notification)
-    }
+    } */
     
     override init(size aSize: CGSize) {
         super.init(size: aSize)

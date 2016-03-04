@@ -576,14 +576,32 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     
     //This method save the Geo in the array and make it start the monitoring So we can alert the user for a partner business
     func saveAllGeotifications() {
-        let items = NSMutableArray()
+        let newItems = NSMutableArray()
         for geotification in geotifications {
             startMonitoringGeotification(geotification)
             let item = NSKeyedArchiver.archivedDataWithRootObject(geotification)
-            items.addObject(item)
+            newItems.addObject(item)
         }
         let delegate = AppDelegate.getDelegate()
-        delegate.items = items
+        items = newItems
+        print("now printing count")
+        print(items.count)
+        print("now in for loop")
+        //for item in items {
+        //    print(item.description.cStringUsingEncoding(NSUTF8StringEncoding))
+        //}
+        
+        let savedGeos = items
+        if let savedItems = savedGeos as? NSMutableArray {
+            for savedItem in savedItems {
+                if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(savedItem as! NSData) as? Geotification {
+                    var text:String = "\(geotification.note)"
+                    print(text)
+                }
+                
+            }
+        }
+
     }
     
     
