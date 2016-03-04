@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Wrt-Iw-w8l">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -227,7 +227,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="4Ho-86-mYt" eventType="touchUpInside" id="blW-Mb-c7V"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="LoginSuccess" modalTransitionStyle="crossDissolve" id="ybi-IT-bzM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUT-4U-E43">
@@ -235,9 +234,6 @@
                                 <color key="backgroundColor" red="0.035521098545811085" green="0.24374181935183259" blue="0.14482191767812955" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" image="registerButton.jpg"/>
-                                <connections>
-                                    <segue destination="xC5-WP-7bW" kind="modal" identifier="registerView" id="0X4-MR-sBb"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="lkw-JY-T02">
                                 <rect key="frame" x="229" y="65" width="491" height="272"/>
@@ -258,14 +254,11 @@
                         <outlet property="logoImage" destination="lkw-JY-T02" id="qfV-Aa-1go"/>
                         <outlet property="nameLabel" destination="fla-53-sUG" id="0EP-7K-1GX"/>
                         <outlet property="passwordLabel" destination="wHy-Fs-jjs" id="YG5-RE-Qpd"/>
-                        <outlet property="userEmailTextField" destination="Zhz-3D-cqo" id="qDJ-if-Qbf"/>
-                        <outlet property="userPasswordTextField" destination="YKc-um-1Lg" id="1BV-hr-fof"/>
-                        <segue destination="BYZ-38-t0r" kind="modal" identifier="LoginSuccess" id="C8e-TW-KhN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CA5-ua-yKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-514" y="173"/>
+            <point key="canvasLocation" x="-1782" y="301"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="lb2-7V-Yec">
@@ -358,9 +351,6 @@
                                 <rect key="frame" x="617" y="606" width="199" height="37"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="registerButton.jpg"/>
-                                <connections>
-                                    <action selector="registerButtonTapped:" destination="xC5-WP-7bW" eventType="touchUpInside" id="Kau-OX-qCv"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tell us about your car!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2c-V7-leG">
                                 <rect key="frame" x="529" y="386" width="263" height="33"/>
@@ -400,19 +390,10 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="firstLastName" destination="LFm-Pc-X6y" id="LmH-9G-Cg9"/>
-                        <outlet property="licensePlateTextField" destination="rJi-M6-qYb" id="Uyx-Un-AQW"/>
-                        <outlet property="repeatPassword" destination="HeW-G7-one" id="kpv-PC-8V4"/>
-                        <outlet property="userEmailTextField" destination="IRC-AD-hV7" id="q1O-0k-Of0"/>
-                        <outlet property="userNameTextField" destination="zwV-ma-Nwc" id="jPt-tY-KeJ"/>
-                        <outlet property="userPasswordTextField" destination="s7T-b9-MSZ" id="eHm-SA-LKr"/>
-                        <outlet property="vehicleTextField" destination="FW8-0m-IcF" id="etx-ac-tVK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJm-XP-Ve1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-499" y="1357"/>
+            <point key="canvasLocation" x="-1795" y="1233"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -450,7 +431,7 @@
                                 <state key="normal" image="logout-button-blue-hi.png"/>
                                 <connections>
                                     <action selector="logoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pcj-aD-wSi"/>
-                                    <segue destination="4Ho-86-mYt" kind="modal" identifier="logOut" id="Y6X-Pd-2j3"/>
+                                    <segue destination="Wrt-Iw-w8l" kind="modal" identifier="logOut" id="fjt-Zz-9RK"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Fk-YT-wMi" customClass="BarChartView" customModule="Charts">
@@ -480,12 +461,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="356" y="-2163"/>
+            <point key="canvasLocation" x="-170" y="-2188"/>
         </scene>
-        <!--LogInVeiwController-->
+        <!--LogInViewController-->
         <scene sceneID="hTV-TY-wm5">
             <objects>
-                <viewController id="Wrt-Iw-w8l" userLabel="LogInVeiwController" sceneMemberID="viewController">
+                <viewController id="Wrt-Iw-w8l" userLabel="LogInViewController" customClass="LoginViewController" customModule="GasPedlrProto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M0j-8g-cFO"/>
                         <viewControllerLayoutGuide type="bottom" id="7lP-wG-JSQ"/>
@@ -563,6 +544,10 @@
                                                                 <real key="value" value="3"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="loginButtonTapped:" destination="Wrt-Iw-w8l" eventType="touchUpInside" id="gvH-EU-0va"/>
+                                                            <segue destination="BYZ-38-t0r" kind="modal" identifier="LoginSuccess" id="Qyt-YU-dXO"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIq-kP-BfA" customClass="DesignableButton" customModule="GasPedlrProto" customModuleProvider="target">
                                                         <rect key="frame" x="174" y="184" width="113" height="30"/>
@@ -581,7 +566,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="3kd-HB-QBQ" kind="modal" modalTransitionStyle="crossDissolve" id="UHv-ot-iia"/>
+                                                            <segue destination="3kd-HB-QBQ" kind="modal" identifier="registerView" modalTransitionStyle="crossDissolve" id="UHv-ot-iia"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwE-2L-oTh">
@@ -667,6 +652,10 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="userEmailTextField" destination="qcm-W9-xLl" id="TJy-lc-gLD"/>
+                        <outlet property="userPasswordTextField" destination="Lh8-9z-v09" id="YCk-4i-L54"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzc-0h-5n7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -727,6 +716,7 @@
                                 <rect key="frame" x="467" y="297" width="90" height="94"/>
                                 <state key="normal" image="Google-Maps-icon.png"/>
                                 <connections>
+                                    <action selector="mapsTouched:" destination="QAY-Fl-5dS" eventType="touchUpInside" id="xp5-9J-cAF"/>
                                     <segue destination="bfz-zq-dWH" kind="modal" id="o7y-pJ-rxh"/>
                                 </connections>
                             </button>
@@ -734,6 +724,7 @@
                                 <rect key="frame" x="127" y="297" width="90" height="94"/>
                                 <state key="normal" image="safari-icon.png"/>
                                 <connections>
+                                    <action selector="browserTouched:" destination="QAY-Fl-5dS" eventType="touchUpInside" id="30n-IL-HKy"/>
                                     <segue destination="OS0-L1-jbw" kind="modal" id="QIh-3M-PDl"/>
                                 </connections>
                             </button>
@@ -771,6 +762,7 @@
                                 <rect key="frame" x="807" y="297" width="90" height="94"/>
                                 <state key="normal" image="breakout_icon.png"/>
                                 <connections>
+                                    <action selector="gameTouched:" destination="QAY-Fl-5dS" eventType="touchUpInside" id="czn-Qv-O7m"/>
                                     <segue destination="Fzm-FY-Z6G" kind="modal" id="u0D-iY-NP5"/>
                                 </connections>
                             </button>
@@ -780,9 +772,6 @@
                                 <state key="normal" title="Return to Driver Dashboard">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="4Ho-86-mYt" kind="modal" id="17M-20-tVe"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjy-G8-grP">
                                 <rect key="frame" x="95" y="64" width="42" height="21"/>
@@ -956,7 +945,7 @@
                                 </connections>
                             </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msu-sB-2f3">
-                                <rect key="frame" x="140" y="8" width="320" height="66"/>
+                                <rect key="frame" x="264" y="21" width="320" height="50"/>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -975,7 +964,7 @@
         <!--RegisterVeiwController-->
         <scene sceneID="2V9-L8-xzq">
             <objects>
-                <viewController id="3kd-HB-QBQ" userLabel="RegisterVeiwController" sceneMemberID="viewController">
+                <viewController id="3kd-HB-QBQ" userLabel="RegisterVeiwController" customClass="RegistrationViewController" customModule="GasPedlrProto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aMi-Hc-gkO"/>
                         <viewControllerLayoutGuide type="bottom" id="89B-qg-wMx"/>
@@ -1083,6 +1072,9 @@
                                                                 <real key="value" value="3"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="registerButtonTapped:" destination="3kd-HB-QBQ" eventType="touchUpInside" id="rgD-mF-nuJ"/>
+                                                        </connections>
                                                     </button>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" background="input-outline" translatesAutoresizingMaskIntoConstraints="NO" id="WFg-Qw-jK5" customClass="DesignableTextField" customModule="GasPedlrProto" customModuleProvider="target">
                                                         <rect key="frame" x="86" y="56" width="250" height="44"/>
@@ -1295,6 +1287,15 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="firstLastName" destination="WFg-Qw-jK5" id="lBD-yO-vm5"/>
+                        <outlet property="licensePlateTextField" destination="nMi-bQ-OtH" id="i2z-YK-Ni7"/>
+                        <outlet property="repeatPassword" destination="QFg-7a-6ZW" id="Xag-dd-Q1o"/>
+                        <outlet property="userEmailTextField" destination="yUv-4M-xXc" id="mdb-cL-cqw"/>
+                        <outlet property="userNameTextField" destination="D6y-Oi-FRt" id="MeQ-XK-jsz"/>
+                        <outlet property="userPasswordTextField" destination="MZE-ds-Fhg" id="83M-bs-qrm"/>
+                        <outlet property="vehicleTextField" destination="czm-Zs-670" id="WH7-3K-D8r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hR-rK-STc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1321,8 +1322,8 @@
         <image name="transparent icon.png" width="720" height="418"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y6X-Pd-2j3"/>
-        <segue reference="Tjz-Cg-SyX"/>
-        <segue reference="538-Gt-NrF"/>
+        <segue reference="fjt-Zz-9RK"/>
+        <segue reference="Qyt-YU-dXO"/>
+        <segue reference="gyO-I8-J65"/>
     </inferredMetricsTieBreakers>
 </document>

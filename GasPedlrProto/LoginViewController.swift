@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBOutlet weak var passwordLabel: UILabel!
+  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

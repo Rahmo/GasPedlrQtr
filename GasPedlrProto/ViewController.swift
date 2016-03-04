@@ -11,17 +11,18 @@ import Parse
 import Charts
 
 
-
 class ViewController: UIViewController {
     
     var views: [String]!
     
     func setChart(dataPoints: [String], values: [Double]){
+      
         barChartView.noDataText = "No User Activity to Report"
         
         var dataEntries: [BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
+        
             let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
             dataEntries.append(dataEntry)
         }
@@ -147,7 +148,7 @@ class ViewController: UIViewController {
         
         NSUserDefaults.standardUserDefaults().synchronize();
         
-        self.performSegueWithIdentifier("LoginSuccess", sender: self);
+        //self.performSegueWithIdentifier("LoginSuccess", sender: self);
         
     }
 }

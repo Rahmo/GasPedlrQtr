@@ -52,7 +52,6 @@
 		2C03A6B81BC9975A00335354 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03A6B71BC9975A00335354 /* RegistrationViewController.swift */; };
 		2C03A6BA1BC9AFB800335354 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03A6B91BC9AFB800335354 /* LoginViewController.swift */; };
 		2C06798B1C69138700F2C20F /* custsystem.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C06798A1C69138700F2C20F /* custsystem.png */; };
-		2C06798D1C69167500F2C20F /* b.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C06798C1C69167500F2C20F /* b.png */; };
 		2C263C7A1BFA9B4A00C590C7 /* google-analytics-chart-growth.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */; };
 		2C5A4CDA1C03B8CC00F56AA3 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5A4CD91C03B8CC00F56AA3 /* iAd.framework */; };
 		2C5A4CDC1C03C13C00F56AA3 /* sampban.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A4CDB1C03C13C00F56AA3 /* sampban.gif */; };
@@ -199,7 +198,6 @@
 		2C03A6B71BC9975A00335354 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		2C03A6B91BC9AFB800335354 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2C06798A1C69138700F2C20F /* custsystem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custsystem.png; sourceTree = "<group>"; };
-		2C06798C1C69167500F2C20F /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b.png; sourceTree = "<group>"; };
 		2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-analytics-chart-growth.png"; sourceTree = "<group>"; };
 		2C5A4CD91C03B8CC00F56AA3 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		2C5A4CDB1C03C13C00F56AA3 /* sampban.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sampban.gif; sourceTree = "<group>"; };
@@ -488,7 +486,6 @@
 				03A172661C6972010034990F /* bannerTacoBell.jpg */,
 				035218091C67DB78009AE754 /* bannerStarbucks.png */,
 				037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */,
-				2C06798C1C69167500F2C20F /* b.png */,
 				036FA2951BF6DD07002E8956 /* tempAd3.jpg */,
 				2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */,
 				03CB62201BE6C8C6005D0854 /* GasPedlrIcon.png */,
@@ -695,7 +692,6 @@
 				B4FC9D261BECB5FF007303FC /* atm-.png in Resources */,
 				B4A2D4B41BFAC47A0047DC08 /* Images.xcassets in Resources */,
 				B4FC9D221BEC8FAE007303FC /* close.png in Resources */,
-				2C06798D1C69167500F2C20F /* b.png in Resources */,
 				037EF9FB1BEFEE0400AB3E70 /* spark.png in Resources */,
 				03A172671C6972010034990F /* bannerTacoBell.jpg in Resources */,
 				037EF9F81BEFEE0400AB3E70 /* Ping.caf in Resources */,
