@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Charts
 
 
 var browserCount = 0.0
