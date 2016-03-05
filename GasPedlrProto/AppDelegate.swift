@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
     
     let locationManager = CLLocationManager()
     var items = NSMutableArray()
-    
+    var UniquePartners = NSMutableSet()
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         Parse.enableLocalDatastore();
@@ -169,8 +169,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
     }
     
     func notefromRegionIdentifier(identifier: String) -> String? {
-        let savedGeos = self.items
-        if let savedItems = savedGeos as? NSMutableArray {
+      
+        if let savedItems = items as? NSMutableArray {
             for savedItem in savedItems {
                 if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(savedItem as! NSData) as? Geotification {
                     if geotification.identifier == identifier {

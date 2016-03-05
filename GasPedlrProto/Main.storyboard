@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Wrt-Iw-w8l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QAY-Fl-5dS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -22,7 +22,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XrQ-Co-w9L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cz4-fV-c87">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IR8-pB-2K7">
@@ -169,7 +169,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LTx-Y3-Usr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Aq-64-dmR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="216" height="171"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SXL-iB-gQM">
@@ -699,7 +699,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIo-f8-8mp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-145" y="-1007"/>
+            <point key="canvasLocation" x="-342" y="-1897"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="EWi-w2-AMk">
@@ -934,11 +934,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xDa-OS-LRA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NKc-WK-UCF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="qGb-9N-jy5">
-                                <rect key="frame" x="0.0" y="76" width="863" height="64"/>
+                                <rect key="frame" x="0.0" y="76" width="863" height="44"/>
                                 <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="10"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <connections>
@@ -1333,8 +1333,8 @@
         <image name="transparent icon.png" width="720" height="418"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gyO-I8-J65"/>
-        <segue reference="Y6X-Pd-2j3"/>
-        <segue reference="Tjz-Cg-SyX"/>
+        <segue reference="gDu-pb-Vxd"/>
+        <segue reference="xfN-8l-RHi"/>
+        <segue reference="ybi-IT-bzM"/>
     </inferredMetricsTieBreakers>
 </document>

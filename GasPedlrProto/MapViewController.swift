@@ -55,6 +55,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     var partnerDict: [String: String] = [String: String]()
     var searchController:UISearchController!
     var autoCompleteDataSource:Array<String> = [];
+    var CurrentClosePartners = NSMutableSet()
     @IBOutlet weak var mapView: MKMapView!
     
     //This used in the dataload method to save the result from the service
@@ -486,9 +487,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
             let serviceHelper = ServiceHelper();
             for Partner in partnerDict {
                 let dynamicURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(mapData.latitude),\(mapData.longitude)&radius=5000&name=\(Partner.0)&sensor=true&key=\(apiKey)"
-                serviceHelper.getServiceHandle(self.DataLoadedForPartner, url: dynamicURL);
-            }
-            
+                serviceHelper.getServiceHandle(self.DataLoadedForPartner, url: dynamicURL)
+            }  /**
+                The save is important to make the region monitoring
+                */
+             saveAllGeotifications()
+             updateGeotificationsCount()
         }
     }
 
@@ -538,7 +542,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
             stopMonitoringGeotification(geo)
             removeGeotification(geo)
         }
-        
+        for closePartner in CurrentClosePartners {
+        CurrentClosePartners.removeObject(closePartner)
+        }
         if geotifications.count > 0 {
             for index in 1...geotifications.count {
                 geotifications.removeAtIndex(index)
@@ -577,13 +583,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     //This method save the Geo in the array and make it start the monitoring So we can alert the user for a partner business
     func saveAllGeotifications() {
         let items = NSMutableArray()
+        let delegate = AppDelegate.getDelegate()
         for geotification in geotifications {
             startMonitoringGeotification(geotification)
             let item = NSKeyedArchiver.archivedDataWithRootObject(geotification)
             items.addObject(item)
+            CurrentClosePartners.addObject(geotification.note)
+           
         }
-        let delegate = AppDelegate.getDelegate()
+        
         delegate.items = items
+   delegate.UniquePartners = CurrentClosePartners
+        var c = delegate.UniquePartners.count
+   
     }
     
     
@@ -621,6 +633,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         var UserDataResultsWithCoupons : [SearchModel] = [SearchModel]()
         
         for model  in userData {
+        
             var m : SearchModel = SearchModel(name: model.name, icon: model.icon, lon: model.lon, lat: model.lat, address: model.address)
           
             if let lookupcoupon = self.findValueForKey(model.name, dictionary: partnerDict)
@@ -646,11 +659,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
             counter++
         }
         
-        /**
-        The save is important to make the region monitoring
-        */
-        saveAllGeotifications()
-        updateGeotificationsCount()
+        
     }
     
     func DataLoadedWithoutMonitoringRegion(userData:[SearchModel]){
@@ -789,7 +798,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         let geotification = Geotification(coordinate: coordinate, radius: clampedRadius, identifier: identifier,  eventType: eventType, Model: model)
         
         addGeotification(geotification)
-        
+        //this to add the geo
+      
         // self.customAnotations.append(geotification)
         
         

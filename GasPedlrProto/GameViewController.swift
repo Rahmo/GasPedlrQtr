@@ -29,6 +29,7 @@ class GameViewController: UIViewController, MySceneDelegate {
     }
 
     func gameStart() {
+        
         _lifeCount = 10
         gameOverButton.hidden = true
         gameClearButton.hidden = true
