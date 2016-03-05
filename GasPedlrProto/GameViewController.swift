@@ -18,14 +18,15 @@ class GameViewController: UIViewController, MySceneDelegate {
     }
     //var adDict = ["bannerSpa.png": "adSpa.png", "bannerStarbucks.png": "adStarbucks.jpg", "bannerHalfAcre.png": "adHalfAcre.jpg", "bannerTacoBell.jpg": "adTacoBell.png"]
     
+    var timer = NSTimer()
     var newDict = ["bannerSpa.png": "newAdSpa.jpg", "bannerTacoBell.jpg": "newAdTacoBell.png", "bannerStarbucks.png": "newAdStarbucks.jpg", "bannerHalfAcre.png": "newAdHalfAcre.jpg"]
     
     var _myScene : MyScene!
     var _readyToFire = false
     var _lifeCount : Int = 0 {
-    didSet {
-        lifeLabel.text = String(_lifeCount)
-    }
+        didSet {
+            lifeLabel.text = String(_lifeCount)
+        }
     }
 
     func gameStart() {
@@ -94,6 +95,15 @@ class GameViewController: UIViewController, MySceneDelegate {
         setPadPosition(value)
     }
     
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
+        timer = NSTimer.scheduledTimerWithTimeInterval(15, target: self, selector: Selector("updateBoard"), userInfo: nil, repeats: true)
+    }
+    
+    func updateBoard() {
+        _myScene.updateBoard()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -106,6 +116,7 @@ class GameViewController: UIViewController, MySceneDelegate {
         padSlider.value = Float(_myScene.padX)
         
         _myScene.mySceneDelegate = self
+        scheduledTimerWithTimeInterval()
         gameStart()
     }
 

@@ -12,6 +12,19 @@ import MapKit
 
 class RiderUIViewController: UIViewController {
 
+    @IBAction func browserTouched(sender: AnyObject) {
+        browserCount += 1
+    }
+    
+    @IBAction func mapsTouched(sender: AnyObject) {
+         mapCount += 1
+    }
+    
+    
+    @IBAction func gameTouched(sender: AnyObject) {
+          gameCount += 1
+    }
+    
    
     @IBOutlet weak var BrowserButton: UIButton!
     @IBOutlet weak var MapButton: UIButton!
@@ -34,6 +47,7 @@ class RiderUIViewController: UIViewController {
     
 
     @IBOutlet weak var driverCar: UILabel!
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

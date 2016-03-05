@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QAY-Fl-5dS">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="AvenirNext.ttc">
@@ -158,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdz-Ng-4oa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188.8" y="-2035.3333333333333"/>
+            <point key="canvasLocation" x="1684" y="-2356"/>
         </scene>
         <!--Main Map View Controller-->
         <scene sceneID="54o-qk-MZM">
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f85-3d-XB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1531.7333333333333" y="1058.8466666666666"/>
+            <point key="canvasLocation" x="779" y="1714.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="IO5-MW-N6S">
@@ -227,7 +227,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="4Ho-86-mYt" eventType="touchUpInside" id="blW-Mb-c7V"/>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="LoginSuccess" modalTransitionStyle="crossDissolve" id="ybi-IT-bzM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUT-4U-E43">
@@ -235,9 +234,6 @@
                                 <color key="backgroundColor" red="0.035521098545811085" green="0.24374181935183259" blue="0.14482191767812955" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" image="registerButton.jpg"/>
-                                <connections>
-                                    <segue destination="xC5-WP-7bW" kind="modal" identifier="registerView" id="0X4-MR-sBb"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="transparent icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="lkw-JY-T02">
                                 <rect key="frame" x="229" y="65" width="491" height="272"/>
@@ -258,14 +254,11 @@
                         <outlet property="logoImage" destination="lkw-JY-T02" id="qfV-Aa-1go"/>
                         <outlet property="nameLabel" destination="fla-53-sUG" id="0EP-7K-1GX"/>
                         <outlet property="passwordLabel" destination="wHy-Fs-jjs" id="YG5-RE-Qpd"/>
-                        <outlet property="userEmailTextField" destination="Zhz-3D-cqo" id="qDJ-if-Qbf"/>
-                        <outlet property="userPasswordTextField" destination="YKc-um-1Lg" id="1BV-hr-fof"/>
-                        <segue destination="BYZ-38-t0r" kind="modal" identifier="LoginSuccess" id="C8e-TW-KhN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CA5-ua-yKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-514" y="173"/>
+            <point key="canvasLocation" x="-1782" y="301"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="lb2-7V-Yec">
@@ -358,9 +351,6 @@
                                 <rect key="frame" x="617" y="606" width="199" height="37"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="registerButton.jpg"/>
-                                <connections>
-                                    <action selector="registerButtonTapped:" destination="xC5-WP-7bW" eventType="touchUpInside" id="Kau-OX-qCv"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tell us about your car!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2c-V7-leG">
                                 <rect key="frame" x="529" y="386" width="263" height="33"/>
@@ -400,19 +390,10 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="firstLastName" destination="LFm-Pc-X6y" id="LmH-9G-Cg9"/>
-                        <outlet property="licensePlateTextField" destination="rJi-M6-qYb" id="Uyx-Un-AQW"/>
-                        <outlet property="repeatPassword" destination="HeW-G7-one" id="kpv-PC-8V4"/>
-                        <outlet property="userEmailTextField" destination="IRC-AD-hV7" id="q1O-0k-Of0"/>
-                        <outlet property="userNameTextField" destination="zwV-ma-Nwc" id="jPt-tY-KeJ"/>
-                        <outlet property="userPasswordTextField" destination="s7T-b9-MSZ" id="eHm-SA-LKr"/>
-                        <outlet property="vehicleTextField" destination="FW8-0m-IcF" id="etx-ac-tVK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJm-XP-Ve1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="601.60000000000002" y="776.26666666666665"/>
+            <point key="canvasLocation" x="-1795" y="1233"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -439,64 +420,53 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Browser View Engagement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHG-Im-g5t">
-                                <rect key="frame" x="51" y="282" width="205" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advertisements Displayed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn5-zm-pAA">
+                                <rect key="frame" x="723" y="281" width="199" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maps Engagement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn5-zm-pAA">
-                                <rect key="frame" x="457" y="281" width="143" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Engagement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXF-O4-AlO">
-                                <rect key="frame" x="774" y="282" width="146" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advertisements Redeemed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgW-q9-frQ">
-                                <rect key="frame" x="425" y="582" width="207" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b.png" translatesAutoresizingMaskIntoConstraints="NO" id="erw-rD-y5L">
-                                <rect key="frame" x="40" y="336" width="240" height="128"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b.png" translatesAutoresizingMaskIntoConstraints="NO" id="laS-LY-Rqu">
-                                <rect key="frame" x="415" y="336" width="240" height="128"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Qd-2n-x4a">
-                                <rect key="frame" x="740" y="336" width="240" height="128"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b.png" translatesAutoresizingMaskIntoConstraints="NO" id="GlH-pV-Cy5">
-                                <rect key="frame" x="415" y="620" width="240" height="128"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whr-6T-uvj">
                                 <rect key="frame" x="40" y="49" width="122" height="53"/>
                                 <state key="normal" image="logout-button-blue-hi.png"/>
                                 <connections>
-                                    <segue destination="4Ho-86-mYt" kind="modal" identifier="logOut" id="Y6X-Pd-2j3"/>
+                                    <action selector="logoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pcj-aD-wSi"/>
+                                    <segue destination="Wrt-Iw-w8l" kind="modal" identifier="logOut" id="fjt-Zz-9RK"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Fk-YT-wMi" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="40" y="341" width="449" height="305"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4E-iD-eMr" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="577" y="341" width="434" height="312"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Interaction by Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHG-Im-g5t">
+                                <rect key="frame" x="163" y="298" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.11976279808633068" green="0.44029654779575245" blue="0.84536773989898983" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="RHU-fC-cNm"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="barChartView" destination="3Fk-YT-wMi" id="s2Z-9O-QEl"/>
+                        <outlet property="lineChartView" destination="B4E-iD-eMr" id="iAr-rr-ytd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="468.80000000000001" y="-1850.7333333333333"/>
+            <point key="canvasLocation" x="-170" y="-2188"/>
         </scene>
-        <!--LogInVeiwController-->
+        <!--LogInViewController-->
         <scene sceneID="hTV-TY-wm5">
             <objects>
-                <viewController id="Wrt-Iw-w8l" userLabel="LogInVeiwController" sceneMemberID="viewController">
+                <viewController id="Wrt-Iw-w8l" userLabel="LogInViewController" customClass="LoginViewController" customModule="GasPedlrProto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M0j-8g-cFO"/>
                         <viewControllerLayoutGuide type="bottom" id="7lP-wG-JSQ"/>
@@ -547,13 +517,13 @@
                                                         <rect key="frame" x="46" y="123" width="33" height="31"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1I-CH-US4">
-                                                        <rect key="frame" x="132" y="8" width="62" height="20.5"/>
+                                                        <rect key="frame" x="132" y="8" width="62" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq3-JR-Euk">
-                                                        <rect key="frame" x="149" y="32" width="51" height="25.5"/>
+                                                        <rect key="frame" x="149" y="32" width="51" height="26"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -574,6 +544,10 @@
                                                                 <real key="value" value="3"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="loginButtonTapped:" destination="Wrt-Iw-w8l" eventType="touchUpInside" id="gvH-EU-0va"/>
+                                                            <segue destination="BYZ-38-t0r" kind="modal" identifier="LoginSuccess" id="Qyt-YU-dXO"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIq-kP-BfA" customClass="DesignableButton" customModule="GasPedlrProto" customModuleProvider="target">
                                                         <rect key="frame" x="174" y="184" width="113" height="30"/>
@@ -592,11 +566,11 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="3kd-HB-QBQ" kind="modal" modalTransitionStyle="crossDissolve" id="UHv-ot-iia"/>
+                                                            <segue destination="3kd-HB-QBQ" kind="modal" identifier="registerView" modalTransitionStyle="crossDissolve" id="UHv-ot-iia"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwE-2L-oTh">
-                                                        <rect key="frame" x="128" y="32" width="24" height="25.5"/>
+                                                        <rect key="frame" x="128" y="32" width="24" height="26"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <color key="textColor" red="1" green="0.48494814665880048" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -676,8 +650,13 @@
                             <constraint firstAttribute="trailing" secondItem="6U5-kR-FtT" secondAttribute="trailing" id="bLW-XH-Aka"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eXN-oa-qhl"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="userEmailTextField" destination="qcm-W9-xLl" id="TJy-lc-gLD"/>
+                        <outlet property="userPasswordTextField" destination="Lh8-9z-v09" id="YCk-4i-L54"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzc-0h-5n7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -717,7 +696,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bf-FE-Hu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="43.200000000000003" y="246.13333333333333"/>
+            <point key="canvasLocation" x="-123" y="-550"/>
         </scene>
         <!--RiderUI View Controller-->
         <scene sceneID="KvG-08-Rjh">
@@ -738,6 +717,7 @@
                                 <rect key="frame" x="467" y="297" width="90" height="94"/>
                                 <state key="normal" image="Google-Maps-icon.png"/>
                                 <connections>
+                                    <action selector="mapsTouched:" destination="QAY-Fl-5dS" eventType="touchUpInside" id="xp5-9J-cAF"/>
                                     <segue destination="bfz-zq-dWH" kind="modal" id="o7y-pJ-rxh"/>
                                 </connections>
                             </button>
@@ -745,6 +725,7 @@
                                 <rect key="frame" x="127" y="297" width="90" height="94"/>
                                 <state key="normal" image="safari-icon.png"/>
                                 <connections>
+                                    <action selector="browserTouched:" destination="QAY-Fl-5dS" eventType="touchUpInside" id="30n-IL-HKy"/>
                                     <segue destination="OS0-L1-jbw" kind="modal" id="QIh-3M-PDl"/>
                                 </connections>
                             </button>
@@ -782,6 +763,7 @@
                                 <rect key="frame" x="807" y="297" width="90" height="94"/>
                                 <state key="normal" image="breakout_icon.png"/>
                                 <connections>
+                                    <action selector="gameTouched:" destination="QAY-Fl-5dS" eventType="touchUpInside" id="czn-Qv-O7m"/>
                                     <segue destination="Fzm-FY-Z6G" kind="modal" id="u0D-iY-NP5"/>
                                 </connections>
                             </button>
@@ -792,7 +774,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4Ho-86-mYt" kind="modal" id="17M-20-tVe"/>
+                                    <segue destination="Wrt-Iw-w8l" kind="modal" identifier="secureLogOut" id="jFG-YL-6bX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjy-G8-grP">
@@ -835,7 +817,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFt-pq-WxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1422.9333333333334" y="427.89333333333332"/>
+            <point key="canvasLocation" x="286" y="776"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="idY-cG-aVg">
@@ -923,7 +905,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2237.3333333333335" y="-299.14666666666665"/>
+            <point key="canvasLocation" x="2533" y="364"/>
         </scene>
         <!--New Web View-->
         <scene sceneID="vvB-zr-kXO">
@@ -967,7 +949,7 @@
                                 </connections>
                             </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msu-sB-2f3">
-                                <rect key="frame" x="140" y="8" width="320" height="66"/>
+                                <rect key="frame" x="264" y="21" width="320" height="50"/>
                             </adBannerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -981,12 +963,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dde-4j-rOf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1625.0666666666666" y="-1085.8266666666666"/>
+            <point key="canvasLocation" x="2305" y="-1310"/>
         </scene>
         <!--RegisterVeiwController-->
         <scene sceneID="2V9-L8-xzq">
             <objects>
-                <viewController id="3kd-HB-QBQ" userLabel="RegisterVeiwController" sceneMemberID="viewController">
+                <viewController id="3kd-HB-QBQ" userLabel="RegisterVeiwController" customClass="RegistrationViewController" customModule="GasPedlrProto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aMi-Hc-gkO"/>
                         <viewControllerLayoutGuide type="bottom" id="89B-qg-wMx"/>
@@ -1047,7 +1029,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ryde" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LX7-QL-kVK">
-                                                        <rect key="frame" x="199" y="28" width="51" height="25.5"/>
+                                                        <rect key="frame" x="199" y="28" width="51" height="26"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1073,7 +1055,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3O-xk-qhV">
-                                                        <rect key="frame" x="178" y="28" width="24" height="25.5"/>
+                                                        <rect key="frame" x="178" y="28" width="24" height="26"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                         <color key="textColor" red="1" green="0.48494814670000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1094,6 +1076,9 @@
                                                                 <real key="value" value="3"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="registerButtonTapped:" destination="3kd-HB-QBQ" eventType="touchUpInside" id="rgD-mF-nuJ"/>
+                                                        </connections>
                                                     </button>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" background="input-outline" translatesAutoresizingMaskIntoConstraints="NO" id="WFg-Qw-jK5" customClass="DesignableTextField" customModule="GasPedlrProto" customModuleProvider="target">
                                                         <rect key="frame" x="86" y="56" width="250" height="44"/>
@@ -1306,6 +1291,15 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="firstLastName" destination="WFg-Qw-jK5" id="lBD-yO-vm5"/>
+                        <outlet property="licensePlateTextField" destination="nMi-bQ-OtH" id="i2z-YK-Ni7"/>
+                        <outlet property="repeatPassword" destination="QFg-7a-6ZW" id="Xag-dd-Q1o"/>
+                        <outlet property="userEmailTextField" destination="yUv-4M-xXc" id="mdb-cL-cqw"/>
+                        <outlet property="userNameTextField" destination="D6y-Oi-FRt" id="MeQ-XK-jsz"/>
+                        <outlet property="userPasswordTextField" destination="MZE-ds-Fhg" id="83M-bs-qrm"/>
+                        <outlet property="vehicleTextField" destination="czm-Zs-670" id="WH7-3K-D8r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hR-rK-STc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1318,7 +1312,6 @@
         <image name="SOCIALCAR Landing" width="1953" height="1334"/>
         <image name="Shape" width="57" height="44"/>
         <image name="SmallCar" width="199" height="63"/>
-        <image name="b.png" width="342" height="272"/>
         <image name="breakout_icon.png" width="300" height="300"/>
         <image name="custsystem.png" width="200" height="200"/>
         <image name="icon-mail" width="34" height="22"/>

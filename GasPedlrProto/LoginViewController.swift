@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBOutlet weak var passwordLabel: UILabel!
+  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,9 +48,6 @@ class LoginViewController: UIViewController {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil
         
-                
-                
-
             {
                 
              
@@ -59,25 +56,14 @@ class LoginViewController: UIViewController {
                 // Login is succesfull
                NSUserDefaults.standardUserDefaults().setBool(true, forKey:"isUserLoggedIn");
                NSUserDefaults.standardUserDefaults().synchronize();
-               print("User logged in")
+              // print("User logged in")
                 
-               self.dismissViewControllerAnimated(true, completion:nil);
+              // self.dismissViewControllerAnimated(true, completion:nil);
                 
-            //}else{
-            //    print("Could not find user")
-            //}
+            }else{
+                print("Could not find user")
+          
             
-       
-                self.performSegueWithIdentifier("LoginSuccess", sender: self)
-                
-            } else {
-                
-
-            //print("Could not find user")
-              
-        
-
-             
               let alert: UIAlertView = UIAlertView(title: "error", message: "Make sure of the entered information", delegate: self, cancelButtonTitle: "Ok")
              alert.show()
                 

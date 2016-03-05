@@ -34,6 +34,12 @@
 		03A27BBF1BDD380F00E00020 /* Google-Maps-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */; };
 		03A27BC01BDD380F00E00020 /* safari-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BBD1BDD380F00E00020 /* safari-icon.png */; };
 		03A27BC21BDD384E00E00020 /* Flappy_Bird_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BC11BDD384E00E00020 /* Flappy_Bird_icon.png */; };
+		03A3319B1C8526AB002067C1 /* blankImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319A1C8526AB002067C1 /* blankImage.png */; };
+		03A331A11C8684CF002067C1 /* Citibank.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319C1C8684CF002067C1 /* Citibank.png */; };
+		03A331A21C8684CF002067C1 /* McDonald's.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319D1C8684CF002067C1 /* McDonald's.png */; };
+		03A331A31C8684CF002067C1 /* Pizza Hut.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319E1C8684CF002067C1 /* Pizza Hut.png */; };
+		03A331A41C8684CF002067C1 /* Starbucks.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319F1C8684CF002067C1 /* Starbucks.png */; };
+		03A331A51C8684CF002067C1 /* Subway.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A331A01C8684CF002067C1 /* Subway.png */; };
 		03E316C11BF56A9300DA6857 /* transparent icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E316C01BF56A9300DA6857 /* transparent icon.png */; };
 		03E316C41BF5820900DA6857 /* loginButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E316C21BF5820900DA6857 /* loginButton.jpg */; };
 		03E316C51BF5820900DA6857 /* registerButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E316C31BF5820900DA6857 /* registerButton.jpg */; };
@@ -46,12 +52,12 @@
 		2C03A6B81BC9975A00335354 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03A6B71BC9975A00335354 /* RegistrationViewController.swift */; };
 		2C03A6BA1BC9AFB800335354 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C03A6B91BC9AFB800335354 /* LoginViewController.swift */; };
 		2C06798B1C69138700F2C20F /* custsystem.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C06798A1C69138700F2C20F /* custsystem.png */; };
-		2C06798D1C69167500F2C20F /* b.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C06798C1C69167500F2C20F /* b.png */; };
 		2C263C7A1BFA9B4A00C590C7 /* google-analytics-chart-growth.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */; };
 		2C5A4CDA1C03B8CC00F56AA3 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5A4CD91C03B8CC00F56AA3 /* iAd.framework */; };
 		2C5A4CDC1C03C13C00F56AA3 /* sampban.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A4CDB1C03C13C00F56AA3 /* sampban.gif */; };
 		2C5CC7761BF02432004629F0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5CC7751BF02432004629F0 /* MobileCoreServices.framework */; };
 		2C5CC77A1BF0250E004629F0 /* myConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C5CC7791BF0250E004629F0 /* myConnector.m */; };
+		2C7856501C8A246B00A3A578 /* GlobalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C78564F1C8A246B00A3A578 /* GlobalVars.swift */; };
 		2CB3DA231C62A8F500994AD2 /* logout-button-blue-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CB3DA221C62A8F500994AD2 /* logout-button-blue-hi.png */; };
 		2CDC08FD1BE85900009D330B /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDC08FC1BE85900009D330B /* libGoogleAnalyticsServices.a */; };
 		2CDC09051BE859AC009D330B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CDC09041BE859AC009D330B /* CoreData.framework */; };
@@ -167,6 +173,12 @@
 		03A27BBC1BDD380F00E00020 /* Google-Maps-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google-Maps-icon.png"; sourceTree = "<group>"; };
 		03A27BBD1BDD380F00E00020 /* safari-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safari-icon.png"; sourceTree = "<group>"; };
 		03A27BC11BDD384E00E00020 /* Flappy_Bird_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Flappy_Bird_icon.png; path = Assets.xcassets/Flappy_Bird_icon.png; sourceTree = "<group>"; };
+		03A3319A1C8526AB002067C1 /* blankImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blankImage.png; sourceTree = "<group>"; };
+		03A3319C1C8684CF002067C1 /* Citibank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Citibank.png; sourceTree = "<group>"; };
+		03A3319D1C8684CF002067C1 /* McDonald's.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "McDonald's.png"; sourceTree = "<group>"; };
+		03A3319E1C8684CF002067C1 /* Pizza Hut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pizza Hut.png"; sourceTree = "<group>"; };
+		03A3319F1C8684CF002067C1 /* Starbucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Starbucks.png; sourceTree = "<group>"; };
+		03A331A01C8684CF002067C1 /* Subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Subway.png; sourceTree = "<group>"; };
 		03CB62201BE6C8C6005D0854 /* GasPedlrIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GasPedlrIcon.png; sourceTree = "<group>"; };
 		03E316C01BF56A9300DA6857 /* transparent icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transparent icon.png"; sourceTree = "<group>"; };
 		03E316C21BF5820900DA6857 /* loginButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginButton.jpg; sourceTree = "<group>"; };
@@ -186,7 +198,6 @@
 		2C03A6B71BC9975A00335354 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		2C03A6B91BC9AFB800335354 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2C06798A1C69138700F2C20F /* custsystem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custsystem.png; sourceTree = "<group>"; };
-		2C06798C1C69167500F2C20F /* b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b.png; sourceTree = "<group>"; };
 		2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google-analytics-chart-growth.png"; sourceTree = "<group>"; };
 		2C5A4CD91C03B8CC00F56AA3 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		2C5A4CDB1C03C13C00F56AA3 /* sampban.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sampban.gif; sourceTree = "<group>"; };
@@ -194,6 +205,7 @@
 		2C5CC7771BF0250D004629F0 /* GasPedlrProto-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GasPedlrProto-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C5CC7781BF0250E004629F0 /* myConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myConnector.h; sourceTree = "<group>"; };
 		2C5CC7791BF0250E004629F0 /* myConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myConnector.m; sourceTree = "<group>"; };
+		2C78564F1C8A246B00A3A578 /* GlobalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVars.swift; sourceTree = "<group>"; };
 		2CB3DA221C62A8F500994AD2 /* logout-button-blue-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout-button-blue-hi.png"; sourceTree = "<group>"; };
 		2CDC08FC1BE85900009D330B /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		2CDC08FE1BE85932009D330B /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
@@ -343,6 +355,7 @@
 			children = (
 				B42650521C7A9B1B00334EC0 /* Spring */,
 				B4B53DE21C430023007B0CCA /* Main.storyboard */,
+				2C78564F1C8A246B00A3A578 /* GlobalVars.swift */,
 				2C86E0571C0231F700FC26CD /* Images */,
 				2C86E0561C02319800FC26CD /* Swift Files */,
 				2C86E0551C02315700FC26CD /* View Controllers */,
@@ -452,8 +465,14 @@
 			children = (
 				B4FC9D0A1BEC3FD0007303FC /* Resources */,
 				03E316C21BF5820900DA6857 /* loginButton.jpg */,
+				03A3319A1C8526AB002067C1 /* blankImage.png */,
 				036FA2911BF6D098002E8956 /* breakout_icon.png */,
 				2CB3DA221C62A8F500994AD2 /* logout-button-blue-hi.png */,
+				03A3319C1C8684CF002067C1 /* Citibank.png */,
+				03A3319D1C8684CF002067C1 /* McDonald's.png */,
+				03A3319E1C8684CF002067C1 /* Pizza Hut.png */,
+				03A3319F1C8684CF002067C1 /* Starbucks.png */,
+				03A331A01C8684CF002067C1 /* Subway.png */,
 				03E316C31BF5820900DA6857 /* registerButton.jpg */,
 				036FA2931BF6DD07002E8956 /* tempAd1.jpg */,
 				2C06798A1C69138700F2C20F /* custsystem.png */,
@@ -467,7 +486,6 @@
 				03A172661C6972010034990F /* bannerTacoBell.jpg */,
 				035218091C67DB78009AE754 /* bannerStarbucks.png */,
 				037C4CA11C5D3E040082E47E /* bannerHalfAcre.png */,
-				2C06798C1C69167500F2C20F /* b.png */,
 				036FA2951BF6DD07002E8956 /* tempAd3.jpg */,
 				2C263C791BFA9B4A00C590C7 /* google-analytics-chart-growth.png */,
 				03CB62201BE6C8C6005D0854 /* GasPedlrIcon.png */,
@@ -663,6 +681,8 @@
 				2C263C7A1BFA9B4A00C590C7 /* google-analytics-chart-growth.png in Resources */,
 				B4FC9D191BEC4034007303FC /* church-icon.png in Resources */,
 				2C06798B1C69138700F2C20F /* custsystem.png in Resources */,
+				03A331A31C8684CF002067C1 /* Pizza Hut.png in Resources */,
+				03A331A21C8684CF002067C1 /* McDonald's.png in Resources */,
 				B4FC9D2A1BECB6B7007303FC /* bank.png in Resources */,
 				036FA2981BF6DD07002E8956 /* tempAd3.jpg in Resources */,
 				B4A6DE091BDC65BC00D31ACE /* Chicago.gpx in Resources */,
@@ -672,7 +692,6 @@
 				B4FC9D261BECB5FF007303FC /* atm-.png in Resources */,
 				B4A2D4B41BFAC47A0047DC08 /* Images.xcassets in Resources */,
 				B4FC9D221BEC8FAE007303FC /* close.png in Resources */,
-				2C06798D1C69167500F2C20F /* b.png in Resources */,
 				037EF9FB1BEFEE0400AB3E70 /* spark.png in Resources */,
 				03A172671C6972010034990F /* bannerTacoBell.jpg in Resources */,
 				037EF9F81BEFEE0400AB3E70 /* Ping.caf in Resources */,
@@ -683,8 +702,11 @@
 				03A27BC01BDD380F00E00020 /* safari-icon.png in Resources */,
 				B4B53DE31C430023007B0CCA /* Main.storyboard in Resources */,
 				B4FC9D1E1BEC8D2E007303FC /* CustomFlyout.xib in Resources */,
+				03A3319B1C8526AB002067C1 /* blankImage.png in Resources */,
+				03A331A51C8684CF002067C1 /* Subway.png in Resources */,
 				B4FC9D281BECB640007303FC /* airport.png in Resources */,
 				03E316C51BF5820900DA6857 /* registerButton.jpg in Resources */,
+				03A331A41C8684CF002067C1 /* Starbucks.png in Resources */,
 				03E316C11BF56A9300DA6857 /* transparent icon.png in Resources */,
 				03E316C41BF5820900DA6857 /* loginButton.jpg in Resources */,
 				03246A951C6F978A0073F896 /* newAdHalfAcre.jpg in Resources */,
@@ -693,6 +715,7 @@
 				0352180A1C67DB78009AE754 /* bannerStarbucks.png in Resources */,
 				037EF9F91BEFEE0400AB3E70 /* Pop.caf in Resources */,
 				037EF9FA1BEFEE0400AB3E70 /* Smoke.sks in Resources */,
+				03A331A11C8684CF002067C1 /* Citibank.png in Resources */,
 				B4FC9D171BEC4034007303FC /* noimage.gif in Resources */,
 				B4FC9D1A1BEC4034007303FC /* hospital.png in Resources */,
 				036FA2971BF6DD07002E8956 /* tempAd2.jpg in Resources */,
@@ -748,6 +771,7 @@
 				B4FC9D071BEC2806007303FC /* CustomAnnotation.swift in Sources */,
 				B4A2D4B21BFAC3AE0047DC08 /* CollectionViewCell.swift in Sources */,
 				B42650851C7A9B1B00334EC0 /* SpringButton.swift in Sources */,
+				2C7856501C8A246B00A3A578 /* GlobalVars.swift in Sources */,
 				038A4B1E1C4C25F600A80884 /* NewWebViewController.swift in Sources */,
 				B4FC9D031BE9EEC0007303FC /* SearchModel.swift in Sources */,
 				B426507A1C7A9B1B00334EC0 /* DesignableTextView.swift in Sources */,
