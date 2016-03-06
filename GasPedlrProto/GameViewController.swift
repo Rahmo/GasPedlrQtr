@@ -16,10 +16,11 @@ class GameViewController: UIViewController, MySceneDelegate {
         skView.presentScene(nil)
         dismissViewControllerAnimated(true, completion: nil)
     }
-    //var adDict = ["bannerSpa.png": "adSpa.png", "bannerStarbucks.png": "adStarbucks.jpg", "bannerHalfAcre.png": "adHalfAcre.jpg", "bannerTacoBell.jpg": "adTacoBell.png"]
+    
+    var adDict = ["McDonald's.png": "mcdAd.png", "Pizza Hut.png": "pizzaHutAd.png", "Starbucks.png": "starbucksAd.png", "Starbucks (Restricted Acces)": "starbucksAd.png", "Subway.png": "subAd.png", "Citibank.png": "citiAd.png", "Target.png": "targetAd.png", "Target Auto.png": "targetAd.png", "Target Open House.png": "targetAd.png", "Ross Dress for Less.png": "rossAd.png", "Burger King.png": "bkAd.png", "Taco Bell.png": "tacoBellAd.png", "Chipotle Mexican Grill.png": "chipotleAd.png", "Baja Fresh Mexican Grill.png": "bajaAd.png"]
     
     var timer = NSTimer()
-    var newDict = ["bannerSpa.png": "newAdSpa.jpg", "bannerTacoBell.jpg": "newAdTacoBell.png", "bannerStarbucks.png": "newAdStarbucks.jpg", "bannerHalfAcre.png": "newAdHalfAcre.jpg"]
+    //var newDict = ["bannerSpa.png": "newAdSpa.jpg", "bannerTacoBell.jpg": "newAdTacoBell.png", "bannerStarbucks.png": "newAdStarbucks.jpg", "bannerHalfAcre.png": "newAdHalfAcre.jpg"]
     
     var _myScene : MyScene!
     var _readyToFire = false
@@ -65,7 +66,7 @@ class GameViewController: UIViewController, MySceneDelegate {
     }
     
     func updateAd(spriteName: String) {
-        adImage.image = UIImage(named: newDict[spriteName]!)
+        adImage.image = UIImage(named: adDict[spriteName]!)
         adImage.backgroundColor = getRandomColor()
     }
     

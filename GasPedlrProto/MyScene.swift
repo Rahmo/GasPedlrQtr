@@ -21,7 +21,7 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         super.init(coder: aDecoder)
     }
     
-    var adArray = ["bannerSpa.png", "bannerStarbucks.png", "bannerHalfAcre.png", "bannerTacoBell.jpg"]
+    //var adArray = ["bannerSpa.png", "bannerStarbucks.png", "bannerHalfAcre.png", "bannerTacoBell.jpg"]
     
     var padX: Float! {
         didSet {
@@ -86,41 +86,91 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func updateBoard() {
-        if(items.count > 0) {
+        let itemsCopy = items
+        var stringArray = [""]
+        //get just the names of the businesses in an array
+        for items in itemsCopy {
+            if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(items as! NSData) as? Geotification {
+                stringArray.append("\(geotification.note)")
+            }
+        }
+        //check to see whether there are businesses in the array
+        if (stringArray.count > 1) {
             var newBlock: SKSpriteNode
             for block in _blocks {
-                let randomNum = Int(arc4random_uniform(10) + 1)
-                if (randomNum % 2 == 0) {
-                    let randomIndex = Int(arc4random_uniform(UInt32(items.count)))
-                    let nextAd = items[randomIndex]
-                    var adName:String = ""
-                    if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(nextAd as! NSData) as? Geotification {
-                        adName = "\(geotification.note)"
+                // check to see whether the business is out of range or whether it is a plain colored block (leave the ads still in range alone)
+                if (!stringArray.contains(block.name) || block.name == nil || block.name == "") {
+                    let randomNum = Int(arc4random_uniform(10) + 1)
+                    if (randomNum % 2 == 0) {
+                        //check the percentage of ads; ads should no exceed 60% of blocks
+                        let percentAds = checkNumAds()
+                        print("PERCENT ADS: \(percentAds)")
+                        if (percentAds >= 0.6) {
+                            print("should fall in here?")
+                            //make a color block
+                            newBlock = SKSpriteNode(color: UIColor.blueColor(), size: CGSize(width:0.9*(size.width / CGFloat(10)), height:50))
+                            newBlock.name = ""
+                            newBlock.position = block.position
+                            newBlock.physicsBody = block.physicsBody
+                            newBlock.physicsBody?.categoryBitMask = blockMask
+                            newBlock.physicsBody?.dynamic = false
+                            _blocks.removeObject(block)
+                            block.removeFromParent()
+                            addChild(newBlock)
+                            _blocks.addObject(newBlock)
+                        } else {
+                            //make an ad block
+                            let randomIndex = Int(arc4random_uniform(UInt32(items.count)))
+                            let nextAd = items[randomIndex]
+                            var adName:String = ""
+                            if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(nextAd as! NSData) as? Geotification {
+                                adName = "\(geotification.note)"
+                            }
+                            newBlock = SKSpriteNode(imageNamed: "\(adName).png")
+                            newBlock.name = "\(adName).png"
+                            newBlock.position = block.position
+                            newBlock.physicsBody = block.physicsBody
+                            newBlock.physicsBody?.categoryBitMask = blockMask
+                            newBlock.physicsBody?.dynamic = false
+                            _blocks.removeObject(block)
+                            block.removeFromParent()
+                            addChild(newBlock)
+                            _blocks.addObject(newBlock)
+                        }
+                    } else {
+                        //make a color block
+                        newBlock = SKSpriteNode(color: UIColor.blueColor(), size: CGSize(width:0.9*(size.width / CGFloat(10)), height:50))
+                        newBlock.name = ""
+                        newBlock.position = block.position
+                        newBlock.physicsBody = block.physicsBody
+                        newBlock.physicsBody?.categoryBitMask = blockMask
+                        newBlock.physicsBody?.dynamic = false
+                        _blocks.removeObject(block)
+                        block.removeFromParent()
+                        addChild(newBlock)
+                        _blocks.addObject(newBlock)
                     }
-                    newBlock = SKSpriteNode(imageNamed: "\(adName).png")
-                    newBlock.name = "\(adName).png"
-                    newBlock.position = block.position
-                    newBlock.physicsBody = block.physicsBody
-                    newBlock.physicsBody?.categoryBitMask = blockMask
-                    newBlock.physicsBody?.dynamic = false
-                    _blocks.removeObject(block)
-                    block.removeFromParent()
-                    addChild(newBlock)
-                    _blocks.addObject(newBlock)
-                } else {
-                    newBlock = SKSpriteNode(color: UIColor.blueColor(), size: CGSize(width:0.9*(size.width / CGFloat(10)), height:50))
-                    newBlock.name = nil
-                    newBlock.position = block.position
-                    newBlock.physicsBody = block.physicsBody
-                    newBlock.physicsBody?.categoryBitMask = blockMask
-                    newBlock.physicsBody?.dynamic = false
-                    _blocks.removeObject(block)
-                    block.removeFromParent()
-                    addChild(newBlock)
-                    _blocks.addObject(newBlock)
                 }
             }
         }
+    }
+    
+    func checkNumAds() -> Double {
+        var countAds = 0.0
+        var countBlocks = 0.0
+        for block in _blocks {
+            if (block.name != "") {
+                countAds++
+            }
+            countBlocks++
+        }
+        //return the percentage of ads
+        print("END PERCENTAGE")
+        print("")
+        print("")
+        print("")
+        print(countAds/countBlocks)
+        return (countAds/countBlocks)
     }
     
     func respawn(completion block: () -> Void) {
@@ -158,7 +208,7 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         if (againstBody.categoryBitMask & blockMask) != 0 {
             
 
-            if (againstBody.node!.name != nil) {
+            if (againstBody.node!.name != "") {
                 mySceneDelegate?.updateAd(againstBody.node!.name!)
                 runAction(_padSound)
             } else {

@@ -14,6 +14,27 @@
 		0352180A1C67DB78009AE754 /* bannerStarbucks.png in Resources */ = {isa = PBXBuildFile; fileRef = 035218091C67DB78009AE754 /* bannerStarbucks.png */; };
 		0352180C1C67DBA0009AE754 /* bannerTacoBell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0352180B1C67DBA0009AE754 /* bannerTacoBell.jpg */; };
 		0352180E1C67DBFC009AE754 /* bannerSpa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0352180D1C67DBFC009AE754 /* bannerSpa.png */; };
+		0358E19F1C8CC9A700F88916 /* Baja Fresh Mexican Grill.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E19D1C8CC9A700F88916 /* Baja Fresh Mexican Grill.png */; };
+		0358E1A01C8CC9A700F88916 /* bajaAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E19E1C8CC9A700F88916 /* bajaAd.png */; };
+		0358E1A31C8CC9B100F88916 /* bkAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1A11C8CC9B100F88916 /* bkAd.png */; };
+		0358E1A41C8CC9B100F88916 /* Burger King.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1A21C8CC9B100F88916 /* Burger King.png */; };
+		0358E1A71C8CC9B900F88916 /* Chipotle Mexican Grill.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1A51C8CC9B900F88916 /* Chipotle Mexican Grill.png */; };
+		0358E1A81C8CC9B900F88916 /* chipotleAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1A61C8CC9B900F88916 /* chipotleAd.png */; };
+		0358E1AB1C8CC9D800F88916 /* citiAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1A91C8CC9D800F88916 /* citiAd.png */; };
+		0358E1AC1C8CC9D800F88916 /* Citibank.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1AA1C8CC9D800F88916 /* Citibank.png */; };
+		0358E1AF1C8CC9E800F88916 /* mcdAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1AD1C8CC9E800F88916 /* mcdAd.png */; };
+		0358E1B21C8CCA1600F88916 /* pizzaHutAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1B11C8CCA1600F88916 /* pizzaHutAd.png */; };
+		0358E1B51C8CCA2400F88916 /* Ross Dress for Less.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1B31C8CCA2400F88916 /* Ross Dress for Less.png */; };
+		0358E1B61C8CCA2400F88916 /* rossAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1B41C8CCA2400F88916 /* rossAd.png */; };
+		0358E1B81C8CCA4100F88916 /* Starbucks (Restricted Access).png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1B71C8CCA4100F88916 /* Starbucks (Restricted Access).png */; };
+		0358E1BA1C8CCA4600F88916 /* starbucksAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1B91C8CCA4600F88916 /* starbucksAd.png */; };
+		0358E1BC1C8CCA4D00F88916 /* subAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1BB1C8CCA4D00F88916 /* subAd.png */; };
+		0358E1BF1C8CCA5500F88916 /* Taco Bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1BD1C8CCA5500F88916 /* Taco Bell.png */; };
+		0358E1C01C8CCA5500F88916 /* tacoBellAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1BE1C8CCA5500F88916 /* tacoBellAd.png */; };
+		0358E1C51C8CCA5D00F88916 /* Target Auto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1C11C8CCA5D00F88916 /* Target Auto.png */; };
+		0358E1C61C8CCA5D00F88916 /* Target Open House.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1C21C8CCA5D00F88916 /* Target Open House.png */; };
+		0358E1C71C8CCA5D00F88916 /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1C31C8CCA5D00F88916 /* Target.png */; };
+		0358E1C81C8CCA5D00F88916 /* targetAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0358E1C41C8CCA5D00F88916 /* targetAd.png */; };
 		036FA2921BF6D098002E8956 /* breakout_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2911BF6D098002E8956 /* breakout_icon.png */; };
 		036FA2961BF6DD07002E8956 /* tempAd1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2931BF6DD07002E8956 /* tempAd1.jpg */; };
 		036FA2971BF6DD07002E8956 /* tempAd2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 036FA2941BF6DD07002E8956 /* tempAd2.jpg */; };
@@ -35,8 +56,6 @@
 		03A27BC01BDD380F00E00020 /* safari-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BBD1BDD380F00E00020 /* safari-icon.png */; };
 		03A27BC21BDD384E00E00020 /* Flappy_Bird_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A27BC11BDD384E00E00020 /* Flappy_Bird_icon.png */; };
 		03A3319B1C8526AB002067C1 /* blankImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319A1C8526AB002067C1 /* blankImage.png */; };
-		03A331A11C8684CF002067C1 /* Citibank.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319C1C8684CF002067C1 /* Citibank.png */; };
-		03A331A21C8684CF002067C1 /* McDonald's.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319D1C8684CF002067C1 /* McDonald's.png */; };
 		03A331A31C8684CF002067C1 /* Pizza Hut.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319E1C8684CF002067C1 /* Pizza Hut.png */; };
 		03A331A41C8684CF002067C1 /* Starbucks.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319F1C8684CF002067C1 /* Starbucks.png */; };
 		03A331A51C8684CF002067C1 /* Subway.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A331A01C8684CF002067C1 /* Subway.png */; };
@@ -204,6 +223,27 @@
 		035218091C67DB78009AE754 /* bannerStarbucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerStarbucks.png; sourceTree = "<group>"; };
 		0352180B1C67DBA0009AE754 /* bannerTacoBell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bannerTacoBell.jpg; sourceTree = "<group>"; };
 		0352180D1C67DBFC009AE754 /* bannerSpa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerSpa.png; sourceTree = "<group>"; };
+		0358E19D1C8CC9A700F88916 /* Baja Fresh Mexican Grill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Baja Fresh Mexican Grill.png"; sourceTree = "<group>"; };
+		0358E19E1C8CC9A700F88916 /* bajaAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bajaAd.png; sourceTree = "<group>"; };
+		0358E1A11C8CC9B100F88916 /* bkAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bkAd.png; sourceTree = "<group>"; };
+		0358E1A21C8CC9B100F88916 /* Burger King.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Burger King.png"; sourceTree = "<group>"; };
+		0358E1A51C8CC9B900F88916 /* Chipotle Mexican Grill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chipotle Mexican Grill.png"; sourceTree = "<group>"; };
+		0358E1A61C8CC9B900F88916 /* chipotleAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chipotleAd.png; sourceTree = "<group>"; };
+		0358E1A91C8CC9D800F88916 /* citiAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = citiAd.png; sourceTree = "<group>"; };
+		0358E1AA1C8CC9D800F88916 /* Citibank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Citibank.png; sourceTree = "<group>"; };
+		0358E1AD1C8CC9E800F88916 /* mcdAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mcdAd.png; sourceTree = "<group>"; };
+		0358E1B11C8CCA1600F88916 /* pizzaHutAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizzaHutAd.png; sourceTree = "<group>"; };
+		0358E1B31C8CCA2400F88916 /* Ross Dress for Less.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ross Dress for Less.png"; sourceTree = "<group>"; };
+		0358E1B41C8CCA2400F88916 /* rossAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rossAd.png; sourceTree = "<group>"; };
+		0358E1B71C8CCA4100F88916 /* Starbucks (Restricted Access).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Starbucks (Restricted Access).png"; sourceTree = "<group>"; };
+		0358E1B91C8CCA4600F88916 /* starbucksAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starbucksAd.png; sourceTree = "<group>"; };
+		0358E1BB1C8CCA4D00F88916 /* subAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subAd.png; sourceTree = "<group>"; };
+		0358E1BD1C8CCA5500F88916 /* Taco Bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Taco Bell.png"; sourceTree = "<group>"; };
+		0358E1BE1C8CCA5500F88916 /* tacoBellAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tacoBellAd.png; sourceTree = "<group>"; };
+		0358E1C11C8CCA5D00F88916 /* Target Auto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Target Auto.png"; sourceTree = "<group>"; };
+		0358E1C21C8CCA5D00F88916 /* Target Open House.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Target Open House.png"; sourceTree = "<group>"; };
+		0358E1C31C8CCA5D00F88916 /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Target.png; sourceTree = "<group>"; };
+		0358E1C41C8CCA5D00F88916 /* targetAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = targetAd.png; sourceTree = "<group>"; };
 		036FA2911BF6D098002E8956 /* breakout_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breakout_icon.png; sourceTree = "<group>"; };
 		036FA2931BF6DD07002E8956 /* tempAd1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAd1.jpg; sourceTree = "<group>"; };
 		036FA2941BF6DD07002E8956 /* tempAd2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tempAd2.jpg; sourceTree = "<group>"; };
@@ -225,8 +265,6 @@
 		03A27BBD1BDD380F00E00020 /* safari-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safari-icon.png"; sourceTree = "<group>"; };
 		03A27BC11BDD384E00E00020 /* Flappy_Bird_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Flappy_Bird_icon.png; path = Assets.xcassets/Flappy_Bird_icon.png; sourceTree = "<group>"; };
 		03A3319A1C8526AB002067C1 /* blankImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blankImage.png; sourceTree = "<group>"; };
-		03A3319C1C8684CF002067C1 /* Citibank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Citibank.png; sourceTree = "<group>"; };
-		03A3319D1C8684CF002067C1 /* McDonald's.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "McDonald's.png"; sourceTree = "<group>"; };
 		03A3319E1C8684CF002067C1 /* Pizza Hut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pizza Hut.png"; sourceTree = "<group>"; };
 		03A3319F1C8684CF002067C1 /* Starbucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Starbucks.png; sourceTree = "<group>"; };
 		03A331A01C8684CF002067C1 /* Subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Subway.png; sourceTree = "<group>"; };
@@ -529,15 +567,34 @@
 			isa = PBXGroup;
 			children = (
 				B4FC9D0A1BEC3FD0007303FC /* Resources */,
+				0358E1A51C8CC9B900F88916 /* Chipotle Mexican Grill.png */,
+				0358E1A61C8CC9B900F88916 /* chipotleAd.png */,
+				0358E1A11C8CC9B100F88916 /* bkAd.png */,
+				0358E1A21C8CC9B100F88916 /* Burger King.png */,
+				0358E19D1C8CC9A700F88916 /* Baja Fresh Mexican Grill.png */,
+				0358E19E1C8CC9A700F88916 /* bajaAd.png */,
+				0358E1A91C8CC9D800F88916 /* citiAd.png */,
+				0358E1AD1C8CC9E800F88916 /* mcdAd.png */,
+				0358E1B11C8CCA1600F88916 /* pizzaHutAd.png */,
+				03A3319E1C8684CF002067C1 /* Pizza Hut.png */,
+				0358E1AA1C8CC9D800F88916 /* Citibank.png */,
+				0358E1B31C8CCA2400F88916 /* Ross Dress for Less.png */,
+				0358E1B41C8CCA2400F88916 /* rossAd.png */,
+				03A3319F1C8684CF002067C1 /* Starbucks.png */,
+				0358E1B71C8CCA4100F88916 /* Starbucks (Restricted Access).png */,
+				0358E1B91C8CCA4600F88916 /* starbucksAd.png */,
+				03A331A01C8684CF002067C1 /* Subway.png */,
+				0358E1BB1C8CCA4D00F88916 /* subAd.png */,
+				0358E1BD1C8CCA5500F88916 /* Taco Bell.png */,
+				0358E1BE1C8CCA5500F88916 /* tacoBellAd.png */,
+				0358E1C11C8CCA5D00F88916 /* Target Auto.png */,
+				0358E1C21C8CCA5D00F88916 /* Target Open House.png */,
+				0358E1C31C8CCA5D00F88916 /* Target.png */,
+				0358E1C41C8CCA5D00F88916 /* targetAd.png */,
 				03E316C21BF5820900DA6857 /* loginButton.jpg */,
 				03A3319A1C8526AB002067C1 /* blankImage.png */,
 				036FA2911BF6D098002E8956 /* breakout_icon.png */,
 				2CB3DA221C62A8F500994AD2 /* logout-button-blue-hi.png */,
-				03A3319C1C8684CF002067C1 /* Citibank.png */,
-				03A3319D1C8684CF002067C1 /* McDonald's.png */,
-				03A3319E1C8684CF002067C1 /* Pizza Hut.png */,
-				03A3319F1C8684CF002067C1 /* Starbucks.png */,
-				03A331A01C8684CF002067C1 /* Subway.png */,
 				03E316C31BF5820900DA6857 /* registerButton.jpg */,
 				036FA2931BF6DD07002E8956 /* tempAd1.jpg */,
 				2C06798A1C69138700F2C20F /* custsystem.png */,
@@ -776,51 +833,70 @@
 				B4FC9D241BECB5AB007303FC /* restaurent.png in Resources */,
 				2C5A4CDC1C03C13C00F56AA3 /* sampban.gif in Resources */,
 				2C03A6941BC98A1200335354 /* LaunchScreen.storyboard in Resources */,
+				0358E1B81C8CCA4100F88916 /* Starbucks (Restricted Access).png in Resources */,
+				0358E1A71C8CC9B900F88916 /* Chipotle Mexican Grill.png in Resources */,
 				B4FC9D2C1BECB6E1007303FC /* Mosque.png in Resources */,
 				2CB3DA231C62A8F500994AD2 /* logout-button-blue-hi.png in Resources */,
 				03A27BC21BDD384E00E00020 /* Flappy_Bird_icon.png in Resources */,
+				0358E1A01C8CC9A700F88916 /* bajaAd.png in Resources */,
 				B42650801C7A9B1B00334EC0 /* LoadingView.xib in Resources */,
+				0358E1A41C8CC9B100F88916 /* Burger King.png in Resources */,
 				2C03A6911BC98A1200335354 /* Assets.xcassets in Resources */,
 				B426507D1C7A9B1B00334EC0 /* Info.plist in Resources */,
 				2C263C7A1BFA9B4A00C590C7 /* google-analytics-chart-growth.png in Resources */,
 				B4FC9D191BEC4034007303FC /* church-icon.png in Resources */,
 				2C06798B1C69138700F2C20F /* custsystem.png in Resources */,
+				0358E1C81C8CCA5D00F88916 /* targetAd.png in Resources */,
 				03A331A31C8684CF002067C1 /* Pizza Hut.png in Resources */,
-				03A331A21C8684CF002067C1 /* McDonald's.png in Resources */,
+				0358E19F1C8CC9A700F88916 /* Baja Fresh Mexican Grill.png in Resources */,
 				B4FC9D2A1BECB6B7007303FC /* bank.png in Resources */,
+				0358E1BF1C8CCA5500F88916 /* Taco Bell.png in Resources */,
 				036FA2981BF6DD07002E8956 /* tempAd3.jpg in Resources */,
+				0358E1C01C8CCA5500F88916 /* tacoBellAd.png in Resources */,
 				B4A6DE091BDC65BC00D31ACE /* Chicago.gpx in Resources */,
 				0352180C1C67DBA0009AE754 /* bannerTacoBell.jpg in Resources */,
 				03A27BBF1BDD380F00E00020 /* Google-Maps-icon.png in Resources */,
 				B4FC9D141BEC4034007303FC /* cinema.png in Resources */,
+				0358E1AF1C8CC9E800F88916 /* mcdAd.png in Resources */,
+				0358E1AB1C8CC9D800F88916 /* citiAd.png in Resources */,
 				B4FC9D261BECB5FF007303FC /* atm-.png in Resources */,
+				0358E1C51C8CCA5D00F88916 /* Target Auto.png in Resources */,
 				B4A2D4B41BFAC47A0047DC08 /* Images.xcassets in Resources */,
 				B4FC9D221BEC8FAE007303FC /* close.png in Resources */,
 				037EF9FB1BEFEE0400AB3E70 /* spark.png in Resources */,
 				03A172671C6972010034990F /* bannerTacoBell.jpg in Resources */,
 				037EF9F81BEFEE0400AB3E70 /* Ping.caf in Resources */,
 				03246A941C6F978A0073F896 /* newAdSpa.jpg in Resources */,
+				0358E1B51C8CCA2400F88916 /* Ross Dress for Less.png in Resources */,
 				03246A931C6F978A0073F896 /* newAdStarbucks.jpg in Resources */,
 				036FA2961BF6DD07002E8956 /* tempAd1.jpg in Resources */,
 				037EFA091BF55F0E00AB3E70 /* loginViewImage.jpg in Resources */,
 				03A27BC01BDD380F00E00020 /* safari-icon.png in Resources */,
 				B4B53DE31C430023007B0CCA /* Main.storyboard in Resources */,
+				0358E1B61C8CCA2400F88916 /* rossAd.png in Resources */,
+				0358E1A31C8CC9B100F88916 /* bkAd.png in Resources */,
+				0358E1C61C8CCA5D00F88916 /* Target Open House.png in Resources */,
+				0358E1AC1C8CC9D800F88916 /* Citibank.png in Resources */,
 				B4FC9D1E1BEC8D2E007303FC /* CustomFlyout.xib in Resources */,
+				0358E1BA1C8CCA4600F88916 /* starbucksAd.png in Resources */,
 				03A3319B1C8526AB002067C1 /* blankImage.png in Resources */,
 				03A331A51C8684CF002067C1 /* Subway.png in Resources */,
 				B4FC9D281BECB640007303FC /* airport.png in Resources */,
 				03E316C51BF5820900DA6857 /* registerButton.jpg in Resources */,
 				03A331A41C8684CF002067C1 /* Starbucks.png in Resources */,
+				0358E1A81C8CC9B900F88916 /* chipotleAd.png in Resources */,
 				03E316C11BF56A9300DA6857 /* transparent icon.png in Resources */,
 				03E316C41BF5820900DA6857 /* loginButton.jpg in Resources */,
+				0358E1C71C8CCA5D00F88916 /* Target.png in Resources */,
 				03246A951C6F978A0073F896 /* newAdHalfAcre.jpg in Resources */,
 				03246A921C6F978A0073F896 /* newAdTacoBell.png in Resources */,
 				037C4CA21C5D3E040082E47E /* bannerHalfAcre.png in Resources */,
 				0352180A1C67DB78009AE754 /* bannerStarbucks.png in Resources */,
 				037EF9F91BEFEE0400AB3E70 /* Pop.caf in Resources */,
 				037EF9FA1BEFEE0400AB3E70 /* Smoke.sks in Resources */,
-				03A331A11C8684CF002067C1 /* Citibank.png in Resources */,
+				0358E1BC1C8CCA4D00F88916 /* subAd.png in Resources */,
 				B4FC9D171BEC4034007303FC /* noimage.gif in Resources */,
+				0358E1B21C8CCA1600F88916 /* pizzaHutAd.png in Resources */,
 				B4FC9D1A1BEC4034007303FC /* hospital.png in Resources */,
 				036FA2971BF6DD07002E8956 /* tempAd2.jpg in Resources */,
 			);
