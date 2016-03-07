@@ -59,8 +59,6 @@
 		03A331A31C8684CF002067C1 /* Pizza Hut.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319E1C8684CF002067C1 /* Pizza Hut.png */; };
 		03A331A41C8684CF002067C1 /* Starbucks.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A3319F1C8684CF002067C1 /* Starbucks.png */; };
 		03A331A51C8684CF002067C1 /* Subway.png in Resources */ = {isa = PBXBuildFile; fileRef = 03A331A01C8684CF002067C1 /* Subway.png */; };
-		03A333291C8B6CC6002067C1 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A333221C8B6CAC002067C1 /* Charts.framework */; };
-		03A3332A1C8B6CC6002067C1 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03A333221C8B6CAC002067C1 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03E316C11BF56A9300DA6857 /* transparent icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E316C01BF56A9300DA6857 /* transparent icon.png */; };
 		03E316C41BF5820900DA6857 /* loginButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E316C21BF5820900DA6857 /* loginButton.jpg */; };
 		03E316C51BF5820900DA6857 /* registerButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03E316C31BF5820900DA6857 /* registerButton.jpg */; };
@@ -150,41 +148,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		03A333211C8B6CAC002067C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03A3331A1C8B6CAB002067C1 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
-		03A333231C8B6CAC002067C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03A3331A1C8B6CAB002067C1 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
-			remoteInfo = "Charts-TV";
-		};
-		03A333251C8B6CAC002067C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03A3331A1C8B6CAB002067C1 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
-			remoteInfo = "Charts-OSX";
-		};
-		03A333271C8B6CAC002067C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03A3331A1C8B6CAB002067C1 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
-			remoteInfo = ChartsTests;
-		};
-		03A3332B1C8B6CC6002067C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03A3331A1C8B6CAB002067C1 /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
 		2C03A69B1BC98A1200335354 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2C03A67E1BC98A1200335354 /* Project object */;
@@ -208,7 +171,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				03A3332A1C8B6CC6002067C1 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +230,6 @@
 		03A3319E1C8684CF002067C1 /* Pizza Hut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pizza Hut.png"; sourceTree = "<group>"; };
 		03A3319F1C8684CF002067C1 /* Starbucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Starbucks.png; sourceTree = "<group>"; };
 		03A331A01C8684CF002067C1 /* Subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Subway.png; sourceTree = "<group>"; };
-		03A3331A1C8B6CAB002067C1 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Desktop/ios-charts-master 2/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 		03CB62201BE6C8C6005D0854 /* GasPedlrIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GasPedlrIcon.png; sourceTree = "<group>"; };
 		03E316C01BF56A9300DA6857 /* transparent icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "transparent icon.png"; sourceTree = "<group>"; };
 		03E316C21BF5820900DA6857 /* loginButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loginButton.jpg; sourceTree = "<group>"; };
@@ -382,7 +343,6 @@
 				2C5A4CDA1C03B8CC00F56AA3 /* iAd.framework in Frameworks */,
 				2CF7D26E1BEAEAE8009A3BA7 /* libsqlite3.tbd in Frameworks */,
 				2CF7D26C1BEAEADF009A3BA7 /* libz.tbd in Frameworks */,
-				03A333291C8B6CC6002067C1 /* Charts.framework in Frameworks */,
 				2CDC09071BE85A08009D330B /* SystemConfiguration.framework in Frameworks */,
 				2CF7D26A1BEAEAD2009A3BA7 /* StoreKit.framework in Frameworks */,
 				B40D24DE1BF136E1007431DB /* Parse.framework in Frameworks */,
@@ -417,21 +377,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03A3331B1C8B6CAB002067C1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				03A333221C8B6CAC002067C1 /* Charts.framework */,
-				03A333241C8B6CAC002067C1 /* Charts.framework */,
-				03A333261C8B6CAC002067C1 /* Charts.framework */,
-				03A333281C8B6CAC002067C1 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		2C03A67D1BC98A1200335354 = {
 			isa = PBXGroup;
 			children = (
-				03A3331A1C8B6CAB002067C1 /* Charts.xcodeproj */,
 				2C5CC7741BF023B2004629F0 /* Frameworks */,
 				2CF7D26D1BEAEAE8009A3BA7 /* libsqlite3.tbd */,
 				2CF7D26B1BEAEADF009A3BA7 /* libz.tbd */,
@@ -690,7 +638,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				03A3332C1C8B6CC6002067C1 /* PBXTargetDependency */,
 			);
 			name = GasPedlrProto;
 			productName = GasPedlrProto;
@@ -776,12 +723,6 @@
 			mainGroup = 2C03A67D1BC98A1200335354;
 			productRefGroup = 2C03A6871BC98A1200335354 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 03A3331B1C8B6CAB002067C1 /* Products */;
-					ProjectRef = 03A3331A1C8B6CAB002067C1 /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2C03A6851BC98A1200335354 /* GasPedlrProto */,
@@ -790,37 +731,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		03A333221C8B6CAC002067C1 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 03A333211C8B6CAC002067C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		03A333241C8B6CAC002067C1 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 03A333231C8B6CAC002067C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		03A333261C8B6CAC002067C1 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 03A333251C8B6CAC002067C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		03A333281C8B6CAC002067C1 /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 03A333271C8B6CAC002067C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2C03A6841BC98A1200335354 /* Resources */ = {
@@ -991,11 +901,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		03A3332C1C8B6CC6002067C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Charts-iOS";
-			targetProxy = 03A3332B1C8B6CC6002067C1 /* PBXContainerItemProxy */;
-		};
 		2C03A69C1BC98A1200335354 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2C03A6851BC98A1200335354 /* GasPedlrProto */;
@@ -1128,6 +1033,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GasPedlrProto/GasPedlrProto-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -1155,6 +1061,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GasPedlrProto/GasPedlrProto-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

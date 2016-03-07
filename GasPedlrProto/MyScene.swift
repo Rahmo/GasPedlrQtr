@@ -68,6 +68,7 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
                     //_blocks.addObject(sprite)
                 } else {
                     sprite = SKSpriteNode(color:color, size:blockSize)
+                    sprite.name = ""
                     //sprite.position = CGPoint(x:(CGFloat(i) + 0.5) * blockWidth, y:y)
                     //sprite.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.size)
                     //sprite.physicsBody?.categoryBitMask = blockMask
@@ -208,7 +209,7 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         if (againstBody.categoryBitMask & blockMask) != 0 {
             
 
-            if (againstBody.node!.name != "") {
+            if (againstBody.node!.name != "" && againstBody.node!.name != nil) {
                 mySceneDelegate?.updateAd(againstBody.node!.name!)
                 runAction(_padSound)
             } else {
