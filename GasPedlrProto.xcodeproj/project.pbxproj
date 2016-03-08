@@ -126,6 +126,7 @@
 		B4FC9D281BECB640007303FC /* airport.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FC9D271BECB640007303FC /* airport.png */; };
 		B4FC9D2A1BECB6B7007303FC /* bank.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FC9D291BECB6B7007303FC /* bank.png */; };
 		B4FC9D2C1BECB6E1007303FC /* Mosque.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FC9D2B1BECB6E1007303FC /* Mosque.png */; };
+		CA4AF95EBCD38F54B9BC4106 /* Pods_GasPedlrProto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C61A8D003151937C80C1D89 /* Pods_GasPedlrProto.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +226,8 @@
 		2CF7D2691BEAEAD2009A3BA7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2CF7D26B1BEAEADF009A3BA7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2CF7D26D1BEAEAE8009A3BA7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		49B68F903128319323972D03 /* Pods-GasPedlrProto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasPedlrProto.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasPedlrProto/Pods-GasPedlrProto.release.xcconfig"; sourceTree = "<group>"; };
+		5C61A8D003151937C80C1D89 /* Pods_GasPedlrProto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GasPedlrProto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B40D24DB1BF136E1007431DB /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B40D24DC1BF136E1007431DB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B4154F241C4DCD0100CA86AE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -281,6 +284,7 @@
 		B4FC9D271BECB640007303FC /* airport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airport.png; sourceTree = "<group>"; };
 		B4FC9D291BECB6B7007303FC /* bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bank.png; sourceTree = "<group>"; };
 		B4FC9D2B1BECB6E1007303FC /* Mosque.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mosque.png; sourceTree = "<group>"; };
+		DBD17F28D09D77D37EFE0562 /* Pods-GasPedlrProto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasPedlrProto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GasPedlrProto/Pods-GasPedlrProto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +310,7 @@
 				2CDC09051BE859AC009D330B /* CoreData.framework in Frameworks */,
 				2CDC08FD1BE85900009D330B /* libGoogleAnalyticsServices.a in Frameworks */,
 				B40D24DD1BF136E1007431DB /* Bolts.framework in Frameworks */,
+				CA4AF95EBCD38F54B9BC4106 /* Pods_GasPedlrProto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +342,7 @@
 				2C03A69D1BC98A1200335354 /* GasPedlrProtoTests */,
 				2C03A6A81BC98A1200335354 /* GasPedlrProtoUITests */,
 				2C03A6871BC98A1200335354 /* Products */,
+				AE2C6AA603E2A391CCD539F5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -413,6 +419,7 @@
 				2CF7D25D1BEAEAAF009A3BA7 /* AudioToolbox.framework */,
 				2CDC09061BE85A08009D330B /* SystemConfiguration.framework */,
 				2CDC09041BE859AC009D330B /* CoreData.framework */,
+				5C61A8D003151937C80C1D89 /* Pods_GasPedlrProto.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -499,6 +506,15 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		AE2C6AA603E2A391CCD539F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBD17F28D09D77D37EFE0562 /* Pods-GasPedlrProto.debug.xcconfig */,
+				49B68F903128319323972D03 /* Pods-GasPedlrProto.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B42650521C7A9B1B00334EC0 /* Spring */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,9 +576,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C03A6AE1BC98A1200335354 /* Build configuration list for PBXNativeTarget "GasPedlrProto" */;
 			buildPhases = (
+				929116BA1B1B0815BBA786F2 /* Check Pods Manifest.lock */,
 				2C03A6821BC98A1200335354 /* Sources */,
 				2C03A6831BC98A1200335354 /* Frameworks */,
 				2C03A6841BC98A1200335354 /* Resources */,
+				570E5681968CEB889A8C207F /* Embed Pods Frameworks */,
+				21B1F64A85F6BE9E5B3F253C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -737,6 +756,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21B1F64A85F6BE9E5B3F253C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasPedlrProto/Pods-GasPedlrProto-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		570E5681968CEB889A8C207F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasPedlrProto/Pods-GasPedlrProto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		929116BA1B1B0815BBA786F2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C03A6821BC98A1200335354 /* Sources */ = {
@@ -920,6 +987,7 @@
 		};
 		2C03A6AF1BC98A1200335354 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBD17F28D09D77D37EFE0562 /* Pods-GasPedlrProto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -947,6 +1015,7 @@
 		};
 		2C03A6B01BC98A1200335354 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49B68F903128319323972D03 /* Pods-GasPedlrProto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

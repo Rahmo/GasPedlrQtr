@@ -37,8 +37,8 @@ let reuseIdentifier = "Cell"
 // .5 will zoom in by x2
 extension MKMapView {
     func setZoomByDelta(delta: Double, animated: Bool) {
-        var _region = region;
-        var _span = region.span;
+        var _region = self.region;
+        var _span = self.region.span;
         _span.latitudeDelta *= delta;
         _span.longitudeDelta *= delta;
         _region.span = _span;
@@ -55,14 +55,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
     var partnerDict: [String: String] = [String: String]()
     var searchController:UISearchController!
     var autoCompleteDataSource:Array<String> = [];
-    var CurrentClosePartners = NSMutableSet()
+   // var CurrentClosePartners = NSMutableSet()
     @IBOutlet weak var mapView: MKMapView!
     
     //This used in the dataload method to save the result from the service
     var mapModels:[SearchModel]?;
     var mapData:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude:0, longitude:0)
     //This key is for Google api servcie
-    let apiKey = "AIzaSyAbXjQRDPYZJkP1FloGsnqjQHF8qc1I4yw"
+    let apiKey = "AIzaSyAAgVrQDUcfD49EK9Om-8V6PddWjT79mYc"
+    let SecondKey = "AIzaSyAbXjQRDPYZJkP1FloGsnqjQHF8qc1I4yw"
     var searchBy:String = ""
     
     //relate to get the user location
@@ -434,13 +435,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         //        zoomSpan[0] = mapView.region.span.latitudeDelta*2
         //        zoomSpan[1] = mapView.region.span.longitudeDelta*2
         //
+//       self.locationManager.stopUpdatingLocation()
         self.mapView.setZoomByDelta(2, animated: true)
         
     }
     
     //to zoom in and out the current location
     @IBAction func zoomIn(sender: UIBarButtonItem) {
+       //self.locationManager.stopUpdatingLocation()
         self.mapView.setZoomByDelta(0.5, animated: true)
+       
         //        zoomSpan[0] = mapView.region.span.latitudeDelta/2
         //        zoomSpan[1] = mapView.region.span.longitudeDelta/2
     }
@@ -485,10 +489,27 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
                 
             }
             let serviceHelper = ServiceHelper();
+            var PartnersString : String = String()
             for Partner in partnerDict {
-                let dynamicURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(mapData.latitude),\(mapData.longitude)&radius=5000&name=\(Partner.0)&sensor=true&key=\(apiKey)"
-                serviceHelper.getServiceHandle(self.DataLoadedForPartner, url: dynamicURL)
-            }  /**
+         
+                if PartnersString == "" {
+                PartnersString = "\(Partner.0.stringByReplacingOccurrencesOfString(" ", withString: "_"))"
+                }
+                else {
+                    PartnersString = "\(PartnersString)|\(Partner.0.stringByReplacingOccurrencesOfString(" ", withString: "_"))"
+                }
+            
+           
+        } //url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+            //Subway|Citibank|Target|Starbucks
+            let AlteranteURL = "https://maps.googleapis.com/maps/api/place/search/json?types=establishment&rankBy=distance&location=\(mapData.latitude),\(mapData.longitude)&radius=2000&name=\(PartnersString)&sensor=true&key=\(apiKey)"
+            
+            serviceHelper.getServiceHandle(self.DataLoadedForPartner, url: AlteranteURL)
+            
+                //TODO2
+            //    let dynamicURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(mapData.latitude),\(mapData.longitude)&radius=5000&name=\(Partner.0)&sensor=true&key=\(apiKey)"
+               // serviceHelper.getServiceHandle(self.DataLoadedForPartner, url: dynamicURL)
+            /**
                 The save is important to make the region monitoring
                 */
              saveAllGeotifications()
@@ -542,9 +563,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
             stopMonitoringGeotification(geo)
             removeGeotification(geo)
         }
-        for closePartner in CurrentClosePartners {
-        CurrentClosePartners.removeObject(closePartner)
-        }
+//        for closePartner in CurrentClosePartners {
+//        CurrentClosePartners.removeObject(closePartner)
+//        }
         if geotifications.count > 0 {
             for index in 1...geotifications.count {
                 geotifications.removeAtIndex(index)
@@ -588,13 +609,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
             startMonitoringGeotification(geotification)
             let item = NSKeyedArchiver.archivedDataWithRootObject(geotification)
             items.addObject(item)
-            CurrentClosePartners.addObject(geotification.note)
+          //  CurrentClosePartners.addObject(geotification.note)
            
         }
         
+        //items = newItems
+        print("now printing count")
+        print(items.count)
+        print("now in for loop")
+        //for item in items {
+        //    print(item.description.cStringUsingEncoding(NSUTF8StringEncoding))
+        //}
+        
         delegate.items = items
-   delegate.UniquePartners = CurrentClosePartners
-        var c = delegate.UniquePartners.count
+  // delegate.UniquePartners = CurrentClosePartners
+       // var c = delegate.UniquePartners.count
    
     }
     
@@ -632,7 +661,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
        
         var UserDataResultsWithCoupons : [SearchModel] = [SearchModel]()
         
-        for model  in userData {
+        for model in userData {
         
             var m : SearchModel = SearchModel(name: model.name, icon: model.icon, lon: model.lon, lat: model.lat, address: model.address)
           
@@ -648,9 +677,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         var counter = 0
         for searchModel in self.mapModels!{
        
-            if (counter > 2) {
-                break
-            }
+            
+//TODO2
+//            if (counter > 2) {
+//                break
+//            }
             //get the result from google service and make coordinate so we can create a geo on that location.
             let GeoCoordinate =  CLLocationCoordinate2D(latitude: searchModel.lat, longitude: searchModel.lon);
             

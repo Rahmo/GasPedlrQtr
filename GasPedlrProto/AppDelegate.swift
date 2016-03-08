@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
     
     let locationManager = CLLocationManager()
     var items = NSMutableArray()
-    var UniquePartners = NSMutableSet()
+   // var UniquePartners = NSMutableSet()
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         Parse.enableLocalDatastore();
