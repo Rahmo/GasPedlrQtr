@@ -502,6 +502,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
            
         } //url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
             //Subway|Citibank|Target|Starbucks
+            /// Updated for performance  //ToBeTested
             let AlteranteURL = "https://maps.googleapis.com/maps/api/place/search/json?types=establishment&rankBy=distance&location=\(mapData.latitude),\(mapData.longitude)&radius=2000&name=\(PartnersString)&sensor=true&key=\(apiKey)"
             
             serviceHelper.getServiceHandle(self.DataLoadedForPartner, url: AlteranteURL)
