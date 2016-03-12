@@ -17,5 +17,6 @@ end
 
 target 'GasPedlrProto' do
   pod 'Charts', '~> 2.2'
+  pod 'IQKeyboardManagerSwift'
   use_frameworks! // 
 end

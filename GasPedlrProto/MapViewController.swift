@@ -85,7 +85,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         super.viewDidLoad()
         refresh ()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("DataLoadedForPartner:"), name: "DataLoadedForPartner", object: nil);
-        autoCompleteDataSource.append("PartneredUser");
+  
         autoCompleteDataSource.append("Restaurant");
         autoCompleteDataSource.append("Airport");
         autoCompleteDataSource.append("Atm");
@@ -368,10 +368,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CollectionViewCell
         let data = autoCompleteDataSource[indexPath.row];
-        if(data == "PartneredUser"){
-            cell.title.text = "Partnered User"
-            cell.imageView.image = UIImage(named: "noimage.gif")}
-        else if(data == "Restaurant"){
+      
+        if(data == "Restaurant"){
             
             cell.title.text = "Restaurant"
             cell.imageView.image = UIImage(named: "restaurent.png")

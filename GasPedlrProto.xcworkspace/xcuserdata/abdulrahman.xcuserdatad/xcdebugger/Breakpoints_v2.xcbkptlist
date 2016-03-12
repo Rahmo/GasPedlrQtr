@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/MapViewController.swift"
-            timestampString = "479155578.047367"
+            timestampString = "479433719.545786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "506"
-            endingLineNumber = "506"
+            startingLineNumber = "504"
+            endingLineNumber = "504"
             landmarkName = "runPartneredBusiness()"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,13 +26,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/MapViewController.swift"
-            timestampString = "479155006.759465"
+            timestampString = "479433719.545786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "444"
-            endingLineNumber = "444"
+            startingLineNumber = "442"
+            endingLineNumber = "442"
             landmarkName = "zoomIn(_:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GasPedlrProto/AppDelegate.swift"
+            timestampString = "479428916.339524"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

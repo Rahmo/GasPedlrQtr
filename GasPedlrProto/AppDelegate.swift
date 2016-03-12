@@ -10,6 +10,7 @@ import UIKit
 import Parse
 import Bolts
 import CoreLocation
+import IQKeyboardManagerSwift
 
 var items = NSMutableArray()
 
@@ -25,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         Parse.enableLocalDatastore();
-        
+        //Managing the keyboard
+        IQKeyboardManager.sharedManager().enable = true
         // Override point for customization after application launch.
         
         

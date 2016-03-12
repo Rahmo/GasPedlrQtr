@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476317949.619905"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "notefromRegionIdentifier(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,7 +42,55 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476227628.844085"
+            timestampString = "479429150.429802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "locationManager(_:didStartMonitoringForRegion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GasPedlrProto/AppDelegate.swift"
+            timestampString = "479429150.429802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "notefromRegionIdentifier(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GasPedlrProto/AppDelegate.swift"
+            timestampString = "479429150.429802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "locationManager(_:didFailWithError:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GasPedlrProto/AppDelegate.swift"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
@@ -58,13 +106,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476317949.619905"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "notefromRegionIdentifier(_:)"
-            landmarkType = "5">
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,27 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476317949.619905"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "locationManager(_:didDetermineState:forRegion:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476227628.844085"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "locationManager(_:didStartMonitoringForRegion:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,45 +138,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476227628.844085"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "handleRegionEvent(_:)"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "applicationDidBecomeActive(_:)"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476227628.844085"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "AppDelegate"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476227628.844085"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "AppDelegate"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -158,9 +158,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "AppDelegate"
-            landmarkType = "3">
+            endingLineNumber = "16">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -282,11 +280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476962321.212652"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "AppDelegate"
             landmarkType = "3">
          </BreakpointContent>
@@ -298,11 +296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476316212.56249"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "handleRegionEvent(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,23 +312,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476317949.619905"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "handleRegionEvent(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476317942.484143"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "99"
@@ -346,11 +328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476318223.460437"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "handleRegionEvent(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -362,27 +344,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476318223.820462"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "handleRegionEvent(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476318224.190842"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
+            landmarkName = "handleRegionEvent(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GasPedlrProto/AppDelegate.swift"
+            timestampString = "479429150.429802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "handleRegionEvent(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GasPedlrProto/AppDelegate.swift"
+            timestampString = "479429150.429802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "handleRegionEvent(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -506,11 +504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476959010.894621"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "notefromRegionIdentifier(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -601,13 +599,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476960146.205418"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "notefromRegionIdentifier(_:)"
-            landmarkType = "5">
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -617,11 +615,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "476960929.337135"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "notefromRegionIdentifier(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -665,11 +663,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "478486711.897411"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "handleRegionEvent(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -775,11 +773,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "478664911.319097"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "handleRegionEvent(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -791,11 +789,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "478665750.118561"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "locationManager(_:didDetermineState:forRegion:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -807,11 +805,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "478666234.246031"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "notefromRegionIdentifier(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -823,11 +821,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/AppDelegate.swift"
-            timestampString = "478667543.568792"
+            timestampString = "479429150.429802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "notefromRegionIdentifier(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -855,11 +853,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/MapViewController.swift"
-            timestampString = "479155578.047367"
+            timestampString = "479433719.545786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "606"
-            endingLineNumber = "606"
+            startingLineNumber = "604"
+            endingLineNumber = "604"
             landmarkName = "saveAllGeotifications()"
             landmarkType = "5">
          </BreakpointContent>
@@ -871,11 +869,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/MapViewController.swift"
-            timestampString = "479155578.047367"
+            timestampString = "479433719.545786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "617"
-            endingLineNumber = "617"
+            startingLineNumber = "615"
+            endingLineNumber = "615"
             landmarkName = "saveAllGeotifications()"
             landmarkType = "5">
          </BreakpointContent>
@@ -887,7 +885,55 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/MapViewController.swift"
-            timestampString = "479155578.047367"
+            timestampString = "479433719.545786"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "616"
+            endingLineNumber = "616"
+            landmarkName = "saveAllGeotifications()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GasPedlrProto/MapViewController.swift"
+            timestampString = "479433719.545786"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "514"
+            endingLineNumber = "514"
+            landmarkName = "runPartneredBusiness()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GasPedlrProto/MapViewController.swift"
+            timestampString = "479433719.545786"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "568"
+            endingLineNumber = "568"
+            landmarkName = "clearAllGeo()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GasPedlrProto/MapViewController.swift"
+            timestampString = "479433719.545786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "618"
@@ -903,59 +949,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasPedlrProto/MapViewController.swift"
-            timestampString = "479155578.047367"
+            timestampString = "479433719.545786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "516"
-            endingLineNumber = "516"
-            landmarkName = "runPartneredBusiness()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasPedlrProto/MapViewController.swift"
-            timestampString = "479155578.047367"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "570"
-            endingLineNumber = "570"
-            landmarkName = "clearAllGeo()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasPedlrProto/MapViewController.swift"
-            timestampString = "479155578.047367"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "620"
-            endingLineNumber = "620"
-            landmarkName = "saveAllGeotifications()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasPedlrProto/MapViewController.swift"
-            timestampString = "479155578.047367"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "619"
-            endingLineNumber = "619"
+            startingLineNumber = "617"
+            endingLineNumber = "617"
             landmarkName = "saveAllGeotifications()"
             landmarkType = "5">
          </BreakpointContent>

@@ -2,11 +2,14 @@ PODS:
   - Charts (2.2.3):
     - Charts/Core (= 2.2.3)
   - Charts/Core (2.2.3)
+  - IQKeyboardManagerSwift (4.0.0)
 
 DEPENDENCIES:
   - Charts (~> 2.2)
+  - IQKeyboardManagerSwift
 
 SPEC CHECKSUMS:
   Charts: f54267bb3f0f0e74520c6f248517cf5074dfd6fc
+  IQKeyboardManagerSwift: ede2a27b4e1ce053d03073b9c7fa439322f5e405
 
 COCOAPODS: 0.39.0

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FBBB0D26B65B8AA7BAC4ECE5'
+               BlueprintIdentifier = 'DB534272B58B5C23B8BCD1E0'
                BlueprintName = 'Pods-GasPedlrProto'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_GasPedlrProto.framework'>

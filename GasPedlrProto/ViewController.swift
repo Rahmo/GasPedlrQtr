@@ -8,8 +8,8 @@
 
 import UIKit
 import Parse
-import Charts
 
+import Charts
 
 class ViewController: UIViewController {
     

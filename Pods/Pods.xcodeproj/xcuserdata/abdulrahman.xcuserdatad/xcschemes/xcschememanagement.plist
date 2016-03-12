@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GasPedlrProto.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9B9F107E78EC4266D6C63337573D13F1</key>
+		<key>6BC33779E5FF1C3CC9B7A990710CA020</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C6828C2508515BC0428D6BDAA1292DC9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9B5C577F89B2F2EBCB51E034A136673</key>
 		<dict>
 			<key>primary</key>
 			<true/>
