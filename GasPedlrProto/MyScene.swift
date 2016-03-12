@@ -21,6 +21,7 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         super.init(coder: aDecoder)
     }
     
+    
     //var adArray = ["bannerSpa.png", "bannerStarbucks.png", "bannerHalfAcre.png", "bannerTacoBell.jpg"]
     
     var padX: Float! {
@@ -34,6 +35,8 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
     var mySceneDelegate: MySceneDelegate?
     
     func reset() {
+        let delegate = AppDelegate.getDelegate()
+        let itemsCopy = delegate.items
         _blocks = NSMutableSet()
         let y0 = size.height - 50
         for (color, y) in [
@@ -52,8 +55,8 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
                 let randomNum = Int(arc4random_uniform(10) + 1)
                 if (randomNum % 2 == 0) {
                 //if (color == UIColor.greenColor()) {
-                    let randomIndex = Int(arc4random_uniform(UInt32(items.count)))
-                    let nextAd = items[randomIndex]
+                    let randomIndex = Int(arc4random_uniform(UInt32(itemsCopy.count)))
+                    let nextAd = itemsCopy[randomIndex]
                     var adName:String = ""
                     if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(nextAd as! NSData) as? Geotification {
                         adName = "\(geotification.note)"
@@ -87,7 +90,9 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func updateBoard() {
-        let itemsCopy = items
+        
+        let delegate = AppDelegate.getDelegate()
+        let itemsCopy = delegate.items
         var stringArray = [""]
         //get just the names of the businesses in an array
         for items in itemsCopy {
@@ -121,8 +126,8 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
                             _blocks.addObject(newBlock)
                         } else {
                             //make an ad block
-                            let randomIndex = Int(arc4random_uniform(UInt32(items.count)))
-                            let nextAd = items[randomIndex]
+                            let randomIndex = Int(arc4random_uniform(UInt32(itemsCopy.count)))
+                            let nextAd = itemsCopy[randomIndex]
                             var adName:String = ""
                             if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(nextAd as! NSData) as? Geotification {
                                 adName = "\(geotification.note)"
