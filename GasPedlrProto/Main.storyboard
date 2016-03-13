@@ -23,7 +23,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XrQ-Co-w9L"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cz4-fV-c87">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IR8-pB-2K7">
@@ -174,7 +174,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LTx-Y3-Usr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Aq-64-dmR">
-                        <rect key="frame" x="0.0" y="0.0" width="216" height="171"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SXL-iB-gQM">
@@ -1040,7 +1040,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xDa-OS-LRA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NKc-WK-UCF">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="qGb-9N-jy5">
@@ -1472,9 +1472,9 @@
         <image name="transparent icon.png" width="720" height="418"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gyO-I8-J65"/>
+        <segue reference="gDu-pb-Vxd"/>
         <segue reference="o7y-pJ-rxh"/>
-        <segue reference="A9g-OL-BZd"/>
+        <segue reference="jFG-YL-6bX"/>
         <segue reference="Tjz-Cg-SyX"/>
     </inferredMetricsTieBreakers>
 </document>
