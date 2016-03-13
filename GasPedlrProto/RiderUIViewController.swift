@@ -29,7 +29,7 @@ class RiderUIViewController: UIViewController {
     @IBOutlet weak var BrowserButton: UIButton!
     @IBOutlet weak var MapButton: UIButton!
     @IBOutlet weak var GameButton: UIButton!
-    //kkk
+
     @IBOutlet weak var driverName: UILabel!
     override func viewDidLoad() {
         //Parse Test Object DO NOT REMOVE
@@ -44,8 +44,6 @@ class RiderUIViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBOutlet weak var driverPlate: UILabel!
-    
-
     @IBOutlet weak var driverCar: UILabel!
     
 
@@ -53,9 +51,6 @@ class RiderUIViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    
     
     /*
     // MARK: - Navigation

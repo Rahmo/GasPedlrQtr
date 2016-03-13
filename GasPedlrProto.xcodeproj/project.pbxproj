@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030C14481C95A6560056B69E /* KFC.png in Resources */ = {isa = PBXBuildFile; fileRef = 030C14471C95A6560056B69E /* KFC.png */; };
+		030C144A1C95B8010056B69E /* kfcAd.png in Resources */ = {isa = PBXBuildFile; fileRef = 030C14491C95B8010056B69E /* kfcAd.png */; };
 		03246A921C6F978A0073F896 /* newAdTacoBell.png in Resources */ = {isa = PBXBuildFile; fileRef = 03246A8E1C6F978A0073F896 /* newAdTacoBell.png */; };
 		03246A931C6F978A0073F896 /* newAdStarbucks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03246A8F1C6F978A0073F896 /* newAdStarbucks.jpg */; };
 		03246A941C6F978A0073F896 /* newAdSpa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03246A901C6F978A0073F896 /* newAdSpa.jpg */; };
@@ -165,20 +167,9 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		03A333191C8B6C26002067C1 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		030C14471C95A6560056B69E /* KFC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KFC.png; sourceTree = "<group>"; };
+		030C14491C95B8010056B69E /* kfcAd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kfcAd.png; sourceTree = "<group>"; };
 		03246A8E1C6F978A0073F896 /* newAdTacoBell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newAdTacoBell.png; sourceTree = "<group>"; };
 		03246A8F1C6F978A0073F896 /* newAdStarbucks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newAdStarbucks.jpg; sourceTree = "<group>"; };
 		03246A901C6F978A0073F896 /* newAdSpa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = newAdSpa.jpg; sourceTree = "<group>"; };
@@ -546,6 +537,8 @@
 				0358E1C21C8CCA5D00F88916 /* Target Open House.png */,
 				0358E1C31C8CCA5D00F88916 /* Target.png */,
 				0358E1C41C8CCA5D00F88916 /* targetAd.png */,
+				030C14471C95A6560056B69E /* KFC.png */,
+				030C14491C95B8010056B69E /* kfcAd.png */,
 				03E316C21BF5820900DA6857 /* loginButton.jpg */,
 				03A3319A1C8526AB002067C1 /* blankImage.png */,
 				036FA2911BF6D098002E8956 /* breakout_icon.png */,
@@ -772,12 +765,14 @@
 				2C03A6911BC98A1200335354 /* Assets.xcassets in Resources */,
 				B426507D1C7A9B1B00334EC0 /* Info.plist in Resources */,
 				2C263C7A1BFA9B4A00C590C7 /* google-analytics-chart-growth.png in Resources */,
+				030C144A1C95B8010056B69E /* kfcAd.png in Resources */,
 				B4FC9D191BEC4034007303FC /* church-icon.png in Resources */,
 				2C06798B1C69138700F2C20F /* custsystem.png in Resources */,
 				0358E1C81C8CCA5D00F88916 /* targetAd.png in Resources */,
 				03A331A31C8684CF002067C1 /* Pizza Hut.png in Resources */,
 				0358E19F1C8CC9A700F88916 /* Baja Fresh Mexican Grill.png in Resources */,
 				B4FC9D2A1BECB6B7007303FC /* bank.png in Resources */,
+				030C14481C95A6560056B69E /* KFC.png in Resources */,
 				0358E1BF1C8CCA5500F88916 /* Taco Bell.png in Resources */,
 				036FA2981BF6DD07002E8956 /* tempAd3.jpg in Resources */,
 				0358E1C01C8CCA5500F88916 /* tacoBellAd.png in Resources */,

@@ -32,10 +32,6 @@ class MainMapViewController: UIViewController,CLLocationManagerDelegate,MKMapVie
         self.mapView.delegate = self;
         //self.mapView.setUserTrackingMode(MAUserTrackingMode.Follow, animated: true)
         self.mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
-
-        
-
-    
     
     }
     

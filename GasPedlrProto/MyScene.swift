@@ -21,9 +21,6 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         super.init(coder: aDecoder)
     }
     
-    
-    //var adArray = ["bannerSpa.png", "bannerStarbucks.png", "bannerHalfAcre.png", "bannerTacoBell.jpg"]
-    
     var padX: Float! {
         didSet {
             if _pad != nil {
@@ -39,30 +36,30 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         let itemsCopy = delegate.items
         _blocks = NSMutableSet()
         let y0 = size.height - 50
-        for (color, y) in [
-            (UIColor.redColor(),    y0-0),
-            (UIColor.orangeColor(), y0-50),
-            (UIColor.yellowColor(), y0-100),
-            (UIColor.greenColor(),  y0-150),
-            (UIColor.blueColor(),   y0-200),
-            ] {
+        for (y) in [(y0-0),(y0-50),(y0-100),(y0-150),(y0-200)] {
             let n = 10
             let blockWidth = size.width / CGFloat(n)
             let blockSize = CGSize(width:0.9*blockWidth, height:50)
-            
             for i in 0..<n {
                 var sprite: SKSpriteNode
                 let randomNum = Int(arc4random_uniform(10) + 1)
                 if (randomNum % 2 == 0) {
-                //if (color == UIColor.greenColor()) {
                     let randomIndex = Int(arc4random_uniform(UInt32(itemsCopy.count)))
                     let nextAd = itemsCopy[randomIndex]
                     var adName:String = ""
                     if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(nextAd as! NSData) as? Geotification {
                         adName = "\(geotification.note)"
+                        //print("Ad name is: \(adName)")
                     }
-                    sprite = SKSpriteNode(imageNamed: "\(adName).png")
-                    sprite.name = "\(adName).png"
+                    //does this if/else function to test whether an ad is in the dictionary
+                    if let val = adDict["\(adName).png"] {
+                        sprite = SKSpriteNode(imageNamed: "\(adName).png")
+                        sprite.name = "\(adName).png"
+                    } else {
+                        sprite = SKSpriteNode(color:getRandomColor(), size:blockSize)
+                        sprite.name = ""
+                    }
+                    
                     //sprite.position = CGPoint(x:(CGFloat(i) + 0.5) * blockWidth, y:y)
                     //sprite.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.size)
                     //sprite.physicsBody?.categoryBitMask = blockMask
@@ -70,7 +67,7 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
                     //addChild(sprite)
                     //_blocks.addObject(sprite)
                 } else {
-                    sprite = SKSpriteNode(color:color, size:blockSize)
+                    sprite = SKSpriteNode(color:getRandomColor(), size:blockSize)
                     sprite.name = ""
                     //sprite.position = CGPoint(x:(CGFloat(i) + 0.5) * blockWidth, y:y)
                     //sprite.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.size)
@@ -89,32 +86,69 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    func getRandomColor() -> UIColor{
+        let randomRed:CGFloat = CGFloat(drand48())
+        let randomGreen:CGFloat = CGFloat(drand48())
+        let randomBlue:CGFloat = CGFloat(drand48())
+        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+    }
+    
     func updateBoard() {
-        
         let delegate = AppDelegate.getDelegate()
         let itemsCopy = delegate.items
-        var stringArray = [""]
-        //get just the names of the businesses in an array
-        for items in itemsCopy {
-            if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(items as! NSData) as? Geotification {
-                stringArray.append("\(geotification.note)")
+        //check to make sure there are businesses in the area, else don't update the board
+        if (itemsCopy.count > 0) {
+            var stringArray = [""]
+            //get just the names of the businesses in an array
+            for items in itemsCopy {
+                if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(items as! NSData) as? Geotification {
+                    stringArray.append("\(geotification.note)")
+                }
             }
-        }
-        //check to see whether there are businesses in the array
-        if (stringArray.count > 1) {
-            var newBlock: SKSpriteNode
-            for block in _blocks {
-                // check to see whether the business is out of range or whether it is a plain colored block (leave the ads still in range alone)
-                if (!stringArray.contains(block.name) || block.name == nil || block.name == "") {
-                    let randomNum = Int(arc4random_uniform(10) + 1)
-                    if (randomNum % 2 == 0) {
-                        //check the percentage of ads; ads should no exceed 60% of blocks
-                        let percentAds = checkNumAds()
-                        print("PERCENT ADS: \(percentAds)")
-                        if (percentAds >= 0.6) {
-                            print("should fall in here?")
+            //check to see whether there are businesses in the array
+            if (stringArray.count > 1) {
+                var newBlock: SKSpriteNode
+                for block in _blocks {
+                    // check to see whether the business is out of range or whether it is a plain colored block (leave the ads still in range alone)
+                    if (!stringArray.contains(block.name) || block.name == nil || block.name == "") {
+                        let randomNum = Int(arc4random_uniform(10) + 1)
+                        if (randomNum % 2 == 0) {
+                            //check the percentage of ads; ads should no exceed 60% of blocks
+                            let percentAds = checkNumAds()
+                            if (percentAds >= 0.6) {
+                                //make a color block
+                                newBlock = SKSpriteNode(color: getRandomColor(), size: CGSize(width:0.9*(size.width / CGFloat(10)), height:50))
+                                newBlock.name = ""
+                                newBlock.position = block.position
+                                newBlock.physicsBody = block.physicsBody
+                                newBlock.physicsBody?.categoryBitMask = blockMask
+                                newBlock.physicsBody?.dynamic = false
+                                _blocks.removeObject(block)
+                                block.removeFromParent()
+                                addChild(newBlock)
+                                _blocks.addObject(newBlock)
+                            } else {
+                                //make an ad block
+                                let randomIndex = Int(arc4random_uniform(UInt32(itemsCopy.count)))
+                                let nextAd = itemsCopy[randomIndex]
+                                var adName:String = ""
+                                if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(nextAd as! NSData) as? Geotification {
+                                    adName = "\(geotification.note)"
+                                }
+                                newBlock = SKSpriteNode(imageNamed: "\(adName).png")
+                                newBlock.name = "\(adName).png"
+                                newBlock.position = block.position
+                                newBlock.physicsBody = block.physicsBody
+                                newBlock.physicsBody?.categoryBitMask = blockMask
+                                newBlock.physicsBody?.dynamic = false
+                                _blocks.removeObject(block)
+                                block.removeFromParent()
+                                addChild(newBlock)
+                                _blocks.addObject(newBlock)
+                            }
+                        } else {
                             //make a color block
-                            newBlock = SKSpriteNode(color: UIColor.blueColor(), size: CGSize(width:0.9*(size.width / CGFloat(10)), height:50))
+                            newBlock = SKSpriteNode(color: getRandomColor(), size: CGSize(width:0.9*(size.width / CGFloat(10)), height:50))
                             newBlock.name = ""
                             newBlock.position = block.position
                             newBlock.physicsBody = block.physicsBody
@@ -124,43 +158,14 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
                             block.removeFromParent()
                             addChild(newBlock)
                             _blocks.addObject(newBlock)
-                        } else {
-                            //make an ad block
-                            let randomIndex = Int(arc4random_uniform(UInt32(itemsCopy.count)))
-                            let nextAd = itemsCopy[randomIndex]
-                            var adName:String = ""
-                            if let geotification = NSKeyedUnarchiver.unarchiveObjectWithData(nextAd as! NSData) as? Geotification {
-                                adName = "\(geotification.note)"
-                            }
-                            newBlock = SKSpriteNode(imageNamed: "\(adName).png")
-                            newBlock.name = "\(adName).png"
-                            newBlock.position = block.position
-                            newBlock.physicsBody = block.physicsBody
-                            newBlock.physicsBody?.categoryBitMask = blockMask
-                            newBlock.physicsBody?.dynamic = false
-                            _blocks.removeObject(block)
-                            block.removeFromParent()
-                            addChild(newBlock)
-                            _blocks.addObject(newBlock)
                         }
-                    } else {
-                        //make a color block
-                        newBlock = SKSpriteNode(color: UIColor.blueColor(), size: CGSize(width:0.9*(size.width / CGFloat(10)), height:50))
-                        newBlock.name = ""
-                        newBlock.position = block.position
-                        newBlock.physicsBody = block.physicsBody
-                        newBlock.physicsBody?.categoryBitMask = blockMask
-                        newBlock.physicsBody?.dynamic = false
-                        _blocks.removeObject(block)
-                        block.removeFromParent()
-                        addChild(newBlock)
-                        _blocks.addObject(newBlock)
                     }
                 }
             }
         }
     }
     
+    //check the proportion of ads on the board
     func checkNumAds() -> Double {
         var countAds = 0.0
         var countBlocks = 0.0
@@ -171,11 +176,6 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
             countBlocks++
         }
         //return the percentage of ads
-        print("END PERCENTAGE")
-        print("")
-        print("")
-        print("")
-        print(countAds/countBlocks)
         return (countAds/countBlocks)
     }
     
@@ -245,15 +245,6 @@ class MyScene: SKScene, SKPhysicsContactDelegate {
             mySceneDelegate?.dead()
         }
     }
-    
-    /*func sendNotification() {
-        let deadline = NSDate()
-        let notification = UILocalNotification()
-        notification.alertBody = "TEST!!!"
-        print("reaching sendNoteifaiont")
-        notification.fireDate = deadline
-        UIApplication.sharedApplication().presentLocalNotificationNow(notification)
-    } */
     
     override init(size aSize: CGSize) {
         super.init(size: aSize)

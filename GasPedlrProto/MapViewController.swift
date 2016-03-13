@@ -615,9 +615,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate , MKMapView
         //items = newItems
         print("now printing count")
         print(items.count)
-        print("now in for loop")
+        //print("now in for loop")
         //for item in items {
-        //    print(item.description.cStringUsingEncoding(NSUTF8StringEncoding))
+            //print(item.description.cStringUsingEncoding(NSUTF8StringEncoding))
         //}
         
         delegate.items = items

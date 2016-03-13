@@ -3,6 +3,8 @@
 import UIKit
 import SpriteKit
 
+ var adDict = ["Starbucks.png": "starbucksAd.png", "Subway.png": "subAd.png", "Citibank.png": "citiAd.png", "Target.png": "targetAd.png", "Burger King.png": "bkAd.png", "Taco Bell.png": "tacoBellAd.png", "Chipotle Mexican Grill.png": "chipotleAd.png", "KFC.png": "kfcAd.png", ]
+
 class GameViewController: UIViewController, MySceneDelegate {
     @IBOutlet weak var skView : SKView!
     @IBOutlet weak var padSlider : UISlider!
@@ -17,10 +19,9 @@ class GameViewController: UIViewController, MySceneDelegate {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    var adDict = ["McDonald's.png": "mcdAd.png", "Pizza Hut.png": "pizzaHutAd.png", "Starbucks.png": "starbucksAd.png", "Starbucks (Restricted Acces)": "starbucksAd.png", "Subway.png": "subAd.png", "Citibank.png": "citiAd.png", "Target.png": "targetAd.png", "Target Auto.png": "targetAd.png", "Target Open House.png": "targetAd.png", "Ross Dress for Less.png": "rossAd.png", "Burger King.png": "bkAd.png", "Taco Bell.png": "tacoBellAd.png", "Chipotle Mexican Grill.png": "chipotleAd.png", "Baja Fresh Mexican Grill.png": "bajaAd.png"]
+   
     
     var timer = NSTimer()
-    //var newDict = ["bannerSpa.png": "newAdSpa.jpg", "bannerTacoBell.jpg": "newAdTacoBell.png", "bannerStarbucks.png": "newAdStarbucks.jpg", "bannerHalfAcre.png": "newAdHalfAcre.jpg"]
     
     var _myScene : MyScene!
     var _readyToFire = false
