@@ -30,7 +30,7 @@ class GameViewController: UIViewController, MySceneDelegate {
             lifeLabel.text = String(_lifeCount)
         }
     }
-
+    
     func gameStart() {
         
         _lifeCount = 10
@@ -40,7 +40,7 @@ class GameViewController: UIViewController, MySceneDelegate {
         _myScene.reset()
         _readyToFire = true
     }
-
+    
     @IBAction func restart(_ : AnyObject) {
         _myScene.respawn(completion:{ self.gameStart() })
     }
@@ -78,7 +78,7 @@ class GameViewController: UIViewController, MySceneDelegate {
         let randomBlue:CGFloat = CGFloat(drand48())
         return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
     }
-
+    
     func setPadPosition(value:Float) {
         if _readyToFire {
             _myScene.fire()
@@ -112,7 +112,7 @@ class GameViewController: UIViewController, MySceneDelegate {
         
         _myScene = MyScene(size: skView.frame.size)
         skView.presentScene(_myScene)
-
+        
         padSlider.minimumValue = 0
         padSlider.maximumValue = Float(_myScene.size.width)
         padSlider.value = Float(_myScene.padX)
@@ -121,7 +121,7 @@ class GameViewController: UIViewController, MySceneDelegate {
         scheduledTimerWithTimeInterval()
         gameStart()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
