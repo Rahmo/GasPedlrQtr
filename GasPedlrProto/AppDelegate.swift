@@ -12,7 +12,7 @@ import Bolts
 import CoreLocation
 import IQKeyboardManagerSwift
 
-var items = NSMutableArray()
+//var items = NSMutableArray()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
@@ -36,9 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
             clientKey: "1T41ABsAaI5PdPwdI2z7buM9DruGryt54h6R2vFO")
         
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
-        
-        
-        
         
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
